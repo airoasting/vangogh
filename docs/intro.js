@@ -774,10 +774,12 @@
   }
   function mapRegionPath(c, s, seed) { rpath(c, [-80, -80, s - (H + 80) * 1.1, -80, s - (-80) * 1.1, H + 80, -80, H + 80], seed, 6, 14); }
   function sweepVal(t) { return eio(seg(t, 22.2, 23.3)) * 2700 - 160; }
+  // 지도 기울기. 지도가 사라진 뒤에도 점은 같은 기울기 위치에서 해로 날아가야 하므로 시간으로만 정한다
+  function tiltAt(t) { return t < 17.88 ? 0 : 0.62 * eio(seg(t, 20.77, 21.6)); }
   function drawMap(t, sc) {
     if (t < 17.88 || t >= 23.4) return;
     if (!MAPB) buildMap(sc, Math.round(W * sc), Math.round(H * sc));
-    TILT = 0.62 * eio(seg(t, 20.77, 21.6));
+    TILT = tiltAt(t);
     var wipe = eo(seg(t, 17.88, 18.4)), s = wipe * 2600 - 120;
     if (wipe < 1) {
       cutAll(function (c) { mapRegionPath(c, s, 9101); c.fill(); });
@@ -826,7 +828,8 @@
   var SUNSTAR = [1040, 190];
   function drawDots(t) {
     if (t < 17.88) return;
-    var sd = sweepVal(t), pulse = t >= 20.77 && t < 23.6 ? ((t - 20.77) / BT) % 1 : -1;
+    var sd = sweepVal(t), pulse = t >= 20.77 && t < 23.6 ? ((t - 20.77) / BT) % 1 : -1, keepTilt = TILT;
+    TILT = tiltAt(t);
     for (var i = 0; i < STARS.length; i++) {
       var s = STARS[i], ci = STAR_TO_CITY[i], C = CITY_XY[ci], key = ci < 5;
       var p = eio(seg(t, 18.0 + ci * 0.065, 18.85 + ci * 0.065));
@@ -845,10 +848,11 @@
       else rring(K, x, y, rr + 1.4, rr + 3.6, 9520 + i);
       rcirc(Y, x, y, rr, 9540 + i, 0.5);
       if (pulse >= 0 && t < 23.4) {
-        var pr = rr + 5 + pulse * 22, pw = 3 * (1 - pulse);
+        var pr = rr + 5 + pulse * 22, pw = 3 * (1 - pulse) * (1 - seg(t, 22.9, 23.4));   // 지도가 끝나기 전에 물결이 잦아든다
         if (pw > 0.4) { if (!swept) cutAll(function (c) { rring(c, x, y, pr, pr + pw, 9560 + i); }); else rring(K, x, y, pr, pr + pw, 9560 + i); }
       }
     }
+    TILT = keepTilt;
     if (t >= 24.2) drawSunStar(t);
   }
   function drawSunStar(t) {
