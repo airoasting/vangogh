@@ -80,6 +80,7 @@ for m in museums.values():
             m['nameKo'] = cm.get('nameKo') or m['nameKo']
             m['city'] = cm.get('city') or m['city']
 
+adult_notes = cur.get('adultNotes', {})  # {Wikidata 작품 ID: 어른용 메모}
 used_curated = set()
 for w in cat['works']:
     m = museums[w['coll']]
@@ -99,6 +100,8 @@ for w in cat['works']:
         yr = f"{w['year']}년에 " if w.get('year') else ''
         pl = f"{w['placeKo']}에서 " if w.get('placeKo') else ''
         item['story'] = f"고흐가 {yr}{pl}그린 그림이에요." if (yr or pl) else '고흐가 그린 그림이에요.'
+        if w['qid'] in adult_notes:
+            item['forAdults'] = adult_notes[w['qid']]  # 이야기 없는 작품의 어른용 메모(정본 adultNotes)
     m['works'].append(item)
 
 # Wikidata에 없던 큐레이션 작품은 원래 미술관(이름이 맞는 곳)에 그대로 넣는다
