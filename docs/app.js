@@ -37,6 +37,10 @@
     (m.works || []).forEach(function (w) { allWorks.push({ w: w, m: m }); });
   });
   function museumList(m) { return (m.works || []).map(function (w) { return { w: w, m: m }; }); }
+  // 이야기가 있는 그림(큐레이션 32점)을 앞에 둔다. 나머지 순서는 그대로 둔다.
+  function storyFirst(list) {
+    return list.filter(function (it) { return it.w.featured; }).concat(list.filter(function (it) { return !it.w.featured; }));
+  }
 
   // 숫자 채우기
   Array.prototype.forEach.call(document.querySelectorAll('[data-count]'), function (el) {
@@ -99,11 +103,30 @@
         '<h3>' + esc(w.titleKo) + '</h3>' +
         (w.titleEn ? '<p class="en">' + esc(w.titleEn) + '</p>' : '') +
         '<p class="tomb">' + (w.year ? esc(w.year) + '년<br>' : '') + esc(m.nameKo) + '<br>' + place + '</p>' +
+        (panelOpen && panelMuseum === m ? '' : '<button type="button" class="textlink lb-map" id="lb-map">지도에서 이 미술관 보기</button>') +
         (w.story ? '<p class="story">' + esc(w.story) + '</p>' : '') +
         (look ? '<div class="part"><h4>그림에서 찾아보기</h4><p>' + esc(look) + '</p></div>' : '') +
         (w.fun ? '<div class="part"><h4>알고 있나요?</h4><p>' + esc(w.fun) + '</p></div>' : '') +
+        (look ? '' : '<div class="part"><h4>천천히 보고 이야기해요</h4><p>' + LOOK_COMMON + '</p><p>' + esc(lookQuestion(w)) + '</p></div>') +
       '</div>';
+    var mapBtn = $('lb-map');
+    if (mapBtn) mapBtn.onclick = function () { closeLightbox(); selectMuseum(m, true); };
     setURL(m, (m.works || []).indexOf(w));
+  }
+  // 이야기가 없는 그림에도 아이가 할 일을 하나 준다. 앞 두 질문은 미술관 교육의 VTS 질문이다.
+  var LOOK_COMMON = '이 그림에서 무슨 일이 일어나고 있나요? 무엇을 보고 그렇게 생각했나요?';
+  var LOOK_EXTRA = [
+    '가장 먼저 눈에 들어온 곳은 어디인가요?',
+    '이 그림에서 가장 밝은 색을 찾아보세요.',
+    '붓자국은 어느 쪽으로 움직이나요? 손가락으로 따라 그려 보세요.',
+    '그림 속에 들어간다면 어떤 소리가 들릴까요?',
+    '이 그림에 새 제목을 붙인다면 뭐라고 할까요?',
+    '그림을 보면 어떤 기분이 드나요?'
+  ];
+  function lookQuestion(w) {
+    var s = String(w.id || w.titleKo || ''), h = 0;
+    for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) % 9973;
+    return LOOK_EXTRA[h % LOOK_EXTRA.length];
   }
   function lbStep(d) { lbIdx = (lbIdx + d + lbList.length) % lbList.length; renderLightbox(); }
   $('lb-close').addEventListener('click', closeLightbox);
@@ -115,6 +138,7 @@
     var w = item.w;
     var meta = [w.year ? esc(w.year) : '', showMuseum ? esc(item.m.nameKo) : ''].filter(Boolean).join(' · ');
     if (!showMuseum && w.year) meta = esc(w.year) + '년';
+    if (w.featured) meta += '<span class="has-story">이야기 있음</span>';
     return '<button class="art-card" data-i="' + i + '" aria-label="' + esc(w.titleKo) + ' 크게 보기">' +
       '<div class="art-thumb">' + imgHTML(w) + '</div>' +
       '<div class="t">' + esc(w.titleKo) + '</div>' +
@@ -146,7 +170,7 @@
   /* ---------- 미술관 패널 ---------- */
   var panel = $('panel'), backdrop = $('panel-backdrop'), panelOpen = false, panelMuseum = null;
   function openPanel(m) {
-    var list = museumList(m);
+    var list = storyFirst(museumList(m));
     $('panel-body').innerHTML =
       '<div class="panel-head">' +
         '<p class="eyebrow">' + esc(m.city) + (m.country ? ', ' + esc(m.country) : '') + ' · 그림 ' + list.length + '점</p>' +
@@ -209,33 +233,88 @@
       grid.innerHTML = '<p class="empty-msg">그림을 불러오지 못했어요. 잠시 뒤에 다시 열어 주세요.</p>';
       return;
     }
+    var ordered = storyFirst(allWorks);
+    var STORY = '__story';
+    var search = $('all-search'), result = $('all-result'), quick = $('all-quick');
     var countries = [];
     museums.forEach(function (m) {
       if (m.country && countries.indexOf(m.country) < 0) countries.push(m.country);
     });
-    function count(c) { return allWorks.filter(function (it) { return it.m.country === c; }).length; }
-    countries.sort(function (a, b) { return count(b) - count(a); });
-    var current = '전체';
+    countries.sort(function (a, b) {
+      return allWorks.filter(function (it) { return it.m.country === b; }).length -
+        allWorks.filter(function (it) { return it.m.country === a; }).length;
+    });
+    var current = '전체', query = '';
+
+    // 띄어쓰기와 대소문자를 무시하고 제목, 미술관, 도시, 나라, 그린 곳에서 찾는다
+    function norm(s) { return String(s || '').toLowerCase().replace(/\s+/g, ''); }
+    function matches(it) {
+      if (!query) return true;
+      var w = it.w, m = it.m;
+      return [w.titleKo, w.titleEn, w.place, m.nameKo, m.nameEn, m.city, m.country].some(function (s) {
+        return norm(s).indexOf(query) >= 0;
+      });
+    }
+    function inTab(it, key) {
+      if (key === '전체') return true;
+      if (key === STORY) return !!it.w.featured;
+      return it.m.country === key;
+    }
     function tab(label, key, n) {
       return '<button class="tab" data-c="' + esc(key) + '" aria-pressed="' + (current === key) + '">' + esc(label) + '<span class="n">' + n + '</span></button>';
     }
-    function renderFilters() {
-      filters.innerHTML = [tab('전체', '전체', allWorks.length)].concat(countries.map(function (c) { return tab(c, c, count(c)); })).join('');
+    function renderFilters(found) {
+      function n(key) { return found.filter(function (it) { return inTab(it, key); }).length; }
+      var keys = countries.filter(function (c) { return c === current || n(c) > 0; });
+      filters.innerHTML = [tab('전체', '전체', found.length), tab('이야기 있는 그림', STORY, n(STORY))]
+        .concat(keys.map(function (c) { return tab(c, c, n(c)); })).join('');
     }
-    function renderGrid() {
-      var list = current === '전체' ? allWorks : allWorks.filter(function (it) { return it.m.country === current; });
-      grid.innerHTML = list.map(function (it, i) { return cardHTML(it, i, true); }).join('');
+    function render() {
+      var found = ordered.filter(matches);
+      var list = found.filter(function (it) { return inTab(it, current); });
+      renderFilters(found);
+      grid.innerHTML = list.length
+        ? list.map(function (it, i) { return cardHTML(it, i, true); }).join('')
+        : '<p class="empty-msg">찾는 그림이 없어요. 다른 이름으로 찾아보세요.</p>';
       bindCards(grid, list);
+      if (result) {
+        result.textContent = query
+          ? (list.length ? '「' + search.value.trim() + '」 그림 ' + list.length + '점을 찾았어요.' : '')
+          : '';
+      }
+      if (quick) {
+        Array.prototype.forEach.call(quick.querySelectorAll('button[data-q]'), function (b) {
+          b.setAttribute('aria-pressed', norm(b.getAttribute('data-q')) === query);
+        });
+      }
     }
     filters.addEventListener('click', function (e) {
       var b = e.target.closest('.tab');
       if (!b) return;
       current = b.getAttribute('data-c');
-      renderFilters(); renderGrid();
+      render();
       var f = filters.querySelector('[data-c="' + current.replace(/"/g, '') + '"]');
       if (f) f.focus();
     });
-    renderFilters(); renderGrid();
+    if (search) {
+      var st;
+      search.addEventListener('input', function () {
+        clearTimeout(st);
+        st = setTimeout(function () { query = norm(search.value); render(); }, 150);
+      });
+    }
+    if (quick) {
+      quick.addEventListener('click', function (e) {
+        var b = e.target.closest('button[data-q]');
+        if (!b || !search) return;
+        var q = b.getAttribute('data-q');
+        search.value = norm(q) === query ? '' : q;  // 한 번 더 누르면 지운다
+        query = norm(search.value);
+        current = '전체';
+        render();
+      });
+    }
+    render();
   })();
 
   /* ---------- 지도 ---------- */

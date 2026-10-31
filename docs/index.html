@@ -108,8 +108,22 @@
       <p class="sec-label">모든 그림</p>
       <h2 id="all-title">그림 모아 보기</h2>
     </div>
-    <p class="sec-lead">고흐의 그림을 한곳에 모았어요. 나라를 골라서 볼 수도 있어요.</p>
-    <div class="tabs filters" id="all-filters" role="group" aria-label="나라별로 보기"></div>
+    <p class="sec-lead">고흐의 그림을 한곳에 모았어요. 이야기가 있는 그림이 먼저 나와요.</p>
+    <div class="wall-find">
+      <div class="find-field">
+        <label class="find-label" for="all-search">그림 찾기</label>
+        <input id="all-search" type="search" placeholder="그림 이름, 미술관, 도시" autocomplete="off" enterkeyhint="search">
+      </div>
+      <div class="find-quick" id="all-quick" role="group" aria-label="많이 찾는 그림">
+        <span class="find-hint">많이 찾는 그림</span>
+        <button type="button" class="textlink" data-q="해바라기" aria-pressed="false">해바라기</button>
+        <button type="button" class="textlink" data-q="별이 빛나는 밤" aria-pressed="false">별이 빛나는 밤</button>
+        <button type="button" class="textlink" data-q="자화상" aria-pressed="false">자화상</button>
+        <button type="button" class="textlink" data-q="일본" aria-pressed="false">우리와 가까운 일본</button>
+      </div>
+    </div>
+    <div class="tabs filters" id="all-filters" role="group" aria-label="골라 보기"></div>
+    <p class="find-result" id="all-result" aria-live="polite"></p>
     <div class="wall" id="all-grid"></div>
   </section>
 

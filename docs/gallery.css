@@ -200,6 +200,27 @@ a { color: inherit; }
   padding: 12px; font-size: 13px; color: var(--muted);
 }
 .empty-msg { font-size: 15px; color: var(--muted); padding: 24px 0; }
+.art-card .has-story { margin-left: 8px; color: var(--route); font-weight: 500; }
+
+/* 그림 찾기 */
+.wall-find { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 40px; margin-top: 40px; }
+.find-field { flex: 1 1 280px; max-width: 420px; }
+.find-label { display: block; font-size: 13px; font-weight: 700; color: var(--muted); }
+#all-search {
+  -webkit-appearance: none; appearance: none; width: 100%; min-height: 48px; padding: 8px 0 7px;
+  font: inherit; font-size: 18px; color: var(--ink); background: transparent;
+  border: 0; border-bottom: 1px solid var(--ink); border-radius: 0;
+}
+#all-search::placeholder { color: var(--muted); }
+#all-search:focus { outline: none; padding-bottom: 6px; border-bottom-width: 2px; }
+.find-quick { display: flex; flex-wrap: wrap; align-items: center; column-gap: 20px; }
+.find-hint { font-size: 13px; color: var(--muted); }
+.find-quick .textlink[aria-pressed="true"] { font-weight: 700; text-decoration-thickness: 2px; }
+.wall-find ~ .filters { margin-top: 24px; }
+.find-result { margin-top: 16px; font-size: 15px; color: var(--muted); }
+.find-result:empty { display: none; }
+.lb-text .lb-map { color: var(--dark-text); font-size: 14px; margin-top: 4px; }
+.lb-text .part p + p { margin-top: 8px; }
 
 /* 패널 */
 .backdrop { position: fixed; inset: 0; background: rgba(23,23,27,.4); z-index: 80; }
