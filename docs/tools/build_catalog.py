@@ -116,12 +116,14 @@ for key, (cw, cm) in curated_by_file.items():
         if hit:
             hit[0].update({'titleKo': cw['titleKo'], 'story': cw.get('story', ''), 'lookFor': cw.get('lookFor', ''),
                            'fun': cw.get('fun', ''), 'featured': True})
+            if not hit[0].get('place') and cw.get('place'):
+                hit[0]['place'] = cw['place']  # Wikidata에 그린 곳이 없으면 큐레이션 값을 쓴다
             continue
     if target is None:
         target = {'id': cm['id'], 'nameKo': cm['nameKo'], 'nameEn': cm['nameEn'], 'city': cm['city'],
                   'country': cm['country'], 'lat': cm['lat'], 'lon': cm['lon'], 'intro': cm.get('intro', ''), 'works': []}
         museums[cm['id']] = target
-    target['works'].append(dict(cw, featured=True, place=''))
+    target['works'].append(dict(cw, featured=True, place=cw.get('place', '')))
 
 out = [m for m in museums.values() if m['works']]
 for m in out:

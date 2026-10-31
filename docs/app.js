@@ -327,6 +327,46 @@
     if (mapApi) mapApi.clearLifeActive();
   }
 
+  // 고흐가 살던 곳에서 그린 그림. 그림의 place가 생애 도시 이름과 같으면 묶는다.
+  // 몽마르트르는 파리 안, 생폴드모졸 수도원은 생레미에 있는 요양원이라 같은 도시로 본다.
+  // 살던 기간(years) 밖의 연도는 데이터가 어긋난 것으로 보고 뺀다(예: 1885년 그림이 파리로 잡힌 경우).
+  var PLACE_ALIAS = { '몽마르트르': '파리', '생폴드모졸 수도원': '생레미드프로방스' };
+  function paintedAt(s) {
+    var ys = String(s.years || '').split('~').map(Number), from = ys[0], to = ys[1] || ys[0];
+    return storyFirst(allWorks.filter(function (it) {
+      var p = it.w.place, y = +it.w.year;
+      if (!p || (PLACE_ALIAS[p] || p) !== s.placeKo) return false;
+      return !y || !from || (y >= from && y <= to);
+    }));
+  }
+  function lifeWorksHTML(list) {
+    if (!list.length) return '';
+    var ms = [], cs = [];
+    list.forEach(function (it) {
+      if (ms.indexOf(it.m) < 0) ms.push(it.m);
+      if (it.m.country && cs.indexOf(it.m.country) < 0) cs.push(it.m.country);
+    });
+    var thumbs = [];
+    list.forEach(function (it, i) { if (thumbs.length < 3 && it.w.img) thumbs.push(i); });
+    return '<div class="lc-works">' +
+      '<p class="lc-stat">여기서 그린 그림 ' + list.length + '점이 지금은 ' + cs.length + '개 나라, ' + ms.length + '곳 미술관에 있어요.</p>' +
+      (thumbs.length ? '<div class="lc-thumbs">' + thumbs.map(function (i) {
+        var w = list[i].w;
+        return '<button type="button" class="lc-thumb" data-i="' + i + '" aria-label="' + esc(w.titleKo) + ' 크게 보기">' + imgHTML(w) + '</button>';
+      }).join('') + '</div>' : '') +
+      '<button type="button" class="textlink lc-all">' + list.length + '점 모두 보기</button>' +
+    '</div>';
+  }
+  function bindLifeWorks(list) {
+    var box = lifeCard.querySelector('.lc-works');
+    if (!box) return;
+    box.onclick = function (e) {
+      var t = e.target.closest('.lc-thumb');
+      if (t) { openLightbox(list, +t.getAttribute('data-i')); return; }
+      if (e.target.closest('.lc-all')) openLightbox(list, 0);
+    };
+  }
+
   // 미술관 목록 (그림 많은 순)
   (function () {
     var box = $('museum-chips');
@@ -439,12 +479,14 @@
     function showLifeStop(d, node) {
       lifePins.classed('active', false);
       d3.select(node).classed('active', true);
-      var s = d.s;
+      var s = d.s, works = paintedAt(s);
       lifeCard.innerHTML = '<button class="close-text" aria-label="설명 닫기">닫기 <span aria-hidden="true">&times;</span></button>' +
         '<p class="lc-meta">' + (d.i + 1) + '번째 · ' + esc(s.country) + ' · ' + esc(s.years) + '</p>' +
-        '<h4>' + esc(s.placeKo) + '</h4><p>' + esc(s.story) + '</p>';
+        '<h4>' + esc(s.placeKo) + '</h4><p>' + esc(s.story) + '</p>' + lifeWorksHTML(works);
       lifeCard.hidden = false;
+      lifeCard.scrollTop = 0;
       lifeCard.querySelector('.close-text').onclick = hideLifeCard;
+      bindLifeWorks(works);
       zoomTo(s.lon, s.lat, Math.max(k, 5));
     }
 

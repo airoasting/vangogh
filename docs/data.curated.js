@@ -59,7 +59,7 @@
         lat: 48.8600, lon: 2.3266,
         intro: '옛날 기차역을 고쳐서 만든 미술관이에요. 커다란 시계가 있는 건물 안에서 고흐와 친구 화가들의 그림을 볼 수 있어요.',
         works: [
-          { id: 'starry-rhone', titleKo: '론강의 별이 빛나는 밤', titleEn: 'Starry Night Over the Rhône', year: 1888,
+          { id: 'starry-rhone', titleKo: '론강의 별이 빛나는 밤', titleEn: 'Starry Night Over the Rhône', year: 1888, place: '아를',
             img: C + '0/01/Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/960px-Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg',
             story: '아를의 강가에서 본 밤 풍경이에요. 강물 위로 가로등 불빛이 노랗게 길게 비쳐요. 강가에는 두 사람이 산책을 하고 있어요.',
             lookFor: '그림에서 찾아보기: 하늘에서 국자 모양의 북두칠성을 찾아보세요.', fun: '고흐는 밤하늘을 그리는 걸 정말 좋아해서 "별을 보면 꿈을 꾸게 된다"고 편지에 썼어요.' },
@@ -132,7 +132,7 @@
             img: C + '9/9b/Vincent_van_Gogh_-_Irises_%281890%29.jpg/960px-Vincent_van_Gogh_-_Irises_%281890%29.jpg',
             story: '생레미 병원을 떠나기 직전에 그린 꽃병 속 붓꽃이에요. 보라색 꽃이 꽃병에서 넘칠 듯이 가득해요.',
             lookFor: '그림에서 찾아보기: 칼처럼 뾰족한 초록 잎을 찾아보세요.', fun: '처음에는 배경이 분홍빛이었는데, 오랜 세월이 지나며 색이 바래서 하얗게 보여요.' },
-          { id: 'straw-hat', titleKo: '밀짚모자를 쓴 자화상', titleEn: 'Self-Portrait with a Straw Hat', year: 1887,
+          { id: 'straw-hat', titleKo: '밀짚모자를 쓴 자화상', titleEn: 'Self-Portrait with a Straw Hat', year: 1887, place: '파리',
             img: C + 'a/a8/Van_Gogh_Self-Portrait_with_Straw_Hat_1887-Metropolitan.jpg/960px-Van_Gogh_Self-Portrait_with_Straw_Hat_1887-Metropolitan.jpg',
             story: '파리에 살 때 거울을 보며 그린 고흐 자신의 얼굴이에요. 짧은 붓질을 촘촘히 쌓아서 밝은 색을 냈어요.',
             lookFor: '그림에서 찾아보기: 밀짚모자에 쓰인 색을 몇 가지나 찾을 수 있는지 보세요.', fun: '이 그림 뒷면에는 감자 깎는 여자를 그린 다른 그림이 있어요. 캔버스를 아끼려고 양쪽을 다 썼어요.' }
@@ -147,7 +147,7 @@
             img: C + '5/50/Vincent_van_Gogh_-_The_Bedroom_-_1926.417_-_Art_Institute_of_Chicago.jpg/960px-Vincent_van_Gogh_-_The_Bedroom_-_1926.417_-_Art_Institute_of_Chicago.jpg',
             story: '첫 번째 침실 그림이 물에 젖어 상하자 고흐는 같은 크기로 다시 그렸어요. 그게 바로 이 그림이에요.',
             lookFor: '그림에서 찾아보기: 벽에 걸린 수건을 찾아보세요.', fun: '방 모서리가 비스듬한 건 실제 노란 집의 방 모양이 그랬기 때문이에요.' },
-          { id: 'selfportrait-aic', titleKo: '자화상', titleEn: 'Self-Portrait', year: 1887,
+          { id: 'selfportrait-aic', titleKo: '자화상', titleEn: 'Self-Portrait', year: 1887, place: '파리',
             img: C + '3/37/Vincent_van_Gogh_-_Self-Portrait_-_1954.326_-_Art_Institute_of_Chicago.jpg/960px-Vincent_van_Gogh_-_Self-Portrait_-_1954.326_-_Art_Institute_of_Chicago.jpg',
             story: '파리에서 새로운 화가 친구들을 만난 고흐는 작은 점과 짧은 선으로 그리는 방법을 배웠어요. 얼굴과 배경이 알록달록한 점으로 가득해요.',
             lookFor: '그림에서 찾아보기: 수염 속에 숨은 빨간색과 초록색 점을 찾아보세요.', fun: '고흐는 모델을 부를 돈이 없어서 자기 얼굴을 30번 넘게 그렸어요.' }
@@ -162,7 +162,7 @@
             img: C + '0/06/Farmhouse_in_Provence%2C_1888%2C_Vincent_van_Gogh%2C_NGA.jpg/960px-Farmhouse_in_Provence%2C_1888%2C_Vincent_van_Gogh%2C_NGA.jpg',
             story: '아를 근처 시골의 농부 집과 밀밭이에요. 여름 햇볕 아래 밀이 노랗게 익어 가요.',
             lookFor: '그림에서 찾아보기: 길을 걸어가는 사람을 찾아보세요.', fun: '고흐는 노란 밀과 파란 하늘처럼 서로 반대되는 색을 나란히 두면 더 환해 보인다는 걸 알았어요.' },
-          { id: 'roses-nga', titleKo: '장미', titleEn: 'Roses', year: 1890,
+          { id: 'roses-nga', titleKo: '장미', titleEn: 'Roses', year: 1890, place: '생레미드프로방스',
             img: C + 'b/b1/Vincent_van_Gogh%2C_Roses%2C_1890%2C_NGA_72328.jpg/960px-Vincent_van_Gogh%2C_Roses%2C_1890%2C_NGA_72328.jpg',
             story: '생레미 병원을 떠나기 전, 고흐가 꽃병 가득 장미를 그렸어요. 꽃이 너무 많아서 테이블까지 넘쳐흘러요.',
             lookFor: '그림에서 찾아보기: 테이블 위에 떨어진 장미를 찾아보세요.', fun: '지금은 하얀 장미로 보이지만, 처음에는 분홍색 장미였어요. 물감 색이 세월이 지나며 바랬어요.' },

@@ -2804,7 +2804,7 @@ window.VG_DATA = {
 "titleEn": "Starry Night Over the Rhône",
 "year": 1888,
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/960px-Vincent_van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
-"place": "",
+"place": "아를",
 "story": "아를의 강가에서 본 밤 풍경이에요. 강물 위로 가로등 불빛이 노랗게 길게 비쳐요. 강가에는 두 사람이 산책을 하고 있어요.",
 "lookFor": "그림에서 찾아보기: 하늘에서 국자 모양의 북두칠성을 찾아보세요.",
 "fun": "고흐는 밤하늘을 그리는 걸 정말 좋아해서 \"별을 보면 꿈을 꾸게 된다\"고 편지에 썼어요.",
@@ -3032,7 +3032,7 @@ window.VG_DATA = {
 "titleEn": "Self-Portrait with a Straw Hat",
 "year": 1887,
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Van_Gogh_Self-Portrait_with_Straw_Hat_1887-Metropolitan.jpg/960px-Van_Gogh_Self-Portrait_with_Straw_Hat_1887-Metropolitan.jpg",
-"place": "",
+"place": "파리",
 "story": "파리에 살 때 거울을 보며 그린 고흐 자신의 얼굴이에요. 짧은 붓질을 촘촘히 쌓아서 밝은 색을 냈어요.",
 "lookFor": "그림에서 찾아보기: 밀짚모자에 쓰인 색을 몇 가지나 찾을 수 있는지 보세요.",
 "fun": "이 그림 뒷면에는 감자 깎는 여자를 그린 다른 그림이 있어요. 캔버스를 아끼려고 양쪽을 다 썼어요.",
@@ -3381,7 +3381,7 @@ window.VG_DATA = {
 "lookFor": "그림에서 찾아보기: 테이블 위에 떨어진 장미를 찾아보세요.",
 "fun": "지금은 하얀 장미로 보이지만, 처음에는 분홍색 장미였어요. 물감 색이 세월이 지나며 바랬어요.",
 "featured": true,
-"place": ""
+"place": "생레미드프로방스"
 },
 {
 "id": "Q4987244",
@@ -3584,7 +3584,7 @@ window.VG_DATA = {
 "titleEn": "Self-Portrait",
 "year": 1887,
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Vincent_van_Gogh_-_Self-Portrait_-_1954.326_-_Art_Institute_of_Chicago.jpg/960px-Vincent_van_Gogh_-_Self-Portrait_-_1954.326_-_Art_Institute_of_Chicago.jpg",
-"place": "",
+"place": "파리",
 "story": "파리에서 새로운 화가 친구들을 만난 고흐는 작은 점과 짧은 선으로 그리는 방법을 배웠어요. 얼굴과 배경이 알록달록한 점으로 가득해요.",
 "lookFor": "그림에서 찾아보기: 수염 속에 숨은 빨간색과 초록색 점을 찾아보세요.",
 "fun": "고흐는 모델을 부를 돈이 없어서 자기 얼굴을 30번 넘게 그렸어요.",
