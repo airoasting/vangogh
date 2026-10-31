@@ -112,6 +112,8 @@
         (w.story ? '<p class="story">' + esc(w.story) + '</p>' : '') +
         (look ? '<div class="part"><h4>그림에서 찾아보기</h4><p>' + esc(look) + '</p></div>' : '') +
         (w.fun ? '<div class="part"><h4>알고 있나요?</h4><p>' + esc(w.fun) + '</p></div>' : '') +
+        // 어른용 메모는 접어 두고, "읽어 줘요"도 읽지 않는다
+        (w.forAdults ? '<details class="part adults"><summary>어른을 위한 메모: 아이가 물으면</summary><p>' + esc(w.forAdults) + '</p></details>' : '') +
         (look ? '' : '<div class="part"><h4>천천히 보고 이야기해요</h4><p>' + LOOK_COMMON + '</p><p>' + esc(lookQuestion(w)) + '</p></div>') +
       '</div>';
     var mapBtn = $('lb-map');

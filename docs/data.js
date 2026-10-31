@@ -5890,9 +5890,13 @@ window.VG_DATA = {
 "titleKo": "귀에 붕대를 감은 자화상",
 "titleEn": "Self-Portrait with Bandaged Ear",
 "year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Self-Portrait%20with%20a%20Bandaged%20Ear%20-%20Vincent%20van%20Gogh.jpg?width=640",
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Self-Portrait_with_a_Bandaged_Ear_-_Vincent_van_Gogh.jpg/960px-Self-Portrait_with_a_Bandaged_Ear_-_Vincent_van_Gogh.jpg",
 "place": "아를",
-"story": "고흐가 1889년에 아를에서 그린 그림이에요."
+"story": "아를에 살던 1889년 겨울에 그린 자화상이에요. 고흐는 마음이 많이 아팠던 때 귀를 다쳐서 병원에서 치료를 받았어요. 집에 돌아온 뒤 붕대를 감은 자기 모습을 그리며 다시 그림을 시작했어요.",
+"lookFor": "그림에서 찾아보기: 뒤쪽 벽에 걸린 일본 판화를 찾아보세요. 산과 사람들이 보여요.",
+"fun": "고흐가 다친 쪽은 왼쪽 귀였어요. 거울을 보며 그려서, 그림에서는 오른쪽 귀에 붕대를 감은 것처럼 보여요.",
+"featured": true,
+"forAdults": "1888년 12월, 고흐는 마음의 병이 심해진 상태에서 자신의 왼쪽 귀를 다쳤고 아를의 병원에서 치료를 받았어요. 이 그림은 퇴원한 뒤인 1889년 1월에 그렸어요. 아이가 \"귀는 왜 다쳤어요?\" 하고 물으면 \"마음이 많이 아파서 스스로를 다치게 했고, 병원에서 도움을 받은 뒤 다시 그림을 그렸어\"처럼 아픔과 회복을 함께 말해 주세요. 마음이 아플 때 어른에게 도움을 청하는 것은 부끄러운 일이 아니라는 이야기로 이어 갈 수 있어요."
 },
 {
 "id": "Q26221132",

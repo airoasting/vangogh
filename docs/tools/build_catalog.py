@@ -93,6 +93,8 @@ for w in cat['works']:
         used_curated.add(key)
         item.update({'titleKo': cw['titleKo'], 'story': cw.get('story', ''), 'lookFor': cw.get('lookFor', ''),
                      'fun': cw.get('fun', ''), 'featured': True, 'img': cw['img']})
+        if cw.get('forAdults'):
+            item['forAdults'] = cw['forAdults']  # 어른용 메모(아이 화면에서는 접어 둔다)
     else:
         yr = f"{w['year']}년에 " if w.get('year') else ''
         pl = f"{w['placeKo']}에서 " if w.get('placeKo') else ''
@@ -116,6 +118,8 @@ for key, (cw, cm) in curated_by_file.items():
         if hit:
             hit[0].update({'titleKo': cw['titleKo'], 'story': cw.get('story', ''), 'lookFor': cw.get('lookFor', ''),
                            'fun': cw.get('fun', ''), 'featured': True})
+            if cw.get('forAdults'):
+                hit[0]['forAdults'] = cw['forAdults']
             if not hit[0].get('place') and cw.get('place'):
                 hit[0]['place'] = cw['place']  # Wikidata에 그린 곳이 없으면 큐레이션 값을 쓴다
             continue

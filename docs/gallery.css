@@ -257,6 +257,10 @@ a { color: inherit; }
 .lb-text .lb-map, .lb-text .lb-read { color: var(--dark-text); font-size: 14px; }
 .lb-text .lb-read[aria-pressed="true"] { font-weight: 700; text-decoration-thickness: 2px; }
 .lb-text .part p + p { margin-top: 8px; }
+.lb-text .adults summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-size: 13px; font-weight: 700; color: var(--dark-muted); }
+.lb-text .adults summary:hover { color: #F4F1EA; }
+.lb-text .adults[open] summary { color: #F4F1EA; }
+.lb-text .adults p { font-size: 15px; color: var(--dark-text); }
 
 /* 패널 */
 .backdrop { position: fixed; inset: 0; background: rgba(23,23,27,.4); z-index: 80; }
