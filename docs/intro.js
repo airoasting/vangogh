@@ -431,40 +431,127 @@
   }
 
   /* ---------- 화가 ---------- */
+  /* ---------- 사람(고흐) ----------
+     발바닥이 y=0, 모자 꼭대기가 y=-108. 머리는 키의 약 7분의 1이다.
+     오른쪽을 보는 4분의 3 옆모습: 파란 작업복, 검은 바지, 생강색 수염, 밀짚모자.
+     팔다리는 관절(어깨, 팔꿈치, 손목 / 엉덩이, 무릎, 발목)을 잇고 굵기가 줄어드는 면으로 칠한다. */
+  // J: [x0,y0,x1,y1,...] 관절, Wd: 관절마다 굵기
+  function limbPts(J, Wd) {
+    var n = J.length / 2, L = [], Rr = [], i;
+    for (i = 0; i < n; i++) {
+      var i0 = Math.max(0, i - 1), i1 = Math.min(n - 1, i + 1);
+      var dx = J[i1 * 2] - J[i0 * 2], dy = J[i1 * 2 + 1] - J[i0 * 2 + 1], d = Math.hypot(dx, dy) || 1, nx = -dy / d, ny = dx / d, h = Wd[i] / 2;
+      L.push(J[i * 2] + nx * h, J[i * 2 + 1] + ny * h);
+      Rr.unshift(J[i * 2] - nx * h, J[i * 2 + 1] - ny * h);
+    }
+    return L.concat(Rr);
+  }
+  function inkShape(c, pts, seed, lw) { rfill(c, pts, seed, 0.35, 5); K.lineWidth = lw || 1.5; rpath(K, pts, seed, 0.35, 5); K.stroke(); }
+  function paperShape(pts, seed, lw) { cutAll(function (c) { rfill(c, pts, seed, 0.3, 5); }); K.lineWidth = lw || 1.3; rpath(K, pts, seed, 0.3, 5); K.stroke(); }
+  function paperDot(x, y, r, seed) { cutAll(function (c) { rcirc(c, x, y, r, seed, 0.25); }); K.lineWidth = 1.1; K.beginPath(); rcircPath(K, x, y, r, seed, 0.25); K.stroke(); }
+  function leg(J, shoe, seed) {
+    rfill(K, limbPts(J, [10, 7.4, 5.4]), seed, 0.35, 5);
+    rfill(K, shoe, seed + 1, 0.4, 4);
+  }
+  function arm(J, seed) {   // 파란 소매, 종이색 손. 노란 판을 긁어내 초록으로 섞이지 않게 한다
+    var p = limbPts(J, [7.6, 6.2, 5]);
+    cut(Y, function (c) { rfill(c, p, seed, 0.35, 5); });
+    // 소매 둘레를 가늘게 파내 같은 파란 옷 위에서도 팔이 떨어져 보이게 한다
+    cutAll(function (c) { c.lineWidth = 3.4; rpath(c, p, seed, 0.35, 5); c.stroke(); });
+    inkShape(B, p, seed, 1.4);
+    var n = J.length;
+    paperDot(J[n - 2] + (J[n - 2] - J[n - 4]) * 0.18, J[n - 1] + (J[n - 1] - J[n - 3]) * 0.18, 2.7, seed + 2);
+  }
+  var COAT = [-10, -85, 6, -86, 11, -82, 13, -70, 14, -56, 16, -43, -13, -42, -12, -58, -12, -74, -12, -82];
+  function coat(seed) {
+    cutAll(function (c) { rfill(c, COAT, seed, 0.35, 5); });   // 밑에 깔린 들판과 다리를 지우고 칠한다
+    inkShape(B, COAT, seed, 1.6);
+    cut(B, function (c) { sline(c, -6, -78, -8, -47, 1.7, seed + 1, 0.05, 4); sline(c, 2, -72, 3, -46, 1.4, seed + 2, -0.05, 4); });
+    sline(K, 8, -83, 12, -44, 1.3, seed + 3, 0.02, 4);                       // 앞섶
+    rcirc(K, 9.6, -74, 1.1, seed + 4, 0.2); rcirc(K, 10.3, -64, 1.1, seed + 5, 0.2); rcirc(K, 11, -54, 1.1, seed + 6, 0.2);
+    sline(K, 1, -54, 8, -55, 1.2, seed + 7, 0, 3);                           // 주머니
+    paperShape([-1, -88, 5, -88, 5.5, -84, -1.5, -84], seed + 8, 1.1);       // 목
+    sline(K, 0, -86, 5, -79, 1.6, seed + 9, 0, 3); sline(K, 8, -86, 5, -79, 1.6, seed + 10, 0, 3); // 깃
+  }
+  function head(seed, tilt) {
+    var hx = 2, hy = -93;
+    // 모자 밑으로 보이는 뒷머리
+    rfill(Y, [-5, -98, -1, -99, 0, -88, -4, -87, -6, -92], seed, 0.4, 3);
+    // 얼굴(종이색)과 코
+    cutAll(function (c) { c.beginPath(); c.ellipse(hx, hy, 6.3, 7.6, tilt, 0, Math.PI * 2); c.fill(); });
+    paperShape([6.6, -96, 9.4, -90.6, 6.4, -89.8], seed + 1, 1.1);
+    K.lineWidth = 1.3; K.beginPath(); K.ellipse(hx, hy, 6.3, 7.6, tilt, -2.2, 1.2); K.stroke();
+    // 생강색 수염과 콧수염
+    var beard = [-2.5, -91, 0, -88.5, 3.5, -88.6, 6.8, -89.4, 7.6, -86.6, 5.6, -83.6, 1.6, -82.6, -1.8, -84.6, -3.4, -88];
+    rfill(Y, beard, seed + 2, 0.4, 3);
+    K.lineWidth = 0.9; rpath(K, beard, seed + 2, 0.4, 3); K.stroke();
+    sline(K, 0.5, -87.5, 1.5, -84, 0.8, seed + 3, 0, 2); sline(K, 3.2, -87.6, 3.6, -84, 0.8, seed + 4, 0, 2); sline(K, 5.4, -88, 5.2, -85, 0.8, seed + 5, 0, 2);
+    // 눈, 눈썹, 귀
+    rcirc(K, 4.1, -94.2, 1, seed + 6, 0.15);
+    sline(K, 2.6, -96.6, 6, -96.3, 1, seed + 7, 0, 2);
+    K.lineWidth = 1.1; K.beginPath(); K.arc(-1.6, -92.4, 1.9, -1.9, 1.9); K.stroke();
+    // 밀짚모자: 챙이 머리 위쪽에 얹힌다
+    var crown = [-4.6, -99.6, -4, -106, 0.5, -108, 6.5, -108, 9, -105.8, 9.4, -99.6];
+    cutAll(function (c) { c.beginPath(); c.ellipse(2.4, -99.4, 15.6, 3.9, -0.06, 0, Math.PI * 2); c.fill(); rfill(c, crown, seed + 8, 0.3, 4); });
+    Y.beginPath(); Y.ellipse(2.4, -99.4, 15.6, 3.9, -0.06, 0, Math.PI * 2); Y.fill(); rfill(Y, crown, seed + 8, 0.3, 4);
+    K.lineWidth = 1.4; K.beginPath(); K.ellipse(2.4, -99.4, 15.6, 3.9, -0.06, 0, Math.PI * 2); K.stroke();
+    rpath(K, crown, seed + 8, 0.3, 4); K.stroke();
+    rrect(K, -4.4, -102.4, 13.6, 2.2, seed + 9, 0.3);                        // 모자 띠
+    K.lineWidth = 0.8; for (var i = 0; i < 5; i++) { var a = -2.6 + i * 0.55; K.beginPath(); K.moveTo(2.4 + Math.cos(a) * 8, -99.4 + Math.sin(a) * 2); K.lineTo(2.4 + Math.cos(a) * 13.5, -99.4 + Math.sin(a) * 3.4); K.stroke(); }
+  }
   function drawFigure(t) {
     if (t < 2.95) return;
     var e = seg(t, 2.95, 5.7), walking = t < 5.7, ph = (TSTEP >> 1) % 2;
-    var x = lerp(140, 462, e), y = lerp(790, 594, e), s = lerp(1.4, 0.84, e);
+    var x = lerp(140, 462, e), y = lerp(790, 594, e), s = lerp(1.4, 0.84, e) * 0.9;
     push(x, y, s);
     if (walking) {
-      sline(K, 0, -36, ph ? -10 : 8, 0, 5.4, 1500 + ph, 0.05, 3);
-      sline(K, 0, -36, ph ? 8 : -9, -2, 5.4, 1510 + ph, 0.05, 3);
-      // 등에 진 이젤
-      sline(K, -16, -74, 2, -16, 3, 1520, 0, 3);
-      sline(K, -6, -76, -18, -10, 3, 1521, 0, 3);
-      cutAll(function (c) { rfill(c, [-28, -84, -10, -88, -7, -68, -25, -64], 1522, 0.5, 6); });
-      rfill(K, [-29, -85, -9, -89, -6, -67, -26, -63], 1523, 0.5, 6);
-      cut(K, function (c) { rfill(c, [-26, -82, -11, -85, -9, -70, -24, -67], 1522, 0.4, 6); });
+      var bob = ph ? -1 : 0;
+      // 등에 진 접은 이젤 다리와 물감 상자(몸 뒤)
+      sline(K, -17, -103 + bob, -8, -40, 2.6, 1520, 0, 3);
+      sline(K, -12, -105 + bob, -15, -41, 2.4, 1521, 0, 3);
+      paperShape([-22, -84 + bob, -10, -85 + bob, -9.5, -63 + bob, -21.5, -62 + bob], 1522, 1.6);
+      sline(K, -19, -80 + bob, -12, -80 + bob, 1, 1523, 0, 2);
+      // 걸음: 2장(on twos). 앞다리와 반대쪽 팔이 함께 나간다
+      if (!ph) {
+        leg([-2, -46, -5, -25, -11, -6], [-15, -9, -10, -8, -4, -2, -5, 1, -10, 0, -15, -5], 1500);
+        arm([5, -80, 10, -67, 13, -56], 1530);
+        leg([2, -46, 6, -25, 9, -4], [5, -6, 12, -6, 17, -2, 16, 1, 5, 1], 1510);
+      } else {
+        leg([-1, -46, 4, -25, 8, -4], [4, -6, 11, -6, 16, -2, 15, 1, 4, 1], 1501);
+        arm([-3, -80, -7, -67, -9, -56], 1531);
+        leg([2, -46, -1, -25, -7, -6], [-11, -9, -6, -8, 0, -2, -1, 1, -6, 0, -11, -5], 1511);
+      }
+      push(0, bob, 1);
+      coat(1540);
+      sline(K, -10, -80, 4, -85, 1.6, 1524, 0.1, 3);                          // 물감 상자 끈
+      if (!ph) arm([1, -80, -4, -66, -7, -54], 1532); else arm([2, -80, 7, -67, 11, -56], 1533);
+      head(1560, 0.05);
+      pop();
     } else {
-      sline(K, -3, -36, -6, 0, 5.4, 1530, 0, 3);
-      sline(K, 3, -36, 6, 0, 5.4, 1531, 0, 3);
-      // 세워 둔 이젤과 캔버스
-      sline(K, 40, -64, 30, 0, 3, 1532, 0, 3); sline(K, 40, -64, 50, 0, 3, 1533, 0, 3); sline(K, 41, -60, 42, 2, 2.4, 1534, 0, 3);
-      cutAll(function (c) { rrect(c, 26, -80, 32, 26, 1535, 0.6); });
-      K.lineWidth = 2.2; rpath(K, [26, -80, 58, -80, 58, -54, 26, -54], 1536, 0.6, 6); K.stroke();
-      rcirc(Y, 47, -71, 4.5, 1537, 0.5);
-      sline(B, 29, -60, 55, -61, 3, 1538, 0.2, 4);
-      sline(Y, 30, -57, 54, -58, 2.4, 1539, -0.2, 4);
+      // 세워 둔 이젤과 캔버스(그리던 밀밭과 해)
+      sline(K, 50, -98, 38, 0, 3, 1532, 0, 3); sline(K, 50, -98, 62, 0, 3, 1533, 0, 3); sline(K, 51, -94, 52, 2, 2.4, 1534, 0, 3);
+      cutAll(function (c) { rrect(c, 30, -100, 40, 32, 1535, 0.6); });
+      K.lineWidth = 2.2; rpath(K, [30, -100, 70, -100, 70, -68, 30, -68], 1536, 0.6, 6); K.stroke();
+      rcirc(Y, 56, -89, 5.5, 1537, 0.5);
+      sline(B, 33, -78, 67, -79, 3.4, 1538, 0.2, 4);
+      sline(Y, 34, -74, 66, -75, 2.8, 1539, -0.2, 4);
+      sline(K, 27, -67, 73, -67, 2.4, 1541, 0, 3);
+      // 다리를 벌리고 선 자세
+      leg([-2, -46, -4, -25, -6, -4], [-9, -6, -3, -6, 2, -2, 1, 1, -9, 1], 1502);
+      leg([2, -46, 4, -25, 7, -4], [3, -6, 10, -6, 15, -2, 14, 1, 3, 1], 1512);
+      coat(1540);
+      // 붓을 든 팔(캔버스 쪽으로 뻗고 조금씩 움직인다)
+      var by = ph * 3;
+      arm([4, -80, 13, -72, 21, -77 + by], 1543);
+      sline(K, 23, -78 + by, 29, -84 + by, 1.6, 1544, 0, 2); rcirc(Y, 29.5, -84.5 + by, 1.4, 1545, 0.2);
+      // 팔레트를 든 팔
+      arm([-3, -80, -6, -66, 1, -61], 1546);
+      cutAll(function (c) { c.beginPath(); c.ellipse(-1, -60, 8, 3.4, 0.2, 0, Math.PI * 2); c.fill(); });
+      K.lineWidth = 1.3; K.beginPath(); K.ellipse(-1, -60, 8, 3.4, 0.2, 0, Math.PI * 2); K.stroke();
+      rcirc(Y, -5, -61, 1.4, 1547, 0.2); rcirc(B, -1.5, -60, 1.4, 1548, 0.2); rcirc(K, 2.5, -58.6, 1.1, 1549, 0.2);
+      paperDot(2, -62.5, 2.6, 1550);
+      head(1560, 0.05);
     }
-    rfill(K, [-12, -35, 12, -35, 9, -64, -9, -64], 1540, 0.8, 5);
-    if (walking) sline(K, 7, -60, 12 + ph * 3, -40, 4, 1541, 0.1, 3);
-    else sline(K, 8, -60, 25, -64 + ph * 5, 4, 1542, 0.1, 3);
-    rcirc(K, 0, -71, 7.5, 1543, 0.5);
-    cut(K, function (c) { c.beginPath(); c.ellipse(0, -77, 19, 6, 0, 0, Math.PI * 2); c.fill(); c.beginPath(); c.ellipse(0, -82, 8.5, 6.5, 0, 0, Math.PI * 2); c.fill(); });
-    Y.beginPath(); Y.ellipse(0, -77, 17.5, 5, 0, 0, Math.PI * 2); Y.fill();
-    Y.beginPath(); Y.ellipse(0, -82, 7.5, 6, 0, 0, Math.PI * 2); Y.fill();
-    K.lineWidth = 1.8; K.beginPath(); K.ellipse(0, -77, 17.5, 5, 0, 0, Math.PI * 2); K.stroke();
-    K.fillRect(-7.6, -80, 15.2, 2.4);
     pop();
   }
 
