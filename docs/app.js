@@ -188,6 +188,7 @@
     panel.scrollTop = 0;
     setURL(m);
     if (mapApi) mapApi.setActive(m);
+    questCheck(m);
     setTimeout(function () { $('panel-close').focus({ preventScroll: true }); }, 50);
   }
   function closePanel() {
@@ -329,6 +330,16 @@
 
   // 고흐가 살던 곳에서 그린 그림. 그림의 place가 생애 도시 이름과 같으면 묶는다.
   // 몽마르트르는 파리 안, 생폴드모졸 수도원은 생레미에 있는 요양원이라 같은 도시로 본다.
+  // 살던 곳 카드의 나이. 그 해 연도에서 태어난 해를 뺀 값(그 해에 맞은 나이)이다.
+  var VG_BIRTH = 1853;
+  function lifeAgeText(s) {
+    var ys = String(s.years || '').split('~').map(Number), a = ys[0], b = ys[1];
+    if (!a) return '';
+    var x = a - VG_BIRTH;
+    if (!b || b === a) return x <= 0 ? '갓 태어난 아기 때 살았어요.' : x + '살 때 이곳으로 왔어요.';
+    return x + '살부터 ' + (b - VG_BIRTH) + '살까지 살았어요.';
+  }
+
   // 살던 기간(years) 밖의 연도는 데이터가 어긋난 것으로 보고 뺀다(예: 1885년 그림이 파리로 잡힌 경우).
   var PLACE_ALIAS = { '몽마르트르': '파리', '생폴드모졸 수도원': '생레미드프로방스' };
   function paintedAt(s) {
@@ -482,7 +493,9 @@
       var s = d.s, works = paintedAt(s);
       lifeCard.innerHTML = '<button class="close-text" aria-label="설명 닫기">닫기 <span aria-hidden="true">&times;</span></button>' +
         '<p class="lc-meta">' + (d.i + 1) + '번째 · ' + esc(s.country) + ' · ' + esc(s.years) + '</p>' +
-        '<h4>' + esc(s.placeKo) + '</h4><p>' + esc(s.story) + '</p>' + lifeWorksHTML(works);
+        '<h4>' + esc(s.placeKo) + '</h4>' +
+        (lifeAgeText(s) ? '<p class="lc-age">' + esc(lifeAgeText(s)) + '</p>' : '') +
+        '<p>' + esc(s.story) + '</p>' + lifeWorksHTML(works);
       lifeCard.hidden = false;
       lifeCard.scrollTop = 0;
       lifeCard.querySelector('.close-text').onclick = hideLifeCard;
@@ -607,6 +620,85 @@
       if (Math.abs(mapEl.clientWidth - lastW) > 40) { lastW = mapEl.clientWidth; hideLifeCard(); buildMap(); }
     }, 250);
   });
+
+  /* ---------- 찾기 문제 ---------- */
+  // 그림 한 점의 미술관을 지도에서 찾는 문제. 문제와 힌트는 모두 데이터(제목, 나라, 도시, 미술관)로 만든다.
+  // 다른 화가로 바꿀 때는 work에 그 화가 그림의 id만 넣으면 된다.
+  var QUESTS = [
+    { work: 'Q45585' },                                    // 별이 빛나는 밤, 뉴욕 (세계로 넓혀 보기)
+    { work: 'Q154469' },                                   // 감자 먹는 사람들, 암스테르담 (유럽 안)
+    { work: 'Q11275984', lead: '우리와 가까운 나라에 있어요.' } // 장미, 도쿄
+  ].map(function (q) {
+    var hit = allWorks.filter(function (it) { return it.w.id === q.work; })[0];
+    return hit ? { w: hit.w, m: hit.m, lead: q.lead || '' } : null;
+  }).filter(Boolean);
+  var qi = 0, qHint = 0, qSolved = false, questBox = $('quest');
+
+  // 받침이 있으면 앞 말, 없으면 뒷말 (은/는, 이에요/예요)
+  function josa(word, withB, withoutB) {
+    var c = String(word).replace(/[」)\s]+$/, '').slice(-1).charCodeAt(0);
+    var has = c >= 0xAC00 && c <= 0xD7A3 && (c - 0xAC00) % 28 !== 0;
+    return word + (has ? withB : withoutB);
+  }
+  function isFar(m) { return m.lon < -25 || m.lon > 45 || m.lat < 34; }
+
+  function renderQuest() {
+    if (!questBox || !QUESTS.length) return;
+    questBox.hidden = false;
+    if (qi >= QUESTS.length) {
+      questBox.innerHTML = '<p class="q-eyebrow">찾기 문제</p>' +
+        '<p class="q-ask">' + QUESTS.length + '문제를 모두 풀었어요.</p>' +
+        '<p class="q-sub">이제 마음에 드는 그림을 찾아 지도를 마음껏 다녀 보세요.</p>' +
+        '<div class="q-actions"><button type="button" class="textlink" data-q="restart">처음부터 다시</button></div>';
+      return;
+    }
+    var q = QUESTS[qi], t = '「' + q.w.titleKo + '」';
+    if (qSolved) {
+      questBox.innerHTML = '<p class="q-eyebrow">찾기 문제 ' + (qi + 1) + ' / ' + QUESTS.length + '</p>' +
+        '<p class="q-ask">맞았어요!</p>' +
+        '<p class="q-sub">' + esc(josa(t, '은', '는')) + ' ' + esc(q.m.country) + ' ' + esc(q.m.city) + '의 ' + esc(q.m.nameKo) + '에 있어요.</p>' +
+        '<div class="q-actions"><button type="button" class="textlink" data-q="next">' + (qi + 1 < QUESTS.length ? '다음 문제' : '마치기') + '</button></div>';
+      return;
+    }
+    var hints = [];
+    if (qHint >= 1) hints.push(esc(q.m.country) + '에 있어요.' + (isFar(q.m) ? ' 「세계 전체 보기」를 누르면 찾기 쉬워요.' : ''));
+    if (qHint >= 2) hints.push(esc(q.m.city) + '에 있는 ' + esc(josa(q.m.nameKo, '이에요', '예요')) + '.');
+    questBox.innerHTML = '<p class="q-eyebrow">찾기 문제 ' + (qi + 1) + ' / ' + QUESTS.length + '</p>' +
+      '<p class="q-ask">' + esc(josa(t, '은', '는')) + ' 어느 미술관에 있을까요?</p>' +
+      '<p class="q-sub">' + (q.lead ? esc(q.lead) + ' ' : '') + '지도에서 찾아 눌러 보세요.</p>' +
+      hints.map(function (h) { return '<p class="q-hint">' + h + '</p>'; }).join('') +
+      '<div class="q-actions">' +
+        (qHint < 2 ? '<button type="button" class="textlink" data-q="hint">힌트 보기</button>' : '') +
+        '<button type="button" class="textlink" data-q="skip">건너뛰기</button>' +
+      '</div>';
+  }
+  function questCheck(m) {
+    if (!questBox || qSolved || qi >= QUESTS.length || QUESTS[qi].m !== m) return;
+    qSolved = true;
+    renderQuest();
+    var list = storyFirst(museumList(m)), w = QUESTS[qi].w, idx = 0;
+    list.forEach(function (it, i) { if (it.w === w) idx = i; });
+    setTimeout(function () { openLightbox(list, idx); }, 400);  // 찾은 그림을 크게 보여 준다
+  }
+  if (questBox) {
+    questBox.setAttribute('tabindex', '-1');
+    questBox.setAttribute('aria-live', 'polite');
+    questBox.addEventListener('click', function (e) {
+      var b = e.target.closest('button[data-q]');
+      if (!b) return;
+      var act = b.getAttribute('data-q');
+      if (act === 'hint') qHint++;
+      if (act === 'skip' || act === 'next') { qi++; qHint = 0; qSolved = false; }
+      if (act === 'restart') { qi = 0; qHint = 0; qSolved = false; }
+      renderQuest();
+      var nb = questBox.querySelector('button[data-q]');
+      if (nb) nb.focus({ preventScroll: true });
+    });
+    window.addEventListener('vg:quest', function () {
+      setTimeout(function () { questBox.focus({ preventScroll: true }); }, 600);
+    });
+    renderQuest();
+  }
 
   /* ---------- 딥링크: ?museum=<id>&work=<번호> ---------- */
   (function () {

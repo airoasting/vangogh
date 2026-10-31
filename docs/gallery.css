@@ -167,6 +167,18 @@ a { color: inherit; }
 .life-card h4 { font-size: 22px; letter-spacing: -0.02em; margin: 2px 0 8px; padding-right: 64px; }
 .life-card p { font-size: 15px; line-height: 1.7; color: var(--body); }
 .life-card { max-height: calc(100% - 32px); overflow-y: auto; overscroll-behavior: contain; }
+.life-card .lc-age { margin: -4px 0 6px; font-weight: 700; color: var(--route); }
+
+/* 찾기 문제 */
+.quest { margin-top: 32px; padding: 20px 0 8px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--rule); }
+.quest[hidden] { display: none; }
+.quest:focus { outline: none; }
+.quest:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.quest .q-eyebrow { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.quest .q-ask { font-family: var(--serif); font-weight: 600; font-size: clamp(20px, 2.4vw, 26px); line-height: 1.4; letter-spacing: -0.02em; color: var(--ink); margin-top: 4px; word-break: keep-all; }
+.quest .q-sub, .quest .q-hint { font-size: 15px; line-height: 1.7; color: var(--body); margin-top: 6px; word-break: keep-all; }
+.quest .q-hint { color: var(--route); font-weight: 500; }
+.quest .q-actions { display: flex; flex-wrap: wrap; column-gap: 24px; margin-top: 4px; }
 .life-card .lc-works { border-top: 1px solid var(--rule); margin-top: 14px; padding-top: 12px; }
 .life-card .lc-stat { font-weight: 700; color: var(--ink); word-break: keep-all; }
 .lc-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }

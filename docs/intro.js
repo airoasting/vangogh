@@ -1001,7 +1001,7 @@
       '<div class="vgi-sub" aria-live="polite"><span></span></div>' +
       '<div class="vgi-ctrls"><button class="vgi-btn" data-a="mute" type="button">소리 끄기</button><button class="vgi-btn" data-a="replay" type="button">다시 보기</button></div>' +
       '<div class="vgi-prog"><i></i></div>' +
-      '<button class="vgi-end" type="button">지도 여행 시작하기</button>' +
+      '<button class="vgi-end" type="button">지도에서 첫 문제 풀기</button>' +
       '<button class="vgi-overlay" type="button" aria-label="영상 보기, 30초"></button>';
     container.appendChild(wrap);
     var canvas = wrap.querySelector('canvas'), M = canvas.getContext('2d');
@@ -1107,6 +1107,8 @@
     endBtn.addEventListener('click', function () {
       var target = document.getElementById('map-section');
       if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // app.js의 찾기 문제가 이 신호를 받아 첫 문제에 포커스를 둔다
+      try { window.dispatchEvent(new CustomEvent('vg:quest')); } catch (err) { /* 오래된 브라우저는 스크롤만 */ }
     });
 
     if (window.ResizeObserver) new ResizeObserver(function () { resize(); if (started && !ended) dirty = true; else render(curT); }).observe(wrap);
