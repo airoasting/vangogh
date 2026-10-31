@@ -276,11 +276,14 @@ a { color: inherit; }
 }
 .panel.open { transform: translateX(0); }
 .close-text {
-  position: absolute; top: 12px; right: 16px; z-index: 3; min-height: 44px; padding: 0 4px;
-  font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;
+  position: absolute; top: 12px; right: 16px; z-index: 3; width: 44px; height: 44px; padding: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid currentColor; border-radius: 999px; background: transparent;
+  transition: background-color .15s ease, color .15s ease;
 }
-.close-text:hover { text-decoration: underline; text-underline-offset: 4px; }
-.close-text span { font-size: 20px; line-height: 1; }
+.close-text:hover, .close-text:focus-visible { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.close-text span { font-size: 24px; line-height: 1; margin-top: -2px; }
+.lightbox .close-text:hover, .lightbox .close-text:focus-visible { background: var(--dark-text); border-color: var(--dark-text); color: var(--dark); }
 .panel-head { border-bottom: 1px solid var(--ink); padding: 0 72px 24px 0; margin-bottom: 24px; }
 .panel-head .eyebrow { font-size: 13px; font-weight: 500; color: var(--muted); }
 .panel-head h3 { font-size: 32px; line-height: 1.2; letter-spacing: -0.03em; margin-top: 8px; }

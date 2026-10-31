@@ -577,7 +577,7 @@
       lifePins.classed('active', false);
       d3.select(node).classed('active', true);
       var s = d.s, works = paintedAt(s);
-      lifeCard.innerHTML = '<button class="close-text" aria-label="설명 닫기">닫기 <span aria-hidden="true">&times;</span></button>' +
+      lifeCard.innerHTML = '<button class="close-text" aria-label="설명 닫기"><span aria-hidden="true">&times;</span></button>' +
         '<p class="lc-meta">' + (d.i + 1) + '번째 · ' + esc(s.country) + ' · ' + esc(s.years) + '</p>' +
         '<h4>' + esc(s.placeKo) + '</h4>' +
         (lifeAgeText(s) ? '<p class="lc-age">' + esc(lifeAgeText(s)) + '</p>' : '') +
