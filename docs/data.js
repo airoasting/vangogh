@@ -129,16 +129,6 @@ window.VG_DATA = {
 "story": "고흐가 1883년에 니우암스테르담에서 그린 그림이에요."
 },
 {
-"id": "Q7536969",
-"titleKo": "담배 피는 해골",
-"titleEn": "Skull of a Skeleton with Burning Cigarette",
-"year": 1884,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Kop%20van%20een%20skelet%20met%20brandende%20sigaret%20-%20s0083V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
-"place": "안트베르펜",
-"story": "고흐가 1884년에 안트베르펜에서 그린 그림이에요.",
-"forAdults": "고흐가 벨기에 안트베르펜의 미술 학교에 다니던 무렵 그린 그림이에요. 미술 학교에서는 사람의 뼈 구조를 배우려고 해골을 보고 그리는 연습을 했는데, 이 그림은 그 딱딱한 연습을 놀리는 장난처럼 그린 것으로 많이 봐요. 아이가 \"무서워요\" 하면 \"고흐가 장난을 친 그림이야. 해골이 담배를 물고 있는 게 우습지?\"처럼 가볍게 받아 주세요. \"해골도 담배를 피워요?\" 하고 물으면 담배는 몸에 해로워서, 뼈만 남은 해골이 담배를 무는 모습이 바로 이 그림의 농담이라고 이야기할 수 있어요."
-},
-{
 "id": "Q19833798",
 "titleKo": "병과 질그릇이 있는 정물",
 "titleEn": "Still Life with Bottles and Earthenware",
@@ -497,6 +487,16 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Stadtansicht%20von%20Amsterdam.jpeg?width=640",
 "place": "뉘넌",
 "story": "고흐가 1885년에 뉘넌에서 그린 그림이에요."
+},
+{
+"id": "Q7536969",
+"titleKo": "담배 피는 해골",
+"titleEn": "Skull of a Skeleton with Burning Cigarette",
+"year": 1886,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Kop%20van%20een%20skelet%20met%20brandende%20sigaret%20-%20s0083V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
+"place": "안트베르펜",
+"story": "고흐가 1886년에 안트베르펜에서 그린 그림이에요.",
+"forAdults": "고흐가 벨기에 안트베르펜의 미술 학교에 다니던 무렵 그린 그림이에요. 미술 학교에서는 사람의 뼈 구조를 배우려고 해골을 보고 그리는 연습을 했는데, 이 그림은 그 딱딱한 연습을 놀리는 장난처럼 그린 것으로 많이 봐요. 아이가 \"무서워요\" 하면 \"고흐가 장난을 친 그림이야. 해골이 담배를 물고 있는 게 우습지?\"처럼 가볍게 받아 주세요. \"해골도 담배를 피워요?\" 하고 물으면 담배는 몸에 해로워서, 뼈만 남은 해골이 담배를 무는 모습이 바로 이 그림의 농담이라고 이야기할 수 있어요."
 },
 {
 "id": "Q19836325",

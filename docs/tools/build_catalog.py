@@ -82,7 +82,9 @@ for m in museums.values():
 
 adult_notes = cur.get('adultNotes', {})  # {Wikidata 작품 ID: 어른용 메모}
 used_curated = set()
+work_fixes = cur.get('workFixes', {})  # {Wikidata 작품 ID: {catalog.json 필드: 바로잡은 값}}
 for w in cat['works']:
+    w.update(work_fixes.get(w['qid'], {}))  # 자동 문장과 정렬이 바로잡은 값을 쓰도록 맨 먼저 덮어쓴다
     m = museums[w['coll']]
     key = fname(w['img'])
     title_ko = w.get('titleKo') or tr.get(w.get('titleEn') or '', '') or (w.get('titleEn') or '제목 없음')
