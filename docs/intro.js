@@ -773,6 +773,8 @@
     }
   }
   function mapRegionPath(c, s, seed) { rpath(c, [-80, -80, s - (H + 80) * 1.1, -80, s - (-80) * 1.1, H + 80, -80, H + 80], seed, 6, 14); }
+  // 지도가 들어올 때는 아래(노란 들판)부터 덮어 올라가 마지막에 파란 밤하늘이 남게 한다. 노란 조각이 끝에 스치지 않는다
+  function mapInPath(c, s, seed) { rpath(c, [-80, H + 80 - s + (W + 160) * 0.3, W + 80, H + 80 - s, W + 80, H + 80, -80, H + 80], seed, 6, 14); }
   function sweepVal(t) { return eio(seg(t, 22.2, 23.3)) * 2700 - 160; }
   // 지도 기울기. 지도가 사라진 뒤에도 점은 같은 기울기 위치에서 해로 날아가야 하므로 시간으로만 정한다
   function tiltAt(t) { return t < 17.88 ? 0 : 0.62 * eio(seg(t, 20.77, 21.6)); }
@@ -780,10 +782,10 @@
     if (t < 17.88 || t >= 23.4) return;
     if (!MAPB) buildMap(sc, Math.round(W * sc), Math.round(H * sc));
     TILT = tiltAt(t);
-    var wipe = eo(seg(t, 17.88, 18.4)), s = wipe * 2600 - 120;
+    var wipe = eo(seg(t, 17.88, 18.4)), s = wipe * 1360 - 20;
     if (wipe < 1) {
-      cutAll(function (c) { mapRegionPath(c, s, 9101); c.fill(); });
-      [[B, MAPB], [K, MAPK]].forEach(function (pr) { pr[0].save(); mapRegionPath(pr[0], s, 9101); pr[0].clip(); drawMapImg(pr[0], pr[1], sc); pr[0].restore(); });
+      cutAll(function (c) { mapInPath(c, s, 9101); c.fill(); });
+      [[B, MAPB], [K, MAPK]].forEach(function (pr) { pr[0].save(); mapInPath(pr[0], s, 9101); pr[0].clip(); drawMapImg(pr[0], pr[1], sc); pr[0].restore(); });
     } else {
       if (TILT > 0) cutAll(function (c) { c.fillRect(-10, -10, W + 20, H + 20); });
       drawMapImg(B, MAPB, sc); drawMapImg(K, MAPK, sc);
