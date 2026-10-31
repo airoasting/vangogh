@@ -239,7 +239,9 @@ a { color: inherit; }
 .wall-find ~ .filters { margin-top: 24px; }
 .find-result { margin-top: 16px; font-size: 15px; color: var(--muted); }
 .find-result:empty { display: none; }
-.lb-text .lb-map { color: var(--dark-text); font-size: 14px; margin-top: 4px; }
+.lb-actions { display: flex; flex-wrap: wrap; column-gap: 24px; margin-top: 4px; }
+.lb-text .lb-map, .lb-text .lb-read { color: var(--dark-text); font-size: 14px; }
+.lb-text .lb-read[aria-pressed="true"] { font-weight: 700; text-decoration-thickness: 2px; }
 .lb-text .part p + p { margin-top: 8px; }
 
 /* 패널 */

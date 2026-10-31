@@ -85,12 +85,14 @@
     $('lb-close').focus();
   }
   function closeLightbox() {
+    stopReading();
     lb.hidden = true;
     if (!panelOpen) document.body.classList.remove('no-scroll');
     setURL(panelOpen ? panelMuseum : null);
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
   function renderLightbox() {
+    stopReading();
     var item = lbList[lbIdx], w = item.w, m = item.m;
     var multi = lbList.length > 1;
     $('lb-bar').style.visibility = multi ? '' : 'hidden';
@@ -103,7 +105,10 @@
         '<h3>' + esc(w.titleKo) + '</h3>' +
         (w.titleEn ? '<p class="en">' + esc(w.titleEn) + '</p>' : '') +
         '<p class="tomb">' + (w.year ? esc(w.year) + '년<br>' : '') + esc(m.nameKo) + '<br>' + place + '</p>' +
-        (panelOpen && panelMuseum === m ? '' : '<button type="button" class="textlink lb-map" id="lb-map">지도에서 이 미술관 보기</button>') +
+        '<div class="lb-actions">' +
+          (canRead() ? '<button type="button" class="textlink lb-read" id="lb-read" aria-pressed="false">읽어 줘요</button>' : '') +
+          (panelOpen && panelMuseum === m ? '' : '<button type="button" class="textlink lb-map" id="lb-map">지도에서 이 미술관 보기</button>') +
+        '</div>' +
         (w.story ? '<p class="story">' + esc(w.story) + '</p>' : '') +
         (look ? '<div class="part"><h4>그림에서 찾아보기</h4><p>' + esc(look) + '</p></div>' : '') +
         (w.fun ? '<div class="part"><h4>알고 있나요?</h4><p>' + esc(w.fun) + '</p></div>' : '') +
@@ -111,7 +116,69 @@
       '</div>';
     var mapBtn = $('lb-map');
     if (mapBtn) mapBtn.onclick = function () { closeLightbox(); selectMuseum(m, true); };
+    var readBtn = $('lb-read');
+    if (readBtn) readBtn.onclick = function () {
+      if (reading) { stopReading(); return; }
+      var parts = [w.titleKo + '.'];
+      if (w.story) parts.push(w.story);
+      if (look) parts.push('그림에서 찾아보기.', look);
+      if (w.fun) parts.push('알고 있나요?', w.fun);
+      if (!look) parts.push('천천히 보고 이야기해요.', LOOK_COMMON, lookQuestion(w));
+      startReading(parts, readBtn);
+    };
     setURL(m, (m.works || []).indexOf(w));
+  }
+
+  /* ---------- 읽어 줘요 (브라우저 내장 음성) ---------- */
+  // 크롬은 긴 글을 한 번에 읽히면 15초쯤에서 끊기므로 문장 단위로 나눠 차례로 읽힌다.
+  var synth = window.speechSynthesis || null, reading = false, readBtnEl = null;
+  function koVoice() {
+    if (!synth) return null;
+    return synth.getVoices().filter(function (v) { return /^ko/i.test(v.lang); })[0] || null;
+  }
+  function canRead() {
+    if (!synth || !window.SpeechSynthesisUtterance) return false;
+    // 음성 목록이 아직 안 불러졌으면 일단 보여 주고, 불러진 뒤 한국어 음성이 없으면 숨긴다
+    return !synth.getVoices().length || !!koVoice();
+  }
+  if (synth && synth.addEventListener) {
+    synth.addEventListener('voiceschanged', function () {
+      var b = $('lb-read');
+      if (b && !canRead()) { stopReading(); b.remove(); }
+    });
+  }
+  function setReadBtn(on) {
+    reading = on;
+    if (!readBtnEl) return;
+    readBtnEl.textContent = on ? '그만 읽기' : '읽어 줘요';
+    readBtnEl.setAttribute('aria-pressed', on);
+  }
+  function stopReading() {
+    readToken++;
+    if (synth && reading) synth.cancel();
+    setReadBtn(false);
+    readBtnEl = null;
+  }
+  var readToken = 0;  // 취소된 지난 읽기의 끝 신호가 새 읽기를 끄지 않게 한다
+  function startReading(parts, btn) {
+    if (!synth) return;
+    synth.cancel();
+    var token = ++readToken;
+    readBtnEl = btn;
+    var voice = koVoice(), chunks = [];
+    parts.forEach(function (p) {
+      (String(p).match(/[^.?!]+[.?!]*/g) || []).forEach(function (s) { if (s.trim()) chunks.push(s.trim()); });
+    });
+    function done() { if (token === readToken) setReadBtn(false); }
+    chunks.forEach(function (s, i) {
+      var u = new SpeechSynthesisUtterance(s);
+      u.lang = 'ko-KR'; u.rate = 0.95;
+      if (voice) u.voice = voice;
+      if (i === chunks.length - 1) u.onend = done;
+      u.onerror = done;
+      synth.speak(u);
+    });
+    setReadBtn(true);
   }
   // 이야기가 없는 그림에도 아이가 할 일을 하나 준다. 앞 두 질문은 미술관 교육의 VTS 질문이다.
   var LOOK_COMMON = '이 그림에서 무슨 일이 일어나고 있나요? 무엇을 보고 그렇게 생각했나요?';
