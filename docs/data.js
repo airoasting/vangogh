@@ -93,6 +93,66 @@ window.VG_DATA = {
 "story": "고흐가 1881년에 헤이그에서 그린 그림이에요."
 },
 {
+"id": "Q26221247",
+"titleKo": "씨 뿌리는 사람 (밀레 모작)",
+"titleEn": "Sower",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Sower%20%28after%20Millet%2C%201881%29%20-%20My%20Dream.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1881년에 그린 소묘예요."
+},
+{
+"id": "Q26221256",
+"titleKo": "스헤베닝언 여인",
+"titleEn": "Scheveningen Woman",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Scheveningse%20vrouw%20%281881%29.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1881년에 그린 수채화예요."
+},
+{
+"id": "Q26221273",
+"titleKo": "챙 없는 모자를 쓰고 지팡이를 든 구빈원 노인",
+"titleEn": "Workhouse-inmate with skull-cap and stick",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Van%20Gogh%2009.JPG?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1881년에 그린 소묘예요."
+},
+{
+"id": "Q26221275",
+"titleKo": "국영 복권 판매소",
+"titleEn": "The State Lottery Office",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20State%20Lottery%20Office%20%28F970%29.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1881년에 그린 수채화예요."
+},
+{
+"id": "Q26221277",
+"titleKo": "실크 모자를 쓴 노인의 초상",
+"titleEn": "Portrait of an old man with top-hat",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Van%20Gogh%2011.JPG?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1881년에 그린 소묘예요."
+},
+{
+"id": "Q26221278",
+"titleKo": "뒤에서 본 노부부",
+"titleEn": "Old couple, seen from the rear",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Van%20Gogh%2010.JPG?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1881년에 그린 소묘예요."
+},
+{
 "id": "Q4110564",
 "titleKo": "폭풍우 치는 스헤베닝겐 해변",
 "titleEn": "View of the Sea at Scheveningen",
@@ -100,6 +160,76 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Zeegezicht%20bij%20Scheveningen%20%281882%29.jpg?width=640",
 "place": "스헤베닝언",
 "story": "고흐가 1882년에 스헤베닝언에서 그린 그림이에요."
+},
+{
+"id": "Q134007707",
+"titleKo": "빗자루를 든 여인",
+"titleEn": "Woman with a Broom",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Woman%20with%20a%20Broom1.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1882년에 그린 수채화예요."
+},
+{
+"id": "Q134007738",
+"titleKo": "빗자루를 든 여인",
+"titleEn": "Woman with a Broom",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Woman%20with%20a%20Broom2.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1882년에 그린 수채화예요."
+},
+{
+"id": "Q26221259",
+"titleKo": "뒤에서 본 노부인",
+"titleEn": "Old Woman Seen from Behind",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Old%20Woman%20Seen%20from%20Behind%20F913.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1882년에 그린 수채화예요."
+},
+{
+"id": "Q26221261",
+"titleKo": "헤이그 풍경 (파더무스)",
+"titleEn": "View of The Hague ('Paddemoes')",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20the%20Hague%20%28Paddemoes%29%20-%20Vincent%20Van%20Gogh.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1882년에 그린 소묘예요."
+},
+{
+"id": "Q26221262",
+"titleKo": "가스 공장",
+"titleEn": "Gasworks",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Gasworks%20%28F924%29.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1882년에 그린 소묘예요."
+},
+{
+"id": "Q26221272",
+"titleKo": "가지를 친 버드나무",
+"titleEn": "Pollard Willow",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20gogh%20pollard%20willow%29.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1882년에 그린 수채화예요."
+},
+{
+"id": "Q26221284",
+"titleKo": "무료 급식소",
+"titleEn": "The Public Soup Kitchen",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20Public%20Soup%20Kitchen%20F1020.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1882년에 그린 소묘예요."
 },
 {
 "id": "Q5435592",
@@ -127,6 +257,76 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Twee%20vrouwen%20in%20het%20veen%20-%20s0129V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
 "place": "니우암스테르담",
 "story": "고흐가 1883년에 니우암스테르담에서 그린 그림이에요."
+},
+{
+"id": "Q127100218",
+"titleKo": "베 짜는 사람",
+"titleEn": "Weaver",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gogh%20-%20f%201114.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1883년에 그린 수채화예요."
+},
+{
+"id": "Q127100554",
+"titleKo": "베 짜는 사람",
+"titleEn": "Weaver",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gogh%20-%20f%201107.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1883년에 그린 수채화예요."
+},
+{
+"id": "Q127100811",
+"titleKo": "베 짜는 사람",
+"titleEn": "Weaver",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gogh%20-%20f%201125.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1883년에 그린 수채화예요."
+},
+{
+"id": "Q141158203",
+"titleKo": "드렌터 풍경",
+"titleEn": "Landscape in Drenthe",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vangoghmuseum-d0810M1986-800.jpg?width=640",
+"place": "헤이그",
+"kind": "소묘",
+"story": "고흐가 1883년에 헤이그에서 그린 소묘예요."
+},
+{
+"id": "Q26221288",
+"titleKo": "요람 옆에 무릎 꿇은 소녀",
+"titleEn": "Girl Kneeling by a Cradle",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%201883-03%2C%20The%20Hague%20-%20Girl%20Kneeling%20by%20a%20Cradle%20F%201024%20JH%20336.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1883년에 그린 소묘예요."
+},
+{
+"id": "Q26221289",
+"titleKo": "헤이그 근처 데커르스다윈의 모래 파는 사람들",
+"titleEn": "Sand Diggers in Dekkersduin near The Hague",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Duinmannetjes%20door%20Van%20Gogh.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1883년에 그린 소묘예요."
+},
+{
+"id": "Q84711906",
+"titleKo": "이탄 더미와 농가가 있는 풍경",
+"titleEn": "Landscape with a Stack of Peat and Farmhouses",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/F%201099%20jh399.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1883년에 그린 수채화예요."
 },
 {
 "id": "Q19833798",
@@ -181,6 +381,46 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Populierenlaan%20in%20de%20herfst%20-%20s0141M1977%20-%20Van%20Gogh%20Museum.jpg?width=640",
 "place": "뉘넌",
 "story": "고흐가 1884년에 뉘넌에서 그린 그림이에요."
+},
+{
+"id": "Q127154441",
+"titleKo": "실을 감는 남자",
+"titleEn": "Man Winding Yarn",
+"year": 1884,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Man%20winding%20yarn%20f1140%20jh487.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1884년에 그린 수채화예요."
+},
+{
+"id": "Q127155688",
+"titleKo": "실을 감는 여인",
+"titleEn": "Woman Reeling Yarn",
+"year": 1884,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gogh%20-%20f%201139.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1884년에 그린 수채화예요."
+},
+{
+"id": "Q26221292",
+"titleKo": "목재 경매",
+"titleEn": "The timber auction",
+"year": 1884,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Die%20Holzauktion.jpeg?width=640",
+"place": "뉘넌",
+"kind": "수채화",
+"story": "고흐가 1884년에 뉘넌에서 그린 수채화예요."
+},
+{
+"id": "Q26221296",
+"titleKo": "가지를 친 자작나무",
+"titleEn": "Pollard birches",
+"year": 1884,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van-Gogh%20kopfbirken-schafhirt.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1884년에 그린 수채화예요."
 },
 {
 "id": "Q19835849",
@@ -760,6 +1000,16 @@ window.VG_DATA = {
 "story": "고흐가 1886년에 그린 그림이에요."
 },
 {
+"id": "Q41488381",
+"titleKo": "자화상 스케치",
+"titleEn": "Self-portraits drawings by Vincent van Gogh",
+"year": 1886,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vangoghmuseum-d0432V1962r-800.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1886년에 그린 소묘예요."
+},
+{
 "id": "Q19836112",
 "titleKo": "크로커스 구근 바구니",
 "titleEn": "Basket of Crocus Bulbs",
@@ -1327,6 +1577,26 @@ window.VG_DATA = {
 "story": "고흐가 1887년에 그린 그림이에요."
 },
 {
+"id": "Q26221300",
+"titleKo": "누워 있는 여인 누드 습작",
+"titleEn": "Study for 'Reclining Female Nude'",
+"year": 1887,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%201887-01--1887-06%2C%20Paris%20-%20Study%20for%20%27Reclining%20Female%20Nude%27%20F%201404%20JH%201213.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1887년에 그린 소묘예요."
+},
+{
+"id": "Q7827221",
+"titleKo": "비너스 토르소상과 풍경",
+"titleEn": "Torso of Venus and a Landscape",
+"year": 1887,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh-Torso%20of%20Venus%20and%20a%20Landscape.jpg?width=640",
+"place": "파리",
+"kind": "소묘",
+"story": "고흐가 1887년에 파리에서 그린 소묘예요."
+},
+{
 "id": "Q9162674",
 "titleKo": "자화상",
 "titleEn": "Self-portrait",
@@ -1541,6 +1811,46 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20of%20Camille%20Roulin%20-%20Vincent%20van%20Gogh%20%28Unframed%29.jpg?width=640",
 "place": "",
 "story": "고흐가 1888년에 그린 그림이에요."
+},
+{
+"id": "Q134585374",
+"titleKo": "소나무가 있는 몽마주르의 바위",
+"titleEn": "The Rock of Montmajour with Pine Trees",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Rock%20of%20Montmajour%20with%20Pine%20Trees%2C%201888%2C%20Van%20Gogh%2C%20NG%2004.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
+"id": "Q26221303",
+"titleKo": "노란 집",
+"titleEn": "The Yellow House (Vincent's House)",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Das%20gelbe%20Haus%20%28Vincents%20Haus%291.jpeg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1888년에 그린 수채화예요."
+},
+{
+"id": "Q26221304",
+"titleKo": "몽마주르에서 본 라크로 평야",
+"titleEn": "The plain La Crau\" near Arles, seen from Montmajour\"",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Die%20Ebene%20%22La%20Crau%22%20bei%20Arles%2C%20von%20Montmajour%20aus%20gesehen.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
+"id": "Q26221311",
+"titleKo": "나무가 있는 몽마주르의 바위 언덕",
+"titleEn": "Rock-hill with trees: Montmajour",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Felsh%C3%BCgel%20mit%20B%C3%A4umen%20-%20Montmajour.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
 },
 {
 "id": "Q19836180",
@@ -1795,6 +2105,66 @@ window.VG_DATA = {
 "story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
 },
 {
+"id": "Q126723027",
+"titleKo": "요양원 정원의 나무들",
+"titleEn": "Trees in the Garden of the Asylum",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Trees%20in%20the%20Garden%20of%20the%20Asylum%20f%201536%20jh1712.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1889년에 그린 수채화예요."
+},
+{
+"id": "Q126723033",
+"titleKo": "요양원 정원의 돌 벤치",
+"titleEn": "Stone Bench in the Garden of the Asylum",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gogh%20-%20f%201537.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1889년에 그린 수채화예요."
+},
+{
+"id": "Q126777268",
+"titleKo": "요양원 정원의 돌계단",
+"titleEn": "Stone Steps in the Garden of the Asylum",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gogh%20-%20f%201535.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1889년에 그린 수채화예요."
+},
+{
+"id": "Q26221322",
+"titleKo": "아를 병원의 정원",
+"titleEn": "Garden of the Hospital in Arles",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Garten%20des%20Hospitals%20in%20Arles.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1889년에 그린 소묘예요."
+},
+{
+"id": "Q26221335",
+"titleKo": "담쟁이 덮인 나무와 벤치가 있는 생폴 요양원 정원",
+"titleEn": "Trees with ivy and bench in the garden of the Hospital Saint-Paul",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20B%C3%A4ume%20mit%20Efeu%20und%20Bank%20im%20Garten%20des%20Hospitals%20Saint-Paul.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1889년에 그린 소묘예요."
+},
+{
+"id": "Q26221339",
+"titleKo": "생폴 요양원 정원의 분수",
+"titleEn": "Fountain in the garden of the hospital of Saint-Paul",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Brunnen%20im%20Garten%20des%20Hospitals%20Saint-Paul.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1889년에 그린 소묘예요."
+},
+{
 "id": "Q19836223",
 "titleKo": "브라반트의 추억",
 "titleEn": "Reminiscence of Brabant",
@@ -1910,6 +2280,106 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ondergesneeuwd%20veld%20met%20een%20eg%20%28naar%20Millet%29%20-%20s0175V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
 "place": "생레미드프로방스",
 "story": "고흐가 1890년에 생레미드프로방스에서 그린 그림이에요."
+},
+{
+"id": "Q130381700",
+"titleKo": "오두막이 있는 풍경",
+"titleEn": "Landscape with Cottages",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gogh%20-%20f%201640r.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1890년에 그린 수채화예요."
+},
+{
+"id": "Q7085379",
+"titleKo": "농부 여인이 있는 오래된 포도원",
+"titleEn": "Old Vineyard with Peasant Woman",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Old%20vineyard%20with%20peasant%20woman.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1890년에 그린 소묘예요."
+},
+{
+"id": "Q26221255",
+"titleKo": "뜨개질하는 스헤베닝언의 젊은 여인",
+"titleEn": "Young Scheveningen Woman Knitting, Facing Right",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Scheveningen%20Woman%20Knitting%20%28F870%29.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 그린 수채화예요."
+},
+{
+"id": "Q26221293",
+"titleKo": "베틀 앞의 베 짜는 사람 (오른쪽을 봄)",
+"titleEn": "Weaver at the loom - (View to right)",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Weber%20am%20Webstuhl%20-%20%28Profil%20nach%20rechts%292.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
+},
+{
+"id": "Q26221299",
+"titleKo": "남자의 얼굴",
+"titleEn": "Head of a Man",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/HeadOfAManVanGogh.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
+},
+{
+"id": "Q26221301",
+"titleKo": "전망대 입구로 가는 길",
+"titleEn": "A way with the entrance to a viewpoint",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Weg%20mit%20Eingang%20zu%20einem%20Aussichtspunkt.jpeg?width=640",
+"place": "파리",
+"kind": "수채화",
+"story": "고흐가 파리에서 그린 수채화예요."
+},
+{
+"id": "Q26221338",
+"titleKo": "생폴 요양원의 현관",
+"titleEn": "Lobby of the hospital of Saint-Paul",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Vorhalle%20des%20Hospitals%20Saint-Paul.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
+},
+{
+"id": "Q26221340",
+"titleKo": "사이프러스가 있는 밀밭",
+"titleEn": "Wheatfield with Cypresses",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Weizenfeld%20mit%20Zypressen2.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
+},
+{
+"id": "Q26221342",
+"titleKo": "폭풍이 지나간 울타리 밀밭",
+"titleEn": "The Enclosed Wheatfield After a Storm",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20Enclosed%20Wheatfield%20After%20a%20Storm%20F1547%20JH1724.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
+},
+{
+"id": "Q26221347",
+"titleKo": "사이프러스가 있는 풍경",
+"titleEn": "Landscape with Cypresses",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Chestnut%20Leaf%20with%20Pod%20F1611%20JH2058%20-%20Landscape%20with%20Cypresses%20F1541r%20JH%201730.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
 }
 ]
 },
@@ -1978,6 +2448,66 @@ window.VG_DATA = {
 "story": "고흐가 1881년에 그린 그림이에요."
 },
 {
+"id": "Q105312271",
+"titleKo": "양말을 깁는 여인",
+"titleEn": "Woman Mending Stockings",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Woman%20Mending%20Stockings%20f888r%20jh68.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1881년에 그린 수채화예요."
+},
+{
+"id": "Q134007633",
+"titleKo": "빗자루를 든 남자",
+"titleEn": "Man with Broom",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Man%20with%20broom%20f890%20jh45.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1881년에 그린 수채화예요."
+},
+{
+"id": "Q16845412",
+"titleKo": "낫으로 풀을 베는 소년",
+"titleEn": "Boy Cutting Grass with a Sickle",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Kauernder%20Junge%20mit%20Sichel.jpeg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1881년에 그린 수채화예요."
+},
+{
+"id": "Q26221249",
+"titleKo": "여동생 빌레민 반 고흐의 초상",
+"titleEn": "Portrait of Willemina Jacoba ('Willemien') van Gogh",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Portrait%20possibly%20of%20Willemina%20Jacoba%20%28%27Willemien%27%29%20van%20Gogh%20-%20F849%20JH11.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1881년에 그린 수채화예요."
+},
+{
+"id": "Q26221253",
+"titleKo": "난롯가의 노인",
+"titleEn": "Old Man at the Fireside",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/An%20Old%20Man%20Putting%20Dry%20Rice%20on%20the%20Hearth%201881%20Vincent%20van%20Gogh.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1881년에 그린 수채화예요."
+},
+{
+"id": "Q85313974",
+"titleKo": "난롯가에 앉아 책을 읽는 농부",
+"titleEn": "Farmer Sitting at the Fireside, Reading",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/F897%20jh63.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1881년에 그린 수채화예요."
+},
+{
 "id": "Q3929322",
 "titleKo": "흰 옷을 입은 숲 속의 소녀",
 "titleEn": "Girl in a Wood",
@@ -2014,6 +2544,56 @@ window.VG_DATA = {
 "story": "고흐가 1882년에 헤이그에서 그린 그림이에요."
 },
 {
+"id": "Q105156532",
+"titleKo": "커피를 가는 여인",
+"titleEn": "Woman Grinding Coffee",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Woman%20Grinding%20Coffee%20f889%20jh75.jpg?width=640",
+"place": "에턴",
+"kind": "수채화",
+"story": "고흐가 1882년에 에턴에서 그린 수채화예요."
+},
+{
+"id": "Q16863254",
+"titleKo": "예배자들이 있는 교회 좌석",
+"titleEn": "Church Pew with Worshippers",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Church%20Pew%20with%20Worshippers%20%28F967%29.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1882년에 그린 수채화예요."
+},
+{
+"id": "Q26221266",
+"titleKo": "모래땅의 나무뿌리",
+"titleEn": "Tree roots in a sandy ground",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Study%20of%20a%20Tree%20%28F933%29.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1882년에 그린 수채화예요."
+},
+{
+"id": "Q26221267",
+"titleKo": "목공소와 세탁장",
+"titleEn": "Carpenter's Yard and Laundry",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Zimmermannswerkstatt.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1882년에 그린 소묘예요."
+},
+{
+"id": "Q3713983",
+"titleKo": "눈 속에서 석탄 자루를 나르는 여인들",
+"titleEn": "Women carrying sacks of coal in the snow",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Women%20carrying%20sacks%20of%20coal%20in%20the%20snow%20-%20Vincent%20Van%20Gogh.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1882년에 그린 수채화예요."
+},
+{
 "id": "Q137823219",
 "titleKo": "손수레를 끄는 스헤베닝언 여인",
 "titleEn": "Scheveningen Woman with Wheelbarrow",
@@ -2021,6 +2601,16 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Scheveningen%20Woman%20with%20Wheeelbarrow.jpg?width=640",
 "place": "",
 "story": "고흐가 1883년에 그린 그림이에요."
+},
+{
+"id": "Q6095761",
+"titleKo": "임종을 맞은 여인",
+"titleEn": "Woman on Her Deathbed",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Opgebaarde%20vrouw%201883.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1883년에 그린 수채화예요."
 },
 {
 "id": "Q3985006",
@@ -2786,6 +3376,56 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20gogh%20-%20L%27Arl%C3%A9sienne%20%28portrait%20of%20Madame%20Ginoux%29%20%281890%29%20Kroller%20Muller%20Google%20Art%20Project.jpg?width=640",
 "place": "생레미드프로방스",
 "story": "고흐가 1890년에 생레미드프로방스에서 그린 그림이에요."
+},
+{
+"id": "Q26221258",
+"titleKo": "난롯가 바닥에 시가를 들고 앉은 시엔",
+"titleEn": "Sien with a cigar, sitting on the floor beside the fireplace",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Woman%20%28%E2%80%98Sien%E2%80%99%29%20seated%20near%20the%20stove%20-%20Vincent%20van%20Gogh.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
+},
+{
+"id": "Q26221282",
+"titleKo": "스카프를 두른 시엔의 딸",
+"titleEn": "Sien's daughter with scarf",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Siens%20Tochter%20mit%20Schal.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
+},
+{
+"id": "Q26221283",
+"titleKo": "방수모를 쓴 늙은 어부의 얼굴",
+"titleEn": "Head of an old fisherman with sou'wester",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Kopf%20eines%20alten%20Fischers%20mit%20S%C3%BCdwester.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
+},
+{
+"id": "Q26221294",
+"titleKo": "베틀 앞의 베 짜는 사람",
+"titleEn": "Weaver at the loom",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Weber%20am%20Webstuhl.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
+},
+{
+"id": "Q84711828",
+"titleKo": "검은 모자를 쓰고 땅에 앉은 소녀",
+"titleEn": "Girl with Black Cap Sitting on the Ground",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/F%200873%20jh79.jpg?width=640",
+"place": "에턴",
+"kind": "수채화",
+"story": "고흐가 에턴에서 그린 수채화예요."
 }
 ]
 },
@@ -2834,6 +3474,16 @@ window.VG_DATA = {
 "lookFor": "그림에서 찾아보기: 길이 두 갈래로 나뉘는 곳을 찾아보세요.",
 "fun": "이 교회는 지금도 오베르 마을에 그대로 서 있어서 직접 가 볼 수 있어요.",
 "featured": true
+},
+{
+"id": "Q85314709",
+"titleKo": "오른쪽을 보는 베 짜는 사람",
+"titleEn": "Weaver Facing Right",
+"year": 1884,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gogh%20-%20Le%20Tisserand%2C%20RF%2036508%2C%20Recto%20%28cropped%29.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1884년에 그린 수채화예요."
 },
 {
 "id": "Q17494924",
@@ -3064,6 +3714,16 @@ window.VG_DATA = {
 "featured": true
 },
 {
+"id": "Q29385302",
+"titleKo": "에턴의 길",
+"titleEn": "Road in Etten",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Road%20in%20Etten%20MET%20rl1975.1.774.R.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1881년에 그린 소묘예요."
+},
+{
 "id": "Q19906011",
 "titleKo": "난롯가에서 요리하는 농부 여인",
 "titleEn": "Peasant Woman Cooking by a Fireplace",
@@ -3136,6 +3796,26 @@ window.VG_DATA = {
 "story": "고흐가 1888년에 아를에서 그린 그림이에요."
 },
 {
+"id": "Q26221327",
+"titleKo": "주아브 병사",
+"titleEn": "The Zouave",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Zouave%20MET%20DP108506.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1888년에 그린 수채화예요."
+},
+{
+"id": "Q41449677",
+"titleKo": "생트마리드라메르의 거리",
+"titleEn": "Street in Saintes-Maries-de-la-Mer",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Street%20in%20Saintes-Maries-de-la-Mer%20MET%20DP108504.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
 "id": "Q19911437",
 "titleKo": "자장가 (요람을 흔드는 오귀스틴 룰랭 부인)",
 "titleEn": "La Berceuse (Woman Rocking a Cradle; Augustine-Alix Pellicot Roulin, 1851–1930)",
@@ -3181,6 +3861,16 @@ window.VG_DATA = {
 "story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
 },
 {
+"id": "Q26221337",
+"titleKo": "요양원 복도",
+"titleEn": "Corridor in the Asylum",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Corridor%20in%20the%20Asylum%20MET%20DT365509.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1889년에 그린 소묘예요."
+},
+{
 "id": "Q19905329",
 "titleKo": "꽃병에 담긴 꽃다발",
 "titleEn": "Bouquet of Flowers in a Vase",
@@ -3215,6 +3905,290 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Deux%20Paysannes%20%281889%29.jpg?width=640",
 "place": "생레미드프로방스",
 "story": "고흐가 1890년에 생레미드프로방스에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q214867",
+"nameKo": "내셔널 갤러리 오브 아트",
+"nameEn": "National Gallery of Art",
+"city": "워싱턴 D.C.",
+"country": "미국",
+"lat": 38.8914,
+"lon": -77.02,
+"intro": "미국의 수도 워싱턴에 있는 국립 미술관이에요. 누구나 무료로 들어갈 수 있어요.",
+"works": [
+{
+"id": "Q5435849",
+"titleKo": "프로방스의 농가",
+"titleEn": "Farmhouse in Provence",
+"year": 1888,
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Farmhouse_in_Provence%2C_1888%2C_Vincent_van_Gogh%2C_NGA.jpg/960px-Farmhouse_in_Provence%2C_1888%2C_Vincent_van_Gogh%2C_NGA.jpg",
+"place": "아를",
+"story": "아를 근처 시골의 농부 집과 밀밭이에요. 여름 햇볕 아래 밀이 노랗게 익어 가요.",
+"lookFor": "그림에서 찾아보기: 길을 걸어가는 사람을 찾아보세요.",
+"fun": "고흐는 노란 밀과 파란 하늘처럼 서로 반대되는 색을 나란히 두면 더 환해 보인다는 걸 알았어요.",
+"featured": true
+},
+{
+"id": "Q20190142",
+"titleKo": "오베르의 초록 밀밭",
+"titleEn": "Green Wheat Fields, Auvers",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Gr%C3%BCnes%20Weizenfeld1.jpeg?width=640",
+"place": "생레미드프로방스",
+"story": "오베르 마을의 아직 덜 익은 초록 밀밭이에요. 바람에 밀이 살랑살랑 흔들리는 것 같아요.",
+"lookFor": "그림에서 찾아보기: 밀밭 사이에 핀 작은 꽃들을 찾아보세요.",
+"fun": "고흐는 오베르에서 지낸 약 70일 동안 하루에 거의 한 장씩 그림을 그렸어요.",
+"featured": true
+},
+{
+"id": "roses-nga",
+"titleKo": "장미",
+"titleEn": "Roses",
+"year": 1890,
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Vincent_van_Gogh%2C_Roses%2C_1890%2C_NGA_72328.jpg/960px-Vincent_van_Gogh%2C_Roses%2C_1890%2C_NGA_72328.jpg",
+"story": "생레미 병원을 떠나기 전, 고흐가 꽃병 가득 장미를 그렸어요. 꽃이 너무 많아서 테이블까지 넘쳐흘러요.",
+"lookFor": "그림에서 찾아보기: 테이블 위에 떨어진 장미를 찾아보세요.",
+"fun": "지금은 하얀 장미로 보이지만, 처음에는 분홍색 장미였어요. 물감 색이 세월이 지나며 바랬어요.",
+"featured": true,
+"place": "생레미드프로방스"
+},
+{
+"id": "Q65367697",
+"titleKo": "서 있는 구빈원 노인",
+"titleEn": "Orphan Man, Standing",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%2C%20Orphan%20Man%2C%20Standing%2C%201882%2C%20NGA%2039823.jpg?width=640",
+"place": "",
+"kind": "판화",
+"story": "고흐가 1882년에 만든 판화예요."
+},
+{
+"id": "Q4987244",
+"titleKo": "네덜란드의 꽃밭",
+"titleEn": "Bulb Fields",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bulb%20Fields.jpg?width=640",
+"place": "헤이그",
+"story": "고흐가 1883년에 헤이그에서 그린 그림이에요."
+},
+{
+"id": "Q65367700",
+"titleKo": "감자 먹는 사람들",
+"titleEn": "Potato Eaters",
+"year": 1885,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%2C%20Potato%20Eaters%2C%201885%2C%20NGA%2039824.jpg?width=640",
+"place": "",
+"kind": "판화",
+"story": "고흐가 1885년에 만든 판화예요."
+},
+{
+"id": "Q948894",
+"titleKo": "라 무스메",
+"titleEn": "La Mousmé",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vangogh%20mousme.jpg?width=640",
+"place": "아를",
+"story": "고흐가 1888년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q20189957",
+"titleKo": "아기 마르셀 룰랭",
+"titleEn": "Baby Marcelle Roulin",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Marcelle%20Roulin%20als%20Baby.jpeg?width=640",
+"place": "아를",
+"story": "고흐가 1888년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q9162658",
+"titleKo": "팔레트를 든 자화상",
+"titleEn": "Self-portrait by Vincent van Gogh",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Self-Portrait%20-%20Google%20Art%20Project%20%28719161%29.jpg?width=640",
+"place": "생레미드프로방스",
+"story": "고흐가 1888년에 생레미드프로방스에서 그린 그림이에요."
+},
+{
+"id": "Q20190056",
+"titleKo": "오렌지와 레몬과 파란 장갑이 있는 정물",
+"titleEn": "Still Life of Oranges and Lemons with Blue Gloves",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Stillleben%20mit%20Orangen%2C%20Zitronen%20und%20blauen%20Handschuhen.jpeg?width=640",
+"place": "아를",
+"story": "고흐가 1889년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q20190016",
+"titleKo": "올리브 과수원",
+"titleEn": "The Olive Orchard",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20Olive%20Orchard.jpg?width=640",
+"place": "생레미드프로방스",
+"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
+},
+{
+"id": "Q5564475",
+"titleKo": "흰 옷 입은 소녀",
+"titleEn": "Girl in White",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Girl%20in%20White%20by%20Vincent%20Van%20Gogh%20-%20NGA.jpg?width=640",
+"place": "오베르쉬르우아즈",
+"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
+},
+{
+"id": "Q7617071",
+"titleKo": "정물화: 분홍 장미가 담긴 꽃병",
+"titleEn": "Still Life: Vase with Pink Roses",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Roses%20-%20Vincent%20van%20Gogh.JPG?width=640",
+"place": "생레미드프로방스",
+"story": "고흐가 1890년에 생레미드프로방스에서 그린 그림이에요."
+},
+{
+"id": "Q65026319",
+"titleKo": "파이프를 문 가셰 박사",
+"titleEn": "Dr. Gachet (Man with a Pipe)",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%2C%20Dr.%20Gachet%20%28Man%20with%20a%20Pipe%29%2C%201890%2C%20NGA%2010717.jpg?width=640",
+"place": "",
+"kind": "판화",
+"story": "고흐가 1890년에 만든 판화예요."
+}
+]
+},
+{
+"id": "Q190804",
+"nameKo": "암스테르담 국립미술관",
+"nameEn": "Rijksmuseum",
+"city": "암스테르담",
+"country": "네덜란드",
+"lat": 52.36,
+"lon": 4.8853,
+"intro": "",
+"works": [
+{
+"id": "Q17327725",
+"titleKo": "모자를 쓴 추수하는 사람의 뒷모습",
+"titleEn": "Reaper with Hat, Seen from Behind",
+"year": 1876,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Korensnijder%20met%20hoed%2C%20van%20achteren%20gezien%20Rijksmuseum%20SK-A-2227.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1876년에 그린 소묘예요."
+},
+{
+"id": "Q17334627",
+"titleKo": "헤이그 스헹크베흐의 꽃 농원",
+"titleEn": "Pierre van de Putte's Flower Nursery on the Schenkweg, The Hague",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bloemkwekerij%20van%20Pierre%20van%20de%20Putte%20aan%20de%20Schenkweg%20te%20Den%20Haag%20Rijksmuseum%20SK-A-3662.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1882년에 그린 소묘예요."
+},
+{
+"id": "Q17327712",
+"titleKo": "뉘넌 목사관 정원 뒤의 길",
+"titleEn": "Lane Behind the Parsonage Garden at Nuenen",
+"year": 1884,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Weg%20achter%20de%20pastorietuin%20te%20Nuenen%20Rijksmuseum%20SK-A-2225.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1884년에 그린 소묘예요."
+},
+{
+"id": "Q17780730",
+"titleKo": "중앙역에서 본 암스테르담",
+"titleEn": "View of Amsterdam from Central Station",
+"year": 1885,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Blick%20auf%20Amsterdam%20vom%20Hauptbahnhof.jpeg?width=640",
+"place": "암스테르담",
+"story": "고흐가 1885년에 암스테르담에서 그린 그림이에요."
+},
+{
+"id": "Q17334121",
+"titleKo": "자화상",
+"titleEn": "Self-portrait",
+"year": 1887,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Zelfportret%20Rijksmuseum%20SK-A-3262.jpeg?width=640",
+"place": "파리",
+"story": "고흐가 1887년에 파리에서 그린 그림이에요."
+},
+{
+"id": "Q26220217",
+"titleKo": "비탈의 나무들",
+"titleEn": "Trees on a slope",
+"year": 1887,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Baumst%C3%A4mme%20im%20Sonnenlicht.jpeg?width=640",
+"place": "파리",
+"story": "고흐가 1887년에 파리에서 그린 그림이에요."
+},
+{
+"id": "Q19836190",
+"titleKo": "꽃이 핀 복숭아나무",
+"titleEn": "Peach Tree in Blossom",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bloeiende%20perzikboom%20-%20s0035V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
+"place": "아를",
+"story": "고흐가 1888년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q26221151",
+"titleKo": "밀밭",
+"titleEn": "Wheat Field",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Weizenfeld.jpeg?width=640",
+"place": "아를",
+"story": "고흐가 1888년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q17327719",
+"titleKo": "프로방스의 농가",
+"titleEn": "Farmhouse in Provence",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Boerderij%20in%20de%20Provence%20Rijksmuseum%20SK-A-2226.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
+"id": "Q26221310",
+"titleKo": "몽마주르 수도원 폐허가 있는 언덕",
+"titleEn": "Hill with the ruins of Montmajour",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Landschap%20bij%20de%20abdij%20van%20Montmajour%20te%20Arles%2C%20RP-T-1962-65.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
+"id": "Q19836182",
+"titleKo": "외눈 남자의 초상",
+"titleEn": "Portrait of a One-Eyed Man",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Portret%20van%20een%20man%20met%20%C3%A9%C3%A9n%20oog%20-%20s0113V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
+"place": "",
+"story": "고흐가 1889년에 그린 그림이에요."
+},
+{
+"id": "Q19836168",
+"titleKo": "나비가 있는 정원",
+"titleEn": "Garden with Butterflies",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Tuin%20met%20vlinders%20-%20s0110V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
+"place": "아를",
+"story": "고흐가 1890년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q18608298",
+"titleKo": "농가",
+"titleEn": "Farmhouse",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Boerderij%20-%20s0108V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
+"place": "오베르쉬르우아즈",
+"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
 }
 ]
 },
@@ -3339,126 +4313,6 @@ window.VG_DATA = {
 ]
 },
 {
-"id": "Q214867",
-"nameKo": "내셔널 갤러리 오브 아트",
-"nameEn": "National Gallery of Art",
-"city": "워싱턴 D.C.",
-"country": "미국",
-"lat": 38.8914,
-"lon": -77.02,
-"intro": "미국의 수도 워싱턴에 있는 국립 미술관이에요. 누구나 무료로 들어갈 수 있어요.",
-"works": [
-{
-"id": "Q5435849",
-"titleKo": "프로방스의 농가",
-"titleEn": "Farmhouse in Provence",
-"year": 1888,
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Farmhouse_in_Provence%2C_1888%2C_Vincent_van_Gogh%2C_NGA.jpg/960px-Farmhouse_in_Provence%2C_1888%2C_Vincent_van_Gogh%2C_NGA.jpg",
-"place": "아를",
-"story": "아를 근처 시골의 농부 집과 밀밭이에요. 여름 햇볕 아래 밀이 노랗게 익어 가요.",
-"lookFor": "그림에서 찾아보기: 길을 걸어가는 사람을 찾아보세요.",
-"fun": "고흐는 노란 밀과 파란 하늘처럼 서로 반대되는 색을 나란히 두면 더 환해 보인다는 걸 알았어요.",
-"featured": true
-},
-{
-"id": "Q20190142",
-"titleKo": "오베르의 초록 밀밭",
-"titleEn": "Green Wheat Fields, Auvers",
-"year": 1890,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Gr%C3%BCnes%20Weizenfeld1.jpeg?width=640",
-"place": "생레미드프로방스",
-"story": "오베르 마을의 아직 덜 익은 초록 밀밭이에요. 바람에 밀이 살랑살랑 흔들리는 것 같아요.",
-"lookFor": "그림에서 찾아보기: 밀밭 사이에 핀 작은 꽃들을 찾아보세요.",
-"fun": "고흐는 오베르에서 지낸 약 70일 동안 하루에 거의 한 장씩 그림을 그렸어요.",
-"featured": true
-},
-{
-"id": "roses-nga",
-"titleKo": "장미",
-"titleEn": "Roses",
-"year": 1890,
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Vincent_van_Gogh%2C_Roses%2C_1890%2C_NGA_72328.jpg/960px-Vincent_van_Gogh%2C_Roses%2C_1890%2C_NGA_72328.jpg",
-"story": "생레미 병원을 떠나기 전, 고흐가 꽃병 가득 장미를 그렸어요. 꽃이 너무 많아서 테이블까지 넘쳐흘러요.",
-"lookFor": "그림에서 찾아보기: 테이블 위에 떨어진 장미를 찾아보세요.",
-"fun": "지금은 하얀 장미로 보이지만, 처음에는 분홍색 장미였어요. 물감 색이 세월이 지나며 바랬어요.",
-"featured": true,
-"place": "생레미드프로방스"
-},
-{
-"id": "Q4987244",
-"titleKo": "네덜란드의 꽃밭",
-"titleEn": "Bulb Fields",
-"year": 1883,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bulb%20Fields.jpg?width=640",
-"place": "헤이그",
-"story": "고흐가 1883년에 헤이그에서 그린 그림이에요."
-},
-{
-"id": "Q948894",
-"titleKo": "라 무스메",
-"titleEn": "La Mousmé",
-"year": 1888,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vangogh%20mousme.jpg?width=640",
-"place": "아를",
-"story": "고흐가 1888년에 아를에서 그린 그림이에요."
-},
-{
-"id": "Q20189957",
-"titleKo": "아기 마르셀 룰랭",
-"titleEn": "Baby Marcelle Roulin",
-"year": 1888,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Marcelle%20Roulin%20als%20Baby.jpeg?width=640",
-"place": "아를",
-"story": "고흐가 1888년에 아를에서 그린 그림이에요."
-},
-{
-"id": "Q9162658",
-"titleKo": "팔레트를 든 자화상",
-"titleEn": "Self-portrait by Vincent van Gogh",
-"year": 1888,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Self-Portrait%20-%20Google%20Art%20Project%20%28719161%29.jpg?width=640",
-"place": "생레미드프로방스",
-"story": "고흐가 1888년에 생레미드프로방스에서 그린 그림이에요."
-},
-{
-"id": "Q20190056",
-"titleKo": "오렌지와 레몬과 파란 장갑이 있는 정물",
-"titleEn": "Still Life of Oranges and Lemons with Blue Gloves",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Stillleben%20mit%20Orangen%2C%20Zitronen%20und%20blauen%20Handschuhen.jpeg?width=640",
-"place": "아를",
-"story": "고흐가 1889년에 아를에서 그린 그림이에요."
-},
-{
-"id": "Q20190016",
-"titleKo": "올리브 과수원",
-"titleEn": "The Olive Orchard",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20Olive%20Orchard.jpg?width=640",
-"place": "생레미드프로방스",
-"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
-},
-{
-"id": "Q5564475",
-"titleKo": "흰 옷 입은 소녀",
-"titleEn": "Girl in White",
-"year": 1890,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Girl%20in%20White%20by%20Vincent%20Van%20Gogh%20-%20NGA.jpg?width=640",
-"place": "오베르쉬르우아즈",
-"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
-},
-{
-"id": "Q7617071",
-"titleKo": "정물화: 분홍 장미가 담긴 꽃병",
-"titleEn": "Still Life: Vase with Pink Roses",
-"year": 1890,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Roses%20-%20Vincent%20van%20Gogh.JPG?width=640",
-"place": "생레미드프로방스",
-"story": "고흐가 1890년에 생레미드프로방스에서 그린 그림이에요."
-}
-]
-},
-{
 "id": "Q12013217",
 "nameKo": "노르트브라반트 박물관",
 "nameEn": "Noordbrabants Museum",
@@ -3566,6 +4420,16 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Peasant%20Woman%2C%20Seated%20with%20White%20Cap%20by%20Vincent%20van%20Gogh%20-%20Noordbrabants%20Museum.jpg?width=640",
 "place": "뉘넌",
 "story": "고흐가 1885년에 뉘넌에서 그린 그림이에요."
+},
+{
+"id": "Q77604432",
+"titleKo": "뉘넌 목사관 정원",
+"titleEn": "The Garden of the Vicarage at Nuenen",
+"year": 1885,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/De%20tuin%20van%20de%20pastorie%20te%20Nuenen%2C%20van%20Gogh%2C%201885.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1885년에 그린 수채화예요."
 }
 ]
 },
@@ -3602,6 +4466,16 @@ window.VG_DATA = {
 "fun": "방 모서리가 비스듬한 건 실제 노란 집의 방 모양이 그랬기 때문이에요.",
 "featured": true,
 "place": ""
+},
+{
+"id": "Q91131092",
+"titleKo": "나무와 한 사람이 있는 오솔길",
+"titleEn": "Lane with Trees and One Figure",
+"year": 1884,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Avenue%20of%20Pollard%20Birches%20and%20Poplars%20%281884%29.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1884년에 그린 소묘예요."
 },
 {
 "id": "Q20275618",
@@ -3649,6 +4523,16 @@ window.VG_DATA = {
 "story": "고흐가 1888년에 아를에서 그린 그림이에요."
 },
 {
+"id": "Q26221323",
+"titleKo": "아를의 공원 풍경",
+"titleEn": "View of the park from Arles",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Blick%20in%20den%20Park%20von%20Arles.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
 "id": "Q20265518",
 "titleKo": "요람을 흔드는 룰랭 부인",
 "titleEn": "Madame Roulin Rocking the Cradle (La Berceuse)",
@@ -3674,90 +4558,6 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20Drinkers%20-%201953.178%20-%20Art%20Institute%20of%20Chicago.jpg?width=640",
 "place": "생레미드프로방스",
 "story": "고흐가 1890년에 생레미드프로방스에서 그린 그림이에요."
-}
-]
-},
-{
-"id": "Q190804",
-"nameKo": "암스테르담 국립미술관",
-"nameEn": "Rijksmuseum",
-"city": "암스테르담",
-"country": "네덜란드",
-"lat": 52.36,
-"lon": 4.8853,
-"intro": "",
-"works": [
-{
-"id": "Q17780730",
-"titleKo": "중앙역에서 본 암스테르담",
-"titleEn": "View of Amsterdam from Central Station",
-"year": 1885,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Blick%20auf%20Amsterdam%20vom%20Hauptbahnhof.jpeg?width=640",
-"place": "암스테르담",
-"story": "고흐가 1885년에 암스테르담에서 그린 그림이에요."
-},
-{
-"id": "Q17334121",
-"titleKo": "자화상",
-"titleEn": "Self-portrait",
-"year": 1887,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Zelfportret%20Rijksmuseum%20SK-A-3262.jpeg?width=640",
-"place": "파리",
-"story": "고흐가 1887년에 파리에서 그린 그림이에요."
-},
-{
-"id": "Q26220217",
-"titleKo": "비탈의 나무들",
-"titleEn": "Trees on a slope",
-"year": 1887,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Baumst%C3%A4mme%20im%20Sonnenlicht.jpeg?width=640",
-"place": "파리",
-"story": "고흐가 1887년에 파리에서 그린 그림이에요."
-},
-{
-"id": "Q19836190",
-"titleKo": "꽃이 핀 복숭아나무",
-"titleEn": "Peach Tree in Blossom",
-"year": 1888,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bloeiende%20perzikboom%20-%20s0035V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
-"place": "아를",
-"story": "고흐가 1888년에 아를에서 그린 그림이에요."
-},
-{
-"id": "Q26221151",
-"titleKo": "밀밭",
-"titleEn": "Wheat Field",
-"year": 1888,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Weizenfeld.jpeg?width=640",
-"place": "아를",
-"story": "고흐가 1888년에 아를에서 그린 그림이에요."
-},
-{
-"id": "Q19836182",
-"titleKo": "외눈 남자의 초상",
-"titleEn": "Portrait of a One-Eyed Man",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Portret%20van%20een%20man%20met%20%C3%A9%C3%A9n%20oog%20-%20s0113V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
-"place": "",
-"story": "고흐가 1889년에 그린 그림이에요."
-},
-{
-"id": "Q19836168",
-"titleKo": "나비가 있는 정원",
-"titleEn": "Garden with Butterflies",
-"year": 1890,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Tuin%20met%20vlinders%20-%20s0110V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
-"place": "아를",
-"story": "고흐가 1890년에 아를에서 그린 그림이에요."
-},
-{
-"id": "Q18608298",
-"titleKo": "농가",
-"titleEn": "Farmhouse",
-"year": 1890,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Boerderij%20-%20s0108V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
-"place": "오베르쉬르우아즈",
-"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
 }
 ]
 },
@@ -3846,6 +4646,252 @@ window.VG_DATA = {
 ]
 },
 {
+"id": "Q125634",
+"nameKo": "폴크방 미술관",
+"nameEn": "Museum Folkwang",
+"city": "에센",
+"country": "독일",
+"lat": 51.4417,
+"lon": 7.0042,
+"intro": "",
+"works": [
+{
+"id": "Q108801669",
+"titleKo": "허리 숙여 이삭을 줍는 농부 여인",
+"titleEn": "Peasant Woman Stooping and Gleaning",
+"year": 1885,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Paysanne%20arrachant%20de%20l%27herbe%20%281885%29.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1885년에 그린 소묘예요."
+},
+{
+"id": "Q26220278",
+"titleKo": "모래 배에서 짐을 내리는 사람들이 있는 부두",
+"titleEn": "Quay with men unloading sand barges",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Rhonebarken.jpeg?width=640",
+"place": "아를",
+"story": "고흐가 1888년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q26221125",
+"titleKo": "아르망 룰랭의 초상",
+"titleEn": "Portrait of Armand Roulin",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20Armand%20Roulin%20im%20Alter%20von%2017%20Jahren.jpeg?width=640",
+"place": "",
+"story": "고흐가 1888년에 그린 그림이에요."
+},
+{
+"id": "Q108801481",
+"titleKo": "라크로 평야",
+"titleEn": "The Plain of La Crau",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Vue%20de%20la%20Crau%20%281888%29.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
+"id": "Q1194578",
+"titleKo": "생폴 요양원 정원",
+"titleEn": "The garden of St. Paul's Hospital",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Garten%20des%20Hospitals%20Saint-Paul3.jpeg?width=640",
+"place": "생레미드프로방스",
+"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
+},
+{
+"id": "Q21693144",
+"titleKo": "생폴 요양원 뒤 밀밭과 추수하는 사람",
+"titleEn": "The Wheatfield behind Saint Paul's Hospital with a Reaper",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Wheat%20Field%20Behind%20Saint-Paul%20Hospital%20with%20a%20Reaper%20-%20Google%20Art%20%26%20Culture.jpg?width=640",
+"place": "생레미드프로방스",
+"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
+},
+{
+"id": "Q108801440",
+"titleKo": "사이프러스와 밭에서 일하는 네 사람",
+"titleEn": "Cypresses with four people working in the field",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Paysage%20avec%20cypr%C3%A8s%20%281889%29.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1889년에 그린 소묘예요."
+},
+{
+"id": "Q108801564",
+"titleKo": "비 오는 날 씨 뿌리는 사람이 있는 울타리 밭",
+"titleEn": "Enclosed field with a sower in the rain",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20La%20pluie%20%281890%29.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1890년에 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q1752085",
+"nameKo": "노턴 사이먼 미술관",
+"nameEn": "Norton Simon Museum",
+"city": "패서디나",
+"country": "미국",
+"lat": 34.1462,
+"lon": -118.1592,
+"intro": "",
+"works": [
+{
+"id": "Q26221269",
+"titleKo": "시엔 어머니 집의 뒤뜰",
+"titleEn": "Back Garden of Sien's Mother's House",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20De%20tuin%20achter%20het%20huis%20van%20de%20moeder%20van%20Sien%20in%20Den%20Haag.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1882년에 그린 수채화예요."
+},
+{
+"id": "Q26220102",
+"titleKo": "정물화",
+"titleEn": "Still Life (F.1972.44.P)",
+"year": 1884,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Stilleven.jpg?width=640",
+"place": "뉘넌",
+"story": "고흐가 1884년에 뉘넌에서 그린 그림이에요."
+},
+{
+"id": "Q26220167",
+"titleKo": "겨울 (눈 덮인 목사관 정원)",
+"titleEn": "Winter (The Vicarage Garden under Snow)",
+"year": 1885,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Der%20Pfarrgarten%20in%20Nuenen%20im%20Schnee1.jpeg?width=640",
+"place": "뉘넌",
+"story": "고흐가 1885년에 뉘넌에서 그린 그림이에요."
+},
+{
+"id": "Q28146906",
+"titleKo": "흰 모자를 쓴 농부 여인의 얼굴",
+"titleEn": "Head of a Peasant Woman with White Cap",
+"year": 1885,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Head%20of%20a%20Peasant%20Woman%20in%20a%20White%20Bonnet%20by%20Vincent%20van%20Gogh.jpg?width=640",
+"place": "뉘넌",
+"story": "고흐가 1885년에 뉘넌에서 그린 그림이에요."
+},
+{
+"id": "Q7232350",
+"titleKo": "화가 어머니의 초상",
+"titleEn": "Portrait of the Artist's Mother",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20der%20Mutter%20des%20K%C3%BCnstlers.jpeg?width=640",
+"place": "아를",
+"story": "고흐가 1888년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q26220273",
+"titleKo": "농부의 초상 (파시앙스 에스칼리에)",
+"titleEn": "Portrait of a Peasant (Patience Escalier)",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20Patience%20Escalier1.jpeg?width=640",
+"place": "아를",
+"story": "고흐가 1888년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q26221175",
+"titleKo": "뽕나무",
+"titleEn": "The Mulberry Tree",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Maulbeerbaum.jpeg?width=640",
+"place": "생레미드프로방스",
+"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q201469",
+"nameKo": "구겐하임 미술관",
+"nameEn": "Solomon R. Guggenheim Museum",
+"city": "뉴욕",
+"country": "미국",
+"lat": 40.7831,
+"lon": -73.9589,
+"intro": "건물이 하얀 소라 껍데기처럼 동그랗게 돌아가는 미술관이에요. 빙글빙글 비탈길을 걸어 내려오면서 그림을 봐요.",
+"works": [
+{
+"id": "Q19883060",
+"titleKo": "생레미의 산",
+"titleEn": "Mountains at Saint-Rémy",
+"year": 1889,
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Van_Gogh_-_Berglandschaft_in_Saint-R%C3%A9my.jpeg/960px-Van_Gogh_-_Berglandschaft_in_Saint-R%C3%A9my.jpeg",
+"place": "생레미드프로방스",
+"story": "고흐가 생레미 병원에서 지낼 때 창밖으로 보이던 산을 그렸어요. 산과 언덕이 파도처럼 출렁출렁 움직이는 것 같아요.",
+"lookFor": "그림에서 찾아보기: 산 위 하늘에 꿈틀꿈틀 흐르는 구름을 찾아보세요.",
+"fun": "이 그림은 탄하우저라는 미술품 수집가가 구겐하임 미술관에 선물한 그림이에요.",
+"featured": true
+},
+{
+"id": "Q19883059",
+"titleKo": "굴다리가 있는 길",
+"titleEn": "Roadway with Underpass",
+"year": 1887,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Viadukt%20in%20Paris.jpeg?width=640",
+"place": "파리",
+"story": "고흐가 1887년에 파리에서 그린 그림이에요."
+},
+{
+"id": "Q6426375",
+"titleKo": "눈 덮인 풍경",
+"titleEn": "Landscape with Snow",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Landschaft%20im%20Schnee.jpg?width=640",
+"place": "아를",
+"story": "고흐가 1888년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q19912577",
+"titleKo": "타라스콩으로 가는 길",
+"titleEn": "The Road to Tarascon",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/GUGG%20The%20Road%20to%20Tarascon.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
+"id": "Q19912579",
+"titleKo": "생트마리의 배들",
+"titleEn": "Boats at Saintes-Maries",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/GUGG%20Boats%20at%20Saintes-Maries.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
+"id": "Q19912583",
+"titleKo": "소녀의 얼굴",
+"titleEn": "Head of a Girl",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/GUGG%20Head%20of%20a%20Girl.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
+"id": "Q19912586",
+"titleKo": "존 피터 러셀에게 보낸 편지",
+"titleEn": "Letter to John Peter Russell",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/GUGG%20Letter%20to%20John%20Peter%20Russell.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+}
+]
+},
+{
 "id": "Q49133",
 "nameKo": "보스턴 미술관",
 "nameEn": "Museum of Fine Arts Boston",
@@ -3908,72 +4954,6 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Houses%20at%20Auvers%20by%20Vincent%20Van%20Gogh.jpg?width=640",
 "place": "오베르쉬르우아즈",
 "story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
-}
-]
-},
-{
-"id": "Q1752085",
-"nameKo": "노턴 사이먼 미술관",
-"nameEn": "Norton Simon Museum",
-"city": "패서디나",
-"country": "미국",
-"lat": 34.1462,
-"lon": -118.1592,
-"intro": "",
-"works": [
-{
-"id": "Q26220102",
-"titleKo": "정물화",
-"titleEn": "Still Life (F.1972.44.P)",
-"year": 1884,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Stilleven.jpg?width=640",
-"place": "뉘넌",
-"story": "고흐가 1884년에 뉘넌에서 그린 그림이에요."
-},
-{
-"id": "Q26220167",
-"titleKo": "겨울 (눈 덮인 목사관 정원)",
-"titleEn": "Winter (The Vicarage Garden under Snow)",
-"year": 1885,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Der%20Pfarrgarten%20in%20Nuenen%20im%20Schnee1.jpeg?width=640",
-"place": "뉘넌",
-"story": "고흐가 1885년에 뉘넌에서 그린 그림이에요."
-},
-{
-"id": "Q28146906",
-"titleKo": "흰 모자를 쓴 농부 여인의 얼굴",
-"titleEn": "Head of a Peasant Woman with White Cap",
-"year": 1885,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Head%20of%20a%20Peasant%20Woman%20in%20a%20White%20Bonnet%20by%20Vincent%20van%20Gogh.jpg?width=640",
-"place": "뉘넌",
-"story": "고흐가 1885년에 뉘넌에서 그린 그림이에요."
-},
-{
-"id": "Q7232350",
-"titleKo": "화가 어머니의 초상",
-"titleEn": "Portrait of the Artist's Mother",
-"year": 1888,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20der%20Mutter%20des%20K%C3%BCnstlers.jpeg?width=640",
-"place": "아를",
-"story": "고흐가 1888년에 아를에서 그린 그림이에요."
-},
-{
-"id": "Q26220273",
-"titleKo": "농부의 초상 (파시앙스 에스칼리에)",
-"titleEn": "Portrait of a Peasant (Patience Escalier)",
-"year": 1888,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20Patience%20Escalier1.jpeg?width=640",
-"place": "아를",
-"story": "고흐가 1888년에 아를에서 그린 그림이에요."
-},
-{
-"id": "Q26221175",
-"titleKo": "뽕나무",
-"titleEn": "The Mulberry Tree",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Maulbeerbaum.jpeg?width=640",
-"place": "생레미드프로방스",
-"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
 }
 ]
 },
@@ -4248,6 +5228,142 @@ window.VG_DATA = {
 ]
 },
 {
+"id": "Q1760539",
+"nameKo": "세인트루이스 미술관",
+"nameEn": "Saint Louis Art Museum",
+"city": "세인트루이스",
+"country": "미국",
+"lat": 38.6393,
+"lon": -90.2945,
+"intro": "",
+"works": [
+{
+"id": "Q64920837",
+"titleKo": "풍경",
+"titleEn": "Landscape",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%201881-04--1881-05%2C%20Etten%20-%20Landscape%20F%20874v%20JH%203.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1881년에 그린 수채화예요."
+},
+{
+"id": "Q26242941",
+"titleKo": "농부 여인의 얼굴",
+"titleEn": "Head of a Peasant Woman",
+"year": 1884,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Head%20of%20a%20Peasant%20Woman.jpg?width=640",
+"place": "뉘넌",
+"story": "고흐가 1884년에 뉘넌에서 그린 그림이에요."
+},
+{
+"id": "Q19938762",
+"titleKo": "클리시의 공장들",
+"titleEn": "Factories at Clichy",
+"year": 1887,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Factories%20at%20Asni%C3%A8res%2C%20Seen%20from%20the%20Quai%20de%20Clichy.jpg?width=640",
+"place": "파리",
+"story": "고흐가 1887년에 파리에서 그린 그림이에요."
+},
+{
+"id": "Q26220252",
+"titleKo": "정물, 사과 바구니",
+"titleEn": "Still Life, Basket of Apples",
+"year": 1887,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Still%20Life%2C%20Basket%20of%20Apples.jpg?width=640",
+"place": "파리",
+"story": "고흐가 1887년에 파리에서 그린 그림이에요."
+},
+{
+"id": "Q26221221",
+"titleKo": "오베르의 포도밭",
+"titleEn": "Vineyards at Auvers",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Vineyards%20at%20Auvers%20%281890%29.jpg?width=640",
+"place": "오베르쉬르우아즈",
+"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
+},
+{
+"id": "Q26221234",
+"titleKo": "오베르의 계단",
+"titleEn": "Stairway at Auvers",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Stairway%20at%20Auvers%20-%201-1935%20-%20Saint%20Louis%20Art%20Museum.jpg?width=640",
+"place": "오베르쉬르우아즈",
+"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q682406",
+"nameKo": "암 뢰머홀츠 미술관",
+"nameEn": "Museum collection Am Römerholz",
+"city": "빈터투어",
+"country": "스위스",
+"lat": 47.5111,
+"lon": 8.7317,
+"intro": "",
+"works": [
+{
+"id": "Q26220215",
+"titleKo": "고등어와 레몬과 토마토가 있는 정물",
+"titleEn": "Still Life with mackerel, lemon and tomato",
+"year": 1886,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Stillleben%20mit%20Makrelen%2C%20Zitronen%20und%20Tomaten.jpeg?width=640",
+"place": "파리",
+"story": "고흐가 1886년에 파리에서 그린 그림이에요."
+},
+{
+"id": "Q26221130",
+"titleKo": "오귀스틴 룰랭의 초상",
+"titleEn": "Portrait of Augustine Roulin",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20Augustine%20Roulin.jpeg?width=640",
+"place": "아를",
+"story": "고흐가 1888년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q26221309",
+"titleKo": "생트마리드라메르 쪽 풍경",
+"titleEn": "View to Saintes-Maries",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gogh%20-%20Ansicht%20von%20Les%20Saintes-Maries-de-la-Mer%2C%201888.png?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
+"id": "Q26221314",
+"titleKo": "꽃이 핀 정원",
+"titleEn": "Garden with flowers",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gogh%20-%20Garten%20in%20der%20Provence%2C%201888.png?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
+"id": "Q26221134",
+"titleKo": "아를 병원의 안뜰",
+"titleEn": "The Courtyard of the Hospital at Arles",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Garten%20des%20Hospitals%20in%20Arles1.jpeg?width=640",
+"place": "아를",
+"story": "고흐가 1889년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q26221182",
+"titleKo": "아를 병원의 병동",
+"titleEn": "Dormitory in the Hospital in Arles",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Schlafsaal%20im%20Hospital%20in%20Arles.jpeg?width=640",
+"place": "아를",
+"story": "고흐가 1889년에 아를에서 그린 그림이에요.",
+"forAdults": "1888년 12월 귀를 다친 뒤, 고흐는 1889년 초에 몸과 마음이 다시 아파 아를의 병원에 또 들어갔어요. 이 그림은 1889년 봄, 그 병원의 길고 커다란 병실을 그린 거예요. 가운데 난로 둘레에 환자들이 앉아 있고, 양쪽으로 침대가 줄지어 있어요. 아이가 \"고흐는 왜 병원에 있었어요?\" 하고 물으면 \"마음이 많이 아파서 쉬면서 치료를 받았어. 병원에서도 그림을 계속 그렸단다\"처럼 말해 주세요. 그 뒤 고흐가 스스로 생레미의 병원에 들어가 1년쯤 지내며 「별이 빛나는 밤」을 그렸다는 이야기로 이어 갈 수 있어요."
+}
+]
+},
+{
 "id": "Q510324",
 "nameKo": "필라델피아 미술관",
 "nameEn": "Philadelphia Museum of Art",
@@ -4301,63 +5417,6 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Portret%20van%20Camille%20Roulin.jpg?width=640",
 "place": "",
 "story": "고흐가 1889년에 그린 그림이에요."
-}
-]
-},
-{
-"id": "Q1760539",
-"nameKo": "세인트루이스 미술관",
-"nameEn": "Saint Louis Art Museum",
-"city": "세인트루이스",
-"country": "미국",
-"lat": 38.6393,
-"lon": -90.2945,
-"intro": "",
-"works": [
-{
-"id": "Q26242941",
-"titleKo": "농부 여인의 얼굴",
-"titleEn": "Head of a Peasant Woman",
-"year": 1884,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Head%20of%20a%20Peasant%20Woman.jpg?width=640",
-"place": "뉘넌",
-"story": "고흐가 1884년에 뉘넌에서 그린 그림이에요."
-},
-{
-"id": "Q19938762",
-"titleKo": "클리시의 공장들",
-"titleEn": "Factories at Clichy",
-"year": 1887,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Factories%20at%20Asni%C3%A8res%2C%20Seen%20from%20the%20Quai%20de%20Clichy.jpg?width=640",
-"place": "파리",
-"story": "고흐가 1887년에 파리에서 그린 그림이에요."
-},
-{
-"id": "Q26220252",
-"titleKo": "정물, 사과 바구니",
-"titleEn": "Still Life, Basket of Apples",
-"year": 1887,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Still%20Life%2C%20Basket%20of%20Apples.jpg?width=640",
-"place": "파리",
-"story": "고흐가 1887년에 파리에서 그린 그림이에요."
-},
-{
-"id": "Q26221221",
-"titleKo": "오베르의 포도밭",
-"titleEn": "Vineyards at Auvers",
-"year": 1890,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Vineyards%20at%20Auvers%20%281890%29.jpg?width=640",
-"place": "오베르쉬르우아즈",
-"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
-},
-{
-"id": "Q26221234",
-"titleKo": "오베르의 계단",
-"titleEn": "Stairway at Auvers",
-"year": 1890,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Stairway%20at%20Auvers%20-%201-1935%20-%20Saint%20Louis%20Art%20Museum.jpg?width=640",
-"place": "오베르쉬르우아즈",
-"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
 }
 ]
 },
@@ -4567,6 +5626,16 @@ window.VG_DATA = {
 "story": "고흐가 1885년에 뉘넌에서 그린 그림이에요."
 },
 {
+"id": "Q21712157",
+"titleKo": "감자 먹는 사람들",
+"titleEn": "The Potato Eaters",
+"year": 1885,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/3.%20Campesinos%20comiendo%20patatas.jpg?width=640",
+"place": "",
+"kind": "판화",
+"story": "고흐가 1885년에 만든 판화예요."
+},
+{
 "id": "Q21711763",
 "titleKo": "아를의 짐꾼들",
 "titleEn": "The Stevedores in Arles",
@@ -4631,55 +5700,6 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Hospital%20at%20Saint%20Remy.jpg?width=640",
 "place": "생레미드프로방스",
 "story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
-}
-]
-},
-{
-"id": "Q682406",
-"nameKo": "암 뢰머홀츠 미술관",
-"nameEn": "Museum collection Am Römerholz",
-"city": "빈터투어",
-"country": "스위스",
-"lat": 47.5111,
-"lon": 8.7317,
-"intro": "",
-"works": [
-{
-"id": "Q26220215",
-"titleKo": "고등어와 레몬과 토마토가 있는 정물",
-"titleEn": "Still Life with mackerel, lemon and tomato",
-"year": 1886,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Stillleben%20mit%20Makrelen%2C%20Zitronen%20und%20Tomaten.jpeg?width=640",
-"place": "파리",
-"story": "고흐가 1886년에 파리에서 그린 그림이에요."
-},
-{
-"id": "Q26221130",
-"titleKo": "오귀스틴 룰랭의 초상",
-"titleEn": "Portrait of Augustine Roulin",
-"year": 1888,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20Augustine%20Roulin.jpeg?width=640",
-"place": "아를",
-"story": "고흐가 1888년에 아를에서 그린 그림이에요."
-},
-{
-"id": "Q26221134",
-"titleKo": "아를 병원의 안뜰",
-"titleEn": "The Courtyard of the Hospital at Arles",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Garten%20des%20Hospitals%20in%20Arles1.jpeg?width=640",
-"place": "아를",
-"story": "고흐가 1889년에 아를에서 그린 그림이에요."
-},
-{
-"id": "Q26221182",
-"titleKo": "아를 병원의 병동",
-"titleEn": "Dormitory in the Hospital in Arles",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Schlafsaal%20im%20Hospital%20in%20Arles.jpeg?width=640",
-"place": "아를",
-"story": "고흐가 1889년에 아를에서 그린 그림이에요.",
-"forAdults": "1888년 12월 귀를 다친 뒤, 고흐는 1889년 초에 몸과 마음이 다시 아파 아를의 병원에 또 들어갔어요. 이 그림은 1889년 봄, 그 병원의 길고 커다란 병실을 그린 거예요. 가운데 난로 둘레에 환자들이 앉아 있고, 양쪽으로 침대가 줄지어 있어요. 아이가 \"고흐는 왜 병원에 있었어요?\" 하고 물으면 \"마음이 많이 아파서 쉬면서 치료를 받았어. 병원에서도 그림을 계속 그렸단다\"처럼 말해 주세요. 그 뒤 고흐가 스스로 생레미의 병원에 들어가 1년쯤 지내며 「별이 빛나는 밤」을 그렸다는 이야기로 이어 갈 수 있어요."
 }
 ]
 },
@@ -4834,54 +5854,6 @@ window.VG_DATA = {
 ]
 },
 {
-"id": "Q125634",
-"nameKo": "폴크방 미술관",
-"nameEn": "Museum Folkwang",
-"city": "에센",
-"country": "독일",
-"lat": 51.4417,
-"lon": 7.0042,
-"intro": "",
-"works": [
-{
-"id": "Q26220278",
-"titleKo": "모래 배에서 짐을 내리는 사람들이 있는 부두",
-"titleEn": "Quay with men unloading sand barges",
-"year": 1888,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Rhonebarken.jpeg?width=640",
-"place": "아를",
-"story": "고흐가 1888년에 아를에서 그린 그림이에요."
-},
-{
-"id": "Q26221125",
-"titleKo": "아르망 룰랭의 초상",
-"titleEn": "Portrait of Armand Roulin",
-"year": 1888,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20Armand%20Roulin%20im%20Alter%20von%2017%20Jahren.jpeg?width=640",
-"place": "",
-"story": "고흐가 1888년에 그린 그림이에요."
-},
-{
-"id": "Q1194578",
-"titleKo": "생폴 요양원 정원",
-"titleEn": "The garden of St. Paul's Hospital",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Garten%20des%20Hospitals%20Saint-Paul3.jpeg?width=640",
-"place": "생레미드프로방스",
-"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
-},
-{
-"id": "Q21693144",
-"titleKo": "생폴 요양원 뒤 밀밭과 추수하는 사람",
-"titleEn": "The Wheatfield behind Saint Paul's Hospital with a Reaper",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Wheat%20Field%20Behind%20Saint-Paul%20Hospital%20with%20a%20Reaper%20-%20Google%20Art%20%26%20Culture.jpg?width=640",
-"place": "생레미드프로방스",
-"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
-}
-]
-},
-{
 "id": "Q1068063",
 "nameKo": "캐나다 국립미술관",
 "nameEn": "National Gallery of Canada",
@@ -4891,6 +5863,16 @@ window.VG_DATA = {
 "lon": -75.6989,
 "intro": "",
 "works": [
+{
+"id": "Q26221248",
+"titleKo": "늪",
+"titleEn": "The Swamp / Marsh",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20La%20mare%2C%201881%20%28Mus%C3%A9e%20des%20beaux-arts%20du%20Canada%29.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1881년에 그린 소묘예요."
+},
 {
 "id": "Q9371667",
 "titleKo": "백일홍과 여러 꽃이 담긴 그릇",
@@ -4917,6 +5899,265 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Iris.jpeg?width=640",
 "place": "생레미드프로방스",
 "story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q188740",
+"nameKo": "뉴욕 현대미술관",
+"nameEn": "Museum of Modern Art",
+"city": "뉴욕",
+"country": "미국",
+"lat": 40.7614,
+"lon": -73.9776,
+"intro": "뉴욕 한가운데 있는 현대미술관이에요. 세계에서 가장 유명한 밤하늘 그림을 보러 매일 사람들이 줄을 서요.",
+"works": [
+{
+"id": "Q18689459",
+"titleKo": "조제프 룰랭의 초상",
+"titleEn": "Portrait of Joseph Roulin",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Portrait%20de%20Joseph%20Roulin%20-%20Google%20Art%20Project.jpg?width=640",
+"place": "에를랑겐",
+"story": "아를의 우체부 아저씨 룰랭이에요. 룰랭은 외로운 고흐에게 다정한 친구가 되어 주었어요.",
+"lookFor": "그림에서 찾아보기: 뒤쪽 벽지에 핀 꽃들을 찾아보세요.",
+"fun": "고흐는 룰랭 아저씨뿐 아니라 아내와 세 아이까지 온 가족을 그렸어요.",
+"featured": true
+},
+{
+"id": "Q9212498",
+"titleKo": "올리브 나무",
+"titleEn": "The Olive Trees",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20The%20Olive%20Trees..jpg?width=640",
+"place": "생레미드프로방스",
+"story": "별이 빛나는 밤과 같은 달에 생레미에서 그린 그림이에요. 올리브 나무와 땅과 하늘이 모두 물결처럼 꿈틀거려요.",
+"lookFor": "그림에서 찾아보기: 하늘에 떠 있는 하얀 구름을 찾아보세요.",
+"fun": "고흐는 생레미에서 올리브 나무 그림을 열 장 넘게 그렸어요.",
+"featured": true
+},
+{
+"id": "Q45585",
+"titleKo": "별이 빛나는 밤",
+"titleEn": "The Starry Night",
+"year": 1889,
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/960px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+"place": "생레미드프로방스",
+"story": "생레미의 병원 창문 너머로 본 새벽 하늘을 그렸어요. 하늘이 소용돌이처럼 빙글빙글 돌아요. 마을은 고흐가 상상을 더해서 그렸어요.",
+"lookFor": "그림에서 찾아보기: 왼쪽에 불꽃처럼 솟은 사이프러스 나무(키 크고 뾰족한 나무)를 찾아보세요.",
+"fun": "고흐는 이 그림을 낮에 기억을 떠올리며 그렸어요. 병원 방에서는 밤에 그림을 그릴 수 없었거든요.",
+"featured": true
+},
+{
+"id": "Q26221308",
+"titleKo": "생트마리의 거리",
+"titleEn": "Street in Saintes-Maries",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Gasse%20in%20Saintes-Maries1.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q578485",
+"nameKo": "필립스 컬렉션",
+"nameEn": "The Phillips Collection",
+"city": "워싱턴 D.C.",
+"country": "미국",
+"lat": 38.9114,
+"lon": -77.0468,
+"intro": "",
+"works": [
+{
+"id": "Q28798255",
+"titleKo": "물랭 드 라 갈레트",
+"titleEn": "Moulin de la Galette",
+"year": 1887,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Moulin%20de%20la%20Galette%20-%20Google%20Art%20Project.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1887년에 그린 소묘예요."
+},
+{
+"id": "Q9371890",
+"titleKo": "아를 공원의 입구",
+"titleEn": "Entrance to the Public Park in Arles",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Eingang%20zum%20Park%20in%20Arles%20mit%20Spazierg%C3%A4ngern.jpeg?width=640",
+"place": "아를",
+"story": "고흐가 1888년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q23940134",
+"titleKo": "길을 고치는 사람들",
+"titleEn": "The Road Menders",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20Road%20Menders%20-%20Google%20Art%20Project.jpg?width=640",
+"place": "생레미드프로방스",
+"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
+},
+{
+"id": "Q11821614",
+"titleKo": "집이 있는 오베르의 밀밭",
+"titleEn": "Wheat Field at Auvers with House",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20House%20at%20Auvers%20-%20Google%20Art%20Project.jpg?width=640",
+"place": "오베르쉬르우아즈",
+"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q657415",
+"nameKo": "클리블랜드 미술관",
+"nameEn": "Cleveland Museum of Art",
+"city": "클리블랜드",
+"country": "미국",
+"lat": 41.5089,
+"lon": -81.6117,
+"intro": "",
+"works": [
+{
+"id": "Q6485128",
+"titleKo": "외바퀴 손수레가 있는 풍경",
+"titleEn": "Landscape with Wheelbarrow",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Landscape%20with%20Wheelbarrow%20-%201958.30%20-%20Cleveland%20Museum%20of%20Art.tif?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1883년에 그린 수채화예요."
+},
+{
+"id": "Q26221176",
+"titleKo": "생레미 근처 알피유의 포플러 두 그루",
+"titleEn": "Two Poplars in the Alpilles near Saint-Rémy",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Two%20Poplars%20in%20the%20Alpilles%20near%20Saint-R%C3%A9my%2C%20by%20Vincent%20Van%20Gogh%2C%20Cleveland%20Museum%20of%20Art%2C%201958.32.tiff?width=640",
+"place": "생레미드프로방스",
+"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
+},
+{
+"id": "Q26221185",
+"titleKo": "큰 플라타너스 나무",
+"titleEn": "The Large Plane Trees (Road Menders at Saint-Rémy)",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Large%20Plane%20Trees%20%28Road%20Menders%20at%20Saint-R%C3%A9my%29%2C%20by%20Vincent%20van%20Gogh%2C%20Cleveland%20Museum%20of%20Art%2C%201947.209.jpg?width=640",
+"place": "생레미드프로방스",
+"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
+},
+{
+"id": "Q26221230",
+"titleKo": "아델린 라부의 초상",
+"titleEn": "Adeline Ravoux",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Adeline%20Ravoux%2C%20by%20Vincent%20van%20Gogh%2C%20Cleveland%20Museum%20of%20Art%2C%201958.31.jpg?width=640",
+"place": "오베르쉬르우아즈",
+"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q819504",
+"nameKo": "폰 데어 하이트 미술관",
+"nameEn": "Von der Heydt Museum",
+"city": "부퍼탈",
+"country": "독일",
+"lat": 51.2573,
+"lon": 7.1466,
+"intro": "",
+"works": [
+{
+"id": "Q152123",
+"titleKo": "맥주잔과 과일이 있는 정물",
+"titleEn": "Still Life with Beer Mug and Fruit",
+"year": 1881,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Still%20Life%20with%20Beer%20Mug%20and%20Fruit.jpg?width=640",
+"place": "에턴",
+"story": "고흐가 1881년에 에턴에서 그린 그림이에요."
+},
+{
+"id": "Q84712816",
+"titleKo": "모여 있는 농가들",
+"titleEn": "Group of Farmhouses",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/F%201103%20jh403.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1883년에 그린 수채화예요."
+},
+{
+"id": "Q26220113",
+"titleKo": "흰 모자를 쓴 늙은 농부 여인의 얼굴",
+"titleEn": "Head of an Old Peasant Woman with White Cap",
+"year": 1884,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Kopf%20einer%20alten%20B%C3%A4uerin%20mit%20wei%C3%9Fer%20Haube.jpeg?width=640",
+"place": "뉘넌",
+"story": "고흐가 1884년에 뉘넌에서 그린 그림이에요."
+},
+{
+"id": "Q26220161",
+"titleKo": "감자 심기",
+"titleEn": "Potato Planting",
+"year": 1884,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Planting%20potatoes%20%281884%29.jpg?width=640",
+"place": "뉘넌",
+"story": "고흐가 1884년에 뉘넌에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q731126",
+"nameKo": "J. 폴 게티 미술관",
+"nameEn": "J. Paul Getty Museum",
+"city": "로스앤젤레스",
+"country": "미국",
+"lat": 34.0775,
+"lon": -118.475,
+"intro": "",
+"works": [
+{
+"id": "Q2282256",
+"titleKo": "붓꽃",
+"titleEn": "Irises",
+"year": 1889,
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Irises-Vincent_van_Gogh.jpg/960px-Irises-Vincent_van_Gogh.jpg",
+"place": "생레미드프로방스",
+"story": "고흐가 생레미 병원에 들어가고 처음 그린 그림 중 하나예요. 병원 정원에 핀 보라색 붓꽃을 보며 그렸어요.",
+"lookFor": "그림에서 찾아보기: 보라색 꽃들 사이에 혼자 하얀 붓꽃을 찾아보세요.",
+"fun": "1987년에 팔릴 때 그때까지 세상에서 가장 비싼 그림 값이었어요.",
+"featured": true
+},
+{
+"id": "Q20738593",
+"titleKo": "스헤베닝언의 빨래 마당",
+"titleEn": "Bleaching Ground at Scheveningen",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Bleaching%20Ground%20at%20Scheveningen%20-%20Google%20Art%20Project.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1882년에 그린 수채화예요."
+},
+{
+"id": "Q26221317",
+"titleKo": "조제프 룰랭의 초상",
+"titleEn": "Portrait of Josepf Roulin",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20Josepf%20Roulin.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
+"id": "Q26221330",
+"titleKo": "아를이 보이는 밀밭",
+"titleEn": "Wheat field with View of Arles",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Arles.%20View%20from%20the%20Wheatfields%20%281888%29.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
 }
 ]
 },
@@ -5073,174 +6314,6 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Orchard%20Bordered%20by%20Cypresse%20-%20ILE2017.12.1%20-%20Yale%20University%20Art%20Gallery.jpg?width=640",
 "place": "아를",
 "story": "고흐가 1888년에 아를에서 그린 그림이에요."
-}
-]
-},
-{
-"id": "Q188740",
-"nameKo": "뉴욕 현대미술관",
-"nameEn": "Museum of Modern Art",
-"city": "뉴욕",
-"country": "미국",
-"lat": 40.7614,
-"lon": -73.9776,
-"intro": "뉴욕 한가운데 있는 현대미술관이에요. 세계에서 가장 유명한 밤하늘 그림을 보러 매일 사람들이 줄을 서요.",
-"works": [
-{
-"id": "Q18689459",
-"titleKo": "조제프 룰랭의 초상",
-"titleEn": "Portrait of Joseph Roulin",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Portrait%20de%20Joseph%20Roulin%20-%20Google%20Art%20Project.jpg?width=640",
-"place": "에를랑겐",
-"story": "아를의 우체부 아저씨 룰랭이에요. 룰랭은 외로운 고흐에게 다정한 친구가 되어 주었어요.",
-"lookFor": "그림에서 찾아보기: 뒤쪽 벽지에 핀 꽃들을 찾아보세요.",
-"fun": "고흐는 룰랭 아저씨뿐 아니라 아내와 세 아이까지 온 가족을 그렸어요.",
-"featured": true
-},
-{
-"id": "Q9212498",
-"titleKo": "올리브 나무",
-"titleEn": "The Olive Trees",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20The%20Olive%20Trees..jpg?width=640",
-"place": "생레미드프로방스",
-"story": "별이 빛나는 밤과 같은 달에 생레미에서 그린 그림이에요. 올리브 나무와 땅과 하늘이 모두 물결처럼 꿈틀거려요.",
-"lookFor": "그림에서 찾아보기: 하늘에 떠 있는 하얀 구름을 찾아보세요.",
-"fun": "고흐는 생레미에서 올리브 나무 그림을 열 장 넘게 그렸어요.",
-"featured": true
-},
-{
-"id": "Q45585",
-"titleKo": "별이 빛나는 밤",
-"titleEn": "The Starry Night",
-"year": 1889,
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/960px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
-"place": "생레미드프로방스",
-"story": "생레미의 병원 창문 너머로 본 새벽 하늘을 그렸어요. 하늘이 소용돌이처럼 빙글빙글 돌아요. 마을은 고흐가 상상을 더해서 그렸어요.",
-"lookFor": "그림에서 찾아보기: 왼쪽에 불꽃처럼 솟은 사이프러스 나무(키 크고 뾰족한 나무)를 찾아보세요.",
-"fun": "고흐는 이 그림을 낮에 기억을 떠올리며 그렸어요. 병원 방에서는 밤에 그림을 그릴 수 없었거든요.",
-"featured": true
-}
-]
-},
-{
-"id": "Q201469",
-"nameKo": "구겐하임 미술관",
-"nameEn": "Solomon R. Guggenheim Museum",
-"city": "뉴욕",
-"country": "미국",
-"lat": 40.7831,
-"lon": -73.9589,
-"intro": "건물이 하얀 소라 껍데기처럼 동그랗게 돌아가는 미술관이에요. 빙글빙글 비탈길을 걸어 내려오면서 그림을 봐요.",
-"works": [
-{
-"id": "Q19883060",
-"titleKo": "생레미의 산",
-"titleEn": "Mountains at Saint-Rémy",
-"year": 1889,
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Van_Gogh_-_Berglandschaft_in_Saint-R%C3%A9my.jpeg/960px-Van_Gogh_-_Berglandschaft_in_Saint-R%C3%A9my.jpeg",
-"place": "생레미드프로방스",
-"story": "고흐가 생레미 병원에서 지낼 때 창밖으로 보이던 산을 그렸어요. 산과 언덕이 파도처럼 출렁출렁 움직이는 것 같아요.",
-"lookFor": "그림에서 찾아보기: 산 위 하늘에 꿈틀꿈틀 흐르는 구름을 찾아보세요.",
-"fun": "이 그림은 탄하우저라는 미술품 수집가가 구겐하임 미술관에 선물한 그림이에요.",
-"featured": true
-},
-{
-"id": "Q19883059",
-"titleKo": "굴다리가 있는 길",
-"titleEn": "Roadway with Underpass",
-"year": 1887,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Viadukt%20in%20Paris.jpeg?width=640",
-"place": "파리",
-"story": "고흐가 1887년에 파리에서 그린 그림이에요."
-},
-{
-"id": "Q6426375",
-"titleKo": "눈 덮인 풍경",
-"titleEn": "Landscape with Snow",
-"year": 1888,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Landschaft%20im%20Schnee.jpg?width=640",
-"place": "아를",
-"story": "고흐가 1888년에 아를에서 그린 그림이에요."
-}
-]
-},
-{
-"id": "Q578485",
-"nameKo": "필립스 컬렉션",
-"nameEn": "The Phillips Collection",
-"city": "워싱턴 D.C.",
-"country": "미국",
-"lat": 38.9114,
-"lon": -77.0468,
-"intro": "",
-"works": [
-{
-"id": "Q9371890",
-"titleKo": "아를 공원의 입구",
-"titleEn": "Entrance to the Public Park in Arles",
-"year": 1888,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Eingang%20zum%20Park%20in%20Arles%20mit%20Spazierg%C3%A4ngern.jpeg?width=640",
-"place": "아를",
-"story": "고흐가 1888년에 아를에서 그린 그림이에요."
-},
-{
-"id": "Q23940134",
-"titleKo": "길을 고치는 사람들",
-"titleEn": "The Road Menders",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20Road%20Menders%20-%20Google%20Art%20Project.jpg?width=640",
-"place": "생레미드프로방스",
-"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
-},
-{
-"id": "Q11821614",
-"titleKo": "집이 있는 오베르의 밀밭",
-"titleEn": "Wheat Field at Auvers with House",
-"year": 1890,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20House%20at%20Auvers%20-%20Google%20Art%20Project.jpg?width=640",
-"place": "오베르쉬르우아즈",
-"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
-}
-]
-},
-{
-"id": "Q657415",
-"nameKo": "클리블랜드 미술관",
-"nameEn": "Cleveland Museum of Art",
-"city": "클리블랜드",
-"country": "미국",
-"lat": 41.5089,
-"lon": -81.6117,
-"intro": "",
-"works": [
-{
-"id": "Q26221176",
-"titleKo": "생레미 근처 알피유의 포플러 두 그루",
-"titleEn": "Two Poplars in the Alpilles near Saint-Rémy",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Two%20Poplars%20in%20the%20Alpilles%20near%20Saint-R%C3%A9my%2C%20by%20Vincent%20Van%20Gogh%2C%20Cleveland%20Museum%20of%20Art%2C%201958.32.tiff?width=640",
-"place": "생레미드프로방스",
-"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
-},
-{
-"id": "Q26221185",
-"titleKo": "큰 플라타너스 나무",
-"titleEn": "The Large Plane Trees (Road Menders at Saint-Rémy)",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Large%20Plane%20Trees%20%28Road%20Menders%20at%20Saint-R%C3%A9my%29%2C%20by%20Vincent%20van%20Gogh%2C%20Cleveland%20Museum%20of%20Art%2C%201947.209.jpg?width=640",
-"place": "생레미드프로방스",
-"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
-},
-{
-"id": "Q26221230",
-"titleKo": "아델린 라부의 초상",
-"titleEn": "Adeline Ravoux",
-"year": 1890,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Adeline%20Ravoux%2C%20by%20Vincent%20van%20Gogh%2C%20Cleveland%20Museum%20of%20Art%2C%201958.31.jpg?width=640",
-"place": "오베르쉬르우아즈",
-"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
 }
 ]
 },
@@ -5440,45 +6513,6 @@ window.VG_DATA = {
 ]
 },
 {
-"id": "Q819504",
-"nameKo": "폰 데어 하이트 미술관",
-"nameEn": "Von der Heydt Museum",
-"city": "부퍼탈",
-"country": "독일",
-"lat": 51.2573,
-"lon": 7.1466,
-"intro": "",
-"works": [
-{
-"id": "Q152123",
-"titleKo": "맥주잔과 과일이 있는 정물",
-"titleEn": "Still Life with Beer Mug and Fruit",
-"year": 1881,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Still%20Life%20with%20Beer%20Mug%20and%20Fruit.jpg?width=640",
-"place": "에턴",
-"story": "고흐가 1881년에 에턴에서 그린 그림이에요."
-},
-{
-"id": "Q26220113",
-"titleKo": "흰 모자를 쓴 늙은 농부 여인의 얼굴",
-"titleEn": "Head of an Old Peasant Woman with White Cap",
-"year": 1884,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Kopf%20einer%20alten%20B%C3%A4uerin%20mit%20wei%C3%9Fer%20Haube.jpeg?width=640",
-"place": "뉘넌",
-"story": "고흐가 1884년에 뉘넌에서 그린 그림이에요."
-},
-{
-"id": "Q26220161",
-"titleKo": "감자 심기",
-"titleEn": "Potato Planting",
-"year": 1884,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Planting%20potatoes%20%281884%29.jpg?width=640",
-"place": "뉘넌",
-"story": "고흐가 1884년에 뉘넌에서 그린 그림이에요."
-}
-]
-},
-{
 "id": "Q650519",
 "nameKo": "로댕 미술관",
 "nameEn": "Musée Rodin",
@@ -5514,6 +6548,251 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Das%20Viadukt%20in%20Arles%20oder%20Der%20blaue%20Zug.jpeg?width=640",
 "place": "아를",
 "story": "고흐가 1888년에 아를에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q377579",
+"nameKo": "볼티모어 미술관",
+"nameEn": "Baltimore Museum of Art",
+"city": "볼티모어",
+"country": "미국",
+"lat": 39.326,
+"lon": -76.6195,
+"intro": "",
+"works": [
+{
+"id": "Q26221290",
+"titleKo": "스헤베닝언 해변을 걷는 사람들",
+"titleEn": "Beach at Scheveningen / People Strolling on the Beach",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Beach%20at%20Scheveningen%2C%201882%20%28Baltimore%20Museum%20of%20Art%29.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1882년에 그린 수채화예요."
+},
+{
+"id": "Q26220236",
+"titleKo": "구두 한 켤레",
+"titleEn": "Pair of Shoes, A",
+"year": 1887,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Shoes%20-%20My%20Dream.jpg?width=640",
+"place": "파리",
+"story": "고흐가 1887년에 파리에서 그린 그림이에요."
+},
+{
+"id": "Q26221246",
+"titleKo": "나무와 사람들이 있는 풍경",
+"titleEn": "Landscape with Trees and Figures",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Van%20Gogh%2C%20Landscape%20with%20Figures%2C%201889%2C%20oil%20on%20canvas%2C%20The%20Baltimore%20Museum%20of%20Art.jpg?width=640",
+"place": "생레미드프로방스",
+"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q745866",
+"nameKo": "댈러스 미술관",
+"nameEn": "Dallas Museum of Art",
+"city": "댈러스",
+"country": "미국",
+"lat": 32.7876,
+"lon": -96.8009,
+"intro": "",
+"works": [
+{
+"id": "Q26220242",
+"titleKo": "봄날의 강둑",
+"titleEn": "River Bank in Springtime",
+"year": 1887,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20River%20Bank%20in%20Springtime%20-%201961.99%20-%20Dallas%20Museum%20of%20Art.jpg?width=640",
+"place": "파리",
+"story": "고흐가 1887년에 파리에서 그린 그림이에요."
+},
+{
+"id": "Q26221334",
+"titleKo": "밤의 카페 테라스",
+"titleEn": "Cafe Terrace at Night",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh.%20Caf%C3%A9%20Terrace%20at%20Night.%201888.%20Reed%20pen%20and%20ink%20over%20pencil%20on%20laid%20paper%2C%20%2865.4%20x%2047.1%20cm%29.%20Dallas%20Museum%20of%20Art.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
+"id": "Q18650971",
+"titleKo": "밀단",
+"titleEn": "Sheaves of Wheat",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Sheaves%20of%20Wheat%20-%201985.R.80%20-%20Dallas%20Museum%20of%20Art.jpg?width=640",
+"place": "오베르쉬르우아즈",
+"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q12110695",
+"nameKo": "코톨드 갤러리",
+"nameEn": "Courtauld Gallery",
+"city": "런던",
+"country": "영국",
+"lat": 51.5116,
+"lon": -0.1177,
+"intro": "",
+"works": [
+{
+"id": "Q19363211",
+"titleKo": "귀에 붕대를 감은 자화상",
+"titleEn": "Self-Portrait with Bandaged Ear",
+"year": 1889,
+"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Self-Portrait_with_a_Bandaged_Ear_-_Vincent_van_Gogh.jpg/960px-Self-Portrait_with_a_Bandaged_Ear_-_Vincent_van_Gogh.jpg",
+"place": "아를",
+"story": "아를에 살던 1889년 겨울에 그린 자화상이에요. 고흐는 마음이 많이 아팠던 때 귀를 다쳐서 병원에서 치료를 받았어요. 집에 돌아온 뒤 붕대를 감은 자기 모습을 그리며 다시 그림을 시작했어요.",
+"lookFor": "그림에서 찾아보기: 뒤쪽 벽에 걸린 일본 판화를 찾아보세요. 산과 사람들이 보여요.",
+"fun": "고흐가 다친 쪽은 왼쪽 귀였어요. 거울을 보며 그려서, 그림에서는 오른쪽 귀에 붕대를 감은 것처럼 보여요.",
+"featured": true,
+"forAdults": "1888년 12월, 고흐는 마음의 병이 심해진 상태에서 자신의 왼쪽 귀를 다쳤고 아를의 병원에서 치료를 받았어요. 이 그림은 퇴원한 뒤인 1889년 1월에 그렸어요. 아이가 \"귀는 왜 다쳤어요?\" 하고 물으면 \"마음이 많이 아파서 스스로를 다치게 했고, 병원에서 도움을 받은 뒤 다시 그림을 그렸어\"처럼 아픔과 회복을 함께 말해 주세요. 마음이 아플 때 어른에게 도움을 청하는 것은 부끄러운 일이 아니라는 이야기로 이어 갈 수 있어요."
+},
+{
+"id": "Q26221132",
+"titleKo": "꽃이 핀 복숭아나무들",
+"titleEn": "Peach Trees in Blossom",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Perzikbomen%20in%20bloei.jpg?width=640",
+"place": "아를",
+"story": "고흐가 1889년에 아를에서 그린 그림이에요."
+},
+{
+"id": "Q26221331",
+"titleKo": "기와 공장",
+"titleEn": "A tile factory",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20A%20tile%20factory%20%281888%29.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q924335",
+"nameKo": "암스테르담 시립 미술관",
+"nameEn": "Stedelijk Museum Amsterdam",
+"city": "암스테르담",
+"country": "네덜란드",
+"lat": 52.3578,
+"lon": 4.8797,
+"intro": "",
+"works": [
+{
+"id": "Q24056334",
+"titleKo": "몽마르트르의 텃밭",
+"titleEn": "Kitchen Gardens on Montmartre",
+"year": 1887,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Willem%20van%20Gogh%20045.jpg?width=640",
+"place": "파리",
+"story": "고흐가 1887년에 파리에서 그린 그림이에요."
+},
+{
+"id": "Q19937793",
+"titleKo": "몽마르트르 근처 파리 변두리",
+"titleEn": "On the outskirts of Paris, near Montmartre",
+"year": 1887,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Am%20Stadtrand%20von%20Paris%20nahe%20Montmartre.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1887년에 그린 소묘예요."
+},
+{
+"id": "Q24056324",
+"titleKo": "땅을 파는 두 농부",
+"titleEn": "Two Peasants Digging",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Zwei%20Bauern%20beim%20Umgraben.jpeg?width=640",
+"place": "생레미드프로방스",
+"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q163804",
+"nameKo": "슈테델 미술관",
+"nameEn": "Städel Museum",
+"city": "프랑크푸르트암마인",
+"country": "독일",
+"lat": 50.1032,
+"lon": 8.6739,
+"intro": "",
+"works": [
+{
+"id": "Q26220120",
+"titleKo": "오두막과 염소와 여인",
+"titleEn": "Cottage and Woman with Goat",
+"year": 1885,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Farmhouse%20in%20Nuenen%20-%20Google%20Art%20Project.jpg?width=640",
+"place": "뉘넌",
+"story": "고흐가 1885년에 뉘넌에서 그린 그림이에요."
+},
+{
+"id": "Q26221297",
+"titleKo": "감자를 심는 농부 여인",
+"titleEn": "Peasant Woman Planting Potatoes",
+"year": 1885,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Peasant%20Woman%20Planting%20Potatoes%20-%20Google%20Art%20Project.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1885년에 그린 소묘예요."
+},
+{
+"id": "Q17023940",
+"titleKo": "가셰 박사의 초상",
+"titleEn": "Portrait of Dr. Gachet",
+"year": 1890,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20Doktor%20Gachet.jpeg?width=640",
+"place": "오베르쉬르우아즈",
+"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q1132918",
+"nameKo": "노르웨이 국립박물관",
+"nameEn": "National Museum of Art, Architecture and Design",
+"city": "오슬로",
+"country": "노르웨이",
+"lat": 59.9117,
+"lon": 10.7292,
+"intro": "",
+"works": [
+{
+"id": "Q115618542",
+"titleKo": "무릎 꿇은 농부 여인의 뒷모습",
+"titleEn": "Peasant woman, kneeling: seen from behind",
+"year": 1885,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gogh%20-%20Peasant%20woman%2C%20kneeling%20seen%20from%20behind%2C%20August%201885%2C%20NG.K%26H.B.00165.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1885년에 그린 소묘예요."
+},
+{
+"id": "Q89590919",
+"titleKo": "몽마주르에서 본 아를",
+"titleEn": "View of Arles from Montmajour",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Gogh%20-%20View%20of%20Arles%20from%20Montmajour%2C%20Mellom%2027.%20og%2029.%20mai%201988%2C%20NG.K%26H.B.00068.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+},
+{
+"id": "Q9162686",
+"titleKo": "자화상",
+"titleEn": "Self-portrait",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Self-portrait%2C%201889%20%28Nasjonalmuseet%2C%20Oslo%29.jpg?width=640",
+"place": "생레미드프로방스",
+"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
 }
 ]
 },
@@ -5668,36 +6947,6 @@ window.VG_DATA = {
 ]
 },
 {
-"id": "Q377579",
-"nameKo": "볼티모어 미술관",
-"nameEn": "Baltimore Museum of Art",
-"city": "볼티모어",
-"country": "미국",
-"lat": 39.326,
-"lon": -76.6195,
-"intro": "",
-"works": [
-{
-"id": "Q26220236",
-"titleKo": "구두 한 켤레",
-"titleEn": "Pair of Shoes, A",
-"year": 1887,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Shoes%20-%20My%20Dream.jpg?width=640",
-"place": "파리",
-"story": "고흐가 1887년에 파리에서 그린 그림이에요."
-},
-{
-"id": "Q26221246",
-"titleKo": "나무와 사람들이 있는 풍경",
-"titleEn": "Landscape with Trees and Figures",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Van%20Gogh%2C%20Landscape%20with%20Figures%2C%201889%2C%20oil%20on%20canvas%2C%20The%20Baltimore%20Museum%20of%20Art.jpg?width=640",
-"place": "생레미드프로방스",
-"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
-}
-]
-},
-{
 "id": "Q403080",
 "nameKo": "와즈워스 아테네움",
 "nameEn": "Wadsworth Atheneum Museum of Art",
@@ -5724,36 +6973,6 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Self-Portrait6.jpg?width=640",
 "place": "파리",
 "story": "고흐가 1887년에 파리에서 그린 그림이에요."
-}
-]
-},
-{
-"id": "Q745866",
-"nameKo": "댈러스 미술관",
-"nameEn": "Dallas Museum of Art",
-"city": "댈러스",
-"country": "미국",
-"lat": 32.7876,
-"lon": -96.8009,
-"intro": "",
-"works": [
-{
-"id": "Q26220242",
-"titleKo": "봄날의 강둑",
-"titleEn": "River Bank in Springtime",
-"year": 1887,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20River%20Bank%20in%20Springtime%20-%201961.99%20-%20Dallas%20Museum%20of%20Art.jpg?width=640",
-"place": "파리",
-"story": "고흐가 1887년에 파리에서 그린 그림이에요."
-},
-{
-"id": "Q18650971",
-"titleKo": "밀단",
-"titleEn": "Sheaves of Wheat",
-"year": 1890,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Sheaves%20of%20Wheat%20-%201985.R.80%20-%20Dallas%20Museum%20of%20Art.jpg?width=640",
-"place": "오베르쉬르우아즈",
-"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
 }
 ]
 },
@@ -5878,40 +7097,6 @@ window.VG_DATA = {
 ]
 },
 {
-"id": "Q12110695",
-"nameKo": "코톨드 갤러리",
-"nameEn": "Courtauld Gallery",
-"city": "런던",
-"country": "영국",
-"lat": 51.5116,
-"lon": -0.1177,
-"intro": "",
-"works": [
-{
-"id": "Q19363211",
-"titleKo": "귀에 붕대를 감은 자화상",
-"titleEn": "Self-Portrait with Bandaged Ear",
-"year": 1889,
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Self-Portrait_with_a_Bandaged_Ear_-_Vincent_van_Gogh.jpg/960px-Self-Portrait_with_a_Bandaged_Ear_-_Vincent_van_Gogh.jpg",
-"place": "아를",
-"story": "아를에 살던 1889년 겨울에 그린 자화상이에요. 고흐는 마음이 많이 아팠던 때 귀를 다쳐서 병원에서 치료를 받았어요. 집에 돌아온 뒤 붕대를 감은 자기 모습을 그리며 다시 그림을 시작했어요.",
-"lookFor": "그림에서 찾아보기: 뒤쪽 벽에 걸린 일본 판화를 찾아보세요. 산과 사람들이 보여요.",
-"fun": "고흐가 다친 쪽은 왼쪽 귀였어요. 거울을 보며 그려서, 그림에서는 오른쪽 귀에 붕대를 감은 것처럼 보여요.",
-"featured": true,
-"forAdults": "1888년 12월, 고흐는 마음의 병이 심해진 상태에서 자신의 왼쪽 귀를 다쳤고 아를의 병원에서 치료를 받았어요. 이 그림은 퇴원한 뒤인 1889년 1월에 그렸어요. 아이가 \"귀는 왜 다쳤어요?\" 하고 물으면 \"마음이 많이 아파서 스스로를 다치게 했고, 병원에서 도움을 받은 뒤 다시 그림을 그렸어\"처럼 아픔과 회복을 함께 말해 주세요. 마음이 아플 때 어른에게 도움을 청하는 것은 부끄러운 일이 아니라는 이야기로 이어 갈 수 있어요."
-},
-{
-"id": "Q26221132",
-"titleKo": "꽃이 핀 복숭아나무들",
-"titleEn": "Peach Trees in Blossom",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Perzikbomen%20in%20bloei.jpg?width=640",
-"place": "아를",
-"story": "고흐가 1889년에 아를에서 그린 그림이에요."
-}
-]
-},
-{
 "id": "Q842858",
 "nameKo": "스웨덴 국립미술관",
 "nameEn": "Nationalmuseum",
@@ -6032,36 +7217,6 @@ window.VG_DATA = {
 ]
 },
 {
-"id": "Q924335",
-"nameKo": "암스테르담 시립 미술관",
-"nameEn": "Stedelijk Museum Amsterdam",
-"city": "암스테르담",
-"country": "네덜란드",
-"lat": 52.3578,
-"lon": 4.8797,
-"intro": "",
-"works": [
-{
-"id": "Q24056334",
-"titleKo": "몽마르트르의 텃밭",
-"titleEn": "Kitchen Gardens on Montmartre",
-"year": 1887,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Willem%20van%20Gogh%20045.jpg?width=640",
-"place": "파리",
-"story": "고흐가 1887년에 파리에서 그린 그림이에요."
-},
-{
-"id": "Q24056324",
-"titleKo": "땅을 파는 두 농부",
-"titleEn": "Two Peasants Digging",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Zwei%20Bauern%20beim%20Umgraben.jpeg?width=640",
-"place": "생레미드프로방스",
-"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
-}
-]
-},
-{
 "id": "Q162111",
 "nameKo": "베를린 구 국립미술관",
 "nameEn": "Alte Nationalgalerie",
@@ -6088,36 +7243,6 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Lovers%20-%20The%20Poet%27s%20Garden%20%28location%20unknown%29%20-%20My%20Dream.jpg?width=640",
 "place": "아를",
 "story": "고흐가 1888년에 아를에서 그린 그림이에요."
-}
-]
-},
-{
-"id": "Q163804",
-"nameKo": "슈테델 미술관",
-"nameEn": "Städel Museum",
-"city": "프랑크푸르트암마인",
-"country": "독일",
-"lat": 50.1032,
-"lon": 8.6739,
-"intro": "",
-"works": [
-{
-"id": "Q26220120",
-"titleKo": "오두막과 염소와 여인",
-"titleEn": "Cottage and Woman with Goat",
-"year": 1885,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Farmhouse%20in%20Nuenen%20-%20Google%20Art%20Project.jpg?width=640",
-"place": "뉘넌",
-"story": "고흐가 1885년에 뉘넌에서 그린 그림이에요."
-},
-{
-"id": "Q17023940",
-"titleKo": "가셰 박사의 초상",
-"titleEn": "Portrait of Dr. Gachet",
-"year": 1890,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20Doktor%20Gachet.jpeg?width=640",
-"place": "오베르쉬르우아즈",
-"story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
 }
 ]
 },
@@ -6178,6 +7303,101 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20des%20Kunsth%C3%A4ndlers%20Alexander%20Reid.jpeg?width=640",
 "place": "파리",
 "story": "고흐가 1887년에 파리에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q1542668",
+"nameKo": "흐로닝어 미술관",
+"nameEn": "Groninger Museum",
+"city": "흐로닝언",
+"country": "네덜란드",
+"lat": 53.2119,
+"lon": 6.5656,
+"intro": "",
+"works": [
+{
+"id": "Q5306023",
+"titleKo": "니우암스테르담의 도개교",
+"titleEn": "Drawbridge in Nieuw-Amsterdam",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20Ophaalbrug%20in%20Nieuw-Amsterdam.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1883년에 그린 수채화예요."
+},
+{
+"id": "Q26220165",
+"titleKo": "봄 뉘넌의 목사관 정원",
+"titleEn": "The Parsonage Garden at Nuenen",
+"year": 1884,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20The%20Parsonage%20Garden%20at%20Nuenen.jpg?width=640",
+"place": "뉘넌",
+"story": "고흐가 1884년에 뉘넌에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q6373",
+"nameKo": "대영박물관",
+"nameEn": "British Museum",
+"city": "런던",
+"country": "영국",
+"lat": 51.5194,
+"lon": -0.1269,
+"intro": "",
+"works": [
+{
+"id": "Q26221349",
+"titleKo": "과수원에서 땅을 파는 남자",
+"titleEn": "Man Digging in the Orchard",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20In%20the%20Orchard%20-%201883.jpg?width=640",
+"place": "",
+"kind": "판화",
+"story": "고흐가 1883년에 만든 판화예요."
+},
+{
+"id": "Q26221305",
+"titleKo": "작은 기차가 지나는 아를 라크로 평야",
+"titleEn": "The plain La Crau\" at Arles with a small train\"",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Die%20Ebene%20%22La%20Crau%22%20bei%20Arles%20mit%20kleinem%20Zug.jpeg?width=640",
+"place": "아를",
+"kind": "소묘",
+"story": "고흐가 1888년에 아를에서 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q809600",
+"nameKo": "포그 미술관",
+"nameEn": "Fogg Museum",
+"city": "케임브리지",
+"country": "미국",
+"lat": 42.3741,
+"lon": -71.1144,
+"intro": "",
+"works": [
+{
+"id": "Q26221329",
+"titleKo": "파란 수레 (라크로의 수확)",
+"titleEn": "The Blue Cart / Harvest at La Crau",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20La%20charrette%20bleue%20%28Fogg%20Art%20Museum%29.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1888년에 그린 수채화예요."
+},
+{
+"id": "Q26221318",
+"titleKo": "농부의 초상 (파시앙스 에스칼리에)",
+"titleEn": "Peasant of the Camargue / Portrait of Patience Escalier",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Bildnis%20Patience%20Escalier.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
 }
 ]
 },
@@ -6416,27 +7636,6 @@ window.VG_DATA = {
 ]
 },
 {
-"id": "Q1132918",
-"nameKo": "노르웨이 국립박물관",
-"nameEn": "National Museum of Art, Architecture and Design",
-"city": "오슬로",
-"country": "노르웨이",
-"lat": 59.9117,
-"lon": 10.7292,
-"intro": "",
-"works": [
-{
-"id": "Q9162686",
-"titleKo": "자화상",
-"titleEn": "Self-portrait",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Self-portrait%2C%201889%20%28Nasjonalmuseet%2C%20Oslo%29.jpg?width=640",
-"place": "생레미드프로방스",
-"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
-}
-]
-},
-{
 "id": "Q1970945",
 "nameKo": "버펄로 AKG 미술관",
 "nameEn": "Buffalo AKG Art Museum",
@@ -6601,30 +7800,6 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Zwei%20M%C3%A4dchen%20beim%20Spaziergang%20entlang%20der%20Felder.jpeg?width=640",
 "place": "오베르쉬르우아즈",
 "story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
-}
-]
-},
-{
-"id": "Q731126",
-"nameKo": "J. 폴 게티 미술관",
-"nameEn": "J. Paul Getty Museum",
-"city": "로스앤젤레스",
-"country": "미국",
-"lat": 34.0775,
-"lon": -118.475,
-"intro": "",
-"works": [
-{
-"id": "Q2282256",
-"titleKo": "붓꽃",
-"titleEn": "Irises",
-"year": 1889,
-"img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Irises-Vincent_van_Gogh.jpg/960px-Irises-Vincent_van_Gogh.jpg",
-"place": "생레미드프로방스",
-"story": "고흐가 생레미 병원에 들어가고 처음 그린 그림 중 하나예요. 병원 정원에 핀 보라색 붓꽃을 보며 그렸어요.",
-"lookFor": "그림에서 찾아보기: 보라색 꽃들 사이에 혼자 하얀 붓꽃을 찾아보세요.",
-"fun": "1987년에 팔릴 때 그때까지 세상에서 가장 비싼 그림 값이었어요.",
-"featured": true
 }
 ]
 },
@@ -7112,27 +8287,6 @@ window.VG_DATA = {
 ]
 },
 {
-"id": "Q1542668",
-"nameKo": "흐로닝어 미술관",
-"nameEn": "Groninger Museum",
-"city": "흐로닝언",
-"country": "네덜란드",
-"lat": 53.2119,
-"lon": 6.5656,
-"intro": "",
-"works": [
-{
-"id": "Q26220165",
-"titleKo": "봄 뉘넌의 목사관 정원",
-"titleEn": "The Parsonage Garden at Nuenen",
-"year": 1884,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20The%20Parsonage%20Garden%20at%20Nuenen.jpg?width=640",
-"place": "뉘넌",
-"story": "고흐가 1884년에 뉘넌에서 그린 그림이에요."
-}
-]
-},
-{
 "id": "Q468458",
 "nameKo": "만하임 미술관",
 "nameEn": "Kunsthalle Mannheim",
@@ -7486,6 +8640,336 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Le%20Moulin%20de%20la%20Galette%20-%20Google%20Art%20Project.jpg?width=640",
 "place": "파리",
 "story": "고흐가 1886년에 파리에서 그린 그림이에요."
+}
+]
+},
+{
+"id": "Q1478423",
+"nameKo": "모건 라이브러리 & 뮤지엄",
+"nameEn": "The Morgan Library & Museum",
+"city": "뉴욕",
+"country": "미국",
+"lat": 40.7488,
+"lon": -73.9816,
+"intro": "",
+"works": [
+{
+"id": "Q26221343",
+"titleKo": "생레미의 밀밭",
+"titleEn": "Wheatfield, Saint-Rémy de Provence",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Wheatfield%2C%20Saint-R%C3%A9my%20de%20Provence%20-%20F1548%20JH1726.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q14917275",
+"nameKo": "슈투트가르트 주립 미술관",
+"nameEn": "Staatsgalerie Stuttgart",
+"city": "슈투트가르트",
+"country": "독일",
+"lat": 48.7802,
+"lon": 9.1869,
+"intro": "",
+"works": [
+{
+"id": "Q26221324",
+"titleKo": "아를의 랑글루아 다리",
+"titleEn": "The Bridge of Langlois at Arles",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Die%20Br%C3%BCcke%20von%20Langlois%20in%20Arles.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q1756399",
+"nameKo": "테헤란 현대미술관",
+"nameEn": "Tehran Museum of Contemporary Art",
+"city": "테헤란",
+"country": "이란",
+"lat": 35.7114,
+"lon": 51.3906,
+"intro": "",
+"works": [
+{
+"id": "Q26221351",
+"titleKo": "슬픔에 잠긴 노인",
+"titleEn": "Old Man with his Head in his Hands (\"At Eternity's Gate\")",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Old%20Man%20with%20his%20Head%20in%20his%20Hands%20%28At%20Eternity%27s%20Gate%29.jpg?width=640",
+"place": "",
+"kind": "판화",
+"story": "고흐가 1882년에 만든 판화예요."
+}
+]
+},
+{
+"id": "Q2097646",
+"nameKo": "소우마야 미술관",
+"nameEn": "Museo Soumaya",
+"city": "멕시코시티",
+"country": "멕시코",
+"lat": 19.4407,
+"lon": -99.2046,
+"intro": "",
+"works": [
+{
+"id": "Q7158466",
+"titleKo": "드렌터의 이탄 채굴지",
+"titleEn": "Peatery in Drenthe",
+"year": 1883,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Paisaje%20en%20Drenthe%2C%201883.jpg?width=640",
+"place": "드렌터주",
+"kind": "수채화",
+"story": "고흐가 1883년에 드렌터주에서 그린 수채화예요."
+}
+]
+},
+{
+"id": "Q3757721",
+"nameKo": "밀라노 근대미술관",
+"nameEn": "Galleria d'arte moderna di Milano",
+"city": "밀라노",
+"country": "이탈리아",
+"lat": 45.4725,
+"lon": 9.1997,
+"intro": "",
+"works": [
+{
+"id": "Q3713980",
+"titleKo": "브르타뉴의 여인들과 아이들",
+"titleEn": "Breton Women and Chlidren",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Breton%20Women.jpg?width=640",
+"place": "",
+"kind": "수채화",
+"story": "고흐가 1888년에 그린 수채화예요."
+}
+]
+},
+{
+"id": "Q464404",
+"nameKo": "뮌헨 국립 판화 소묘관",
+"nameEn": "Staatliche Graphische Sammlung München",
+"city": "뮌헨",
+"country": "독일",
+"lat": 48.1444,
+"lon": 11.5667,
+"intro": "",
+"works": [
+{
+"id": "Q26221344",
+"titleKo": "생폴 요양원 뒤 울타리 밭",
+"titleEn": "Fenced field behind the hospital of Saint-Paul",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Umfriedetes%20Feld%20hinter%20dem%20Hospital%20Saint-Paul.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q555946",
+"nameKo": "베를린 판화 소묘관",
+"nameEn": "Kupferstichkabinett Berlin",
+"city": "베를린",
+"country": "독일",
+"lat": 52.5084,
+"lon": 13.367,
+"intro": "",
+"works": [
+{
+"id": "Q18689430",
+"titleKo": "수확 (에밀 베르나르에게 보낸 그림)",
+"titleEn": "The Harvest (for Émile Bernard)",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20Harvest%20%28for%20%C3%89mile%20Bernard%29%20-%20Google%20Art%20Project.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q56229813",
+"nameKo": "빌라 플로라 한로저 컬렉션",
+"nameEn": "Hahnloser Collection in Villa Flora",
+"city": "빈터투어",
+"country": "스위스",
+"lat": 47.4964,
+"lon": 8.7354,
+"intro": "",
+"works": [
+{
+"id": "Q26221319",
+"titleKo": "밤의 카페",
+"titleEn": "The Night Cafe in Arles",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Le%20Caf%C3%A9%20de%20nuit%20%C3%A0%20Arles%20%281888%29%20watercolor.jpeg?width=640",
+"place": "아를",
+"kind": "수채화",
+"story": "고흐가 1888년에 아를에서 그린 수채화예요."
+}
+]
+},
+{
+"id": "Q632682",
+"nameKo": "브루클린 미술관",
+"nameEn": "Brooklyn Museum",
+"city": "뉴욕",
+"country": "미국",
+"lat": 40.6712,
+"lon": -73.9636,
+"intro": "",
+"works": [
+{
+"id": "Q26221336",
+"titleKo": "사이프러스 나무",
+"titleEn": "Cypresses",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Zypressen1.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1889년에 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q658725",
+"nameKo": "카를스루에 주립 미술관",
+"nameEn": "Staatliche Kunsthalle Karlsruhe",
+"city": "카를스루에",
+"country": "독일",
+"lat": 49.0119,
+"lon": 8.4,
+"intro": "",
+"works": [
+{
+"id": "Q26221263",
+"titleKo": "공장",
+"titleEn": "Factory",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Factory%20%281882%29%20-%20Kunsthalle%20Karlsruhe.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1882년에 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q6940756",
+"nameKo": "미술 컬렉션 박물관",
+"nameEn": "Museum of Art Collections",
+"city": "부쿠레슈티",
+"country": "루마니아",
+"lat": 44.4445,
+"lon": 26.0914,
+"intro": "",
+"works": [
+{
+"id": "Q134569079",
+"titleKo": "삽으로 당근을 캐는 농부 여인",
+"titleEn": "Peasant Woman, Stooping with a Spade, Digging Up Carrots",
+"year": 1885,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20The%20Carrot%20Harvester.jpg?width=640",
+"place": "뉘넌",
+"kind": "소묘",
+"story": "고흐가 1885년에 뉘넌에서 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q714163",
+"nameKo": "슈추세프 국립 건축 박물관",
+"nameEn": "Shchusev State Museum of Architecture",
+"city": "모스크바",
+"country": "러시아",
+"lat": 55.7524,
+"lon": 37.6072,
+"intro": "",
+"works": [
+{
+"id": "Q26221341",
+"titleKo": "별이 빛나는 밤",
+"titleEn": "The Starry Night",
+"year": 1889,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20Starry%20Night%20Drawing.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1889년에 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q7741188",
+"nameKo": "하이드 컬렉션",
+"nameEn": "The Hyde Collection",
+"city": "글렌스폴스",
+"country": "미국",
+"lat": 43.3103,
+"lon": -73.6344,
+"intro": "",
+"works": [
+{
+"id": "Q26221333",
+"titleKo": "아를이 보이는 과수원",
+"titleEn": "Orchard with Arles in the Background",
+"year": 1888,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Orchard%20with%20Arles%20in%20the%20Background%20%281888%29.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1888년에 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q840886",
+"nameKo": "부다페스트 미술관",
+"nameEn": "Museum of Fine Arts, Budapest",
+"city": "부다페스트",
+"country": "헝가리",
+"lat": 47.5159,
+"lon": 19.0768,
+"intro": "",
+"works": [
+{
+"id": "Q118372364",
+"titleKo": "겨울의 뉘넌 목사관 정원",
+"titleEn": "The Parsonage Garden at Nuenen in Winter",
+"year": 1884,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20Parsonage%20Garden%20at%20Nuenen%20in%20Winter%20-%20Google%20Art%20Project.jpg?width=640",
+"place": "뉘넌",
+"kind": "소묘",
+"story": "고흐가 1884년에 뉘넌에서 그린 소묘예요."
+}
+]
+},
+{
+"id": "Q847508",
+"nameKo": "우스터 미술관",
+"nameEn": "Worcester Art Museum",
+"city": "우스터",
+"country": "미국",
+"lat": 42.2731,
+"lon": -71.8022,
+"intro": "",
+"works": [
+{
+"id": "Q7232324",
+"titleKo": "실크 모자를 쓴 남자의 초상",
+"titleEn": "Portrait of a Man in a Top Hat",
+"year": 1882,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Orphan%20Man%20with%20Top%20Hat%20%28F954%29.jpg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 1882년에 그린 소묘예요."
 }
 ]
 }

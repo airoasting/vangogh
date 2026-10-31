@@ -104,7 +104,7 @@
       '<div class="lb-text">' +
         '<h3>' + esc(w.titleKo) + '</h3>' +
         (w.titleEn ? '<p class="en">' + esc(w.titleEn) + '</p>' : '') +
-        '<p class="tomb">' + (w.year ? esc(w.year) + '년<br>' : '') + esc(m.nameKo) + '<br>' + place + '</p>' +
+        '<p class="tomb">' + (w.year ? esc(w.year) + '년 · ' : '') + esc(kindOf(w)) + '<br>' + esc(m.nameKo) + '<br>' + place + '</p>' +
         '<div class="lb-actions">' +
           (canRead() ? '<button type="button" class="textlink lb-read" id="lb-read" aria-pressed="false">읽어 줘요</button>' : '') +
           (panelOpen && panelMuseum === m ? '' : '<button type="button" class="textlink lb-map" id="lb-map">지도에서 이 미술관 보기</button>') +
@@ -192,10 +192,22 @@
     '이 그림에 새 제목을 붙인다면 뭐라고 할까요?',
     '그림을 보면 어떤 기분이 드나요?'
   ];
+  // 소묘와 판화는 색과 붓자국 대신 선을 보게 한다
+  var LOOK_LINE = [
+    '가장 먼저 눈에 들어온 곳은 어디인가요?',
+    '선이 굵고 진한 곳과 가늘고 연한 곳을 찾아보세요.',
+    '고흐는 짧은 선과 점을 많이 그었어요. 어디에서 찾을 수 있나요?',
+    '그림 속에 들어간다면 어떤 소리가 들릴까요?',
+    '이 그림에 색을 칠한다면 무슨 색을 고를까요?',
+    '그림을 보면 어떤 기분이 드나요?'
+  ];
+  // 유화가 아닌 작품의 종류. 유화에는 kind가 없다
+  function kindOf(w) { return w.kind || '유화'; }
   function lookQuestion(w) {
     var s = String(w.id || w.titleKo || ''), h = 0;
     for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) % 9973;
-    return LOOK_EXTRA[h % LOOK_EXTRA.length];
+    var pool = (w.kind === '소묘' || w.kind === '판화') ? LOOK_LINE : LOOK_EXTRA;
+    return pool[h % pool.length];
   }
   function lbStep(d) { lbIdx = (lbIdx + d + lbList.length) % lbList.length; renderLightbox(); }
   $('lb-close').addEventListener('click', closeLightbox);
@@ -205,8 +217,9 @@
   /* ---------- 그림 카드 ---------- */
   function cardHTML(item, i, showMuseum) {
     var w = item.w;
-    var meta = [w.year ? esc(w.year) : '', showMuseum ? esc(item.m.nameKo) : ''].filter(Boolean).join(' · ');
-    if (!showMuseum && w.year) meta = esc(w.year) + '년';
+    var kind = w.kind ? esc(w.kind) : '';  // 카드에는 유화가 아닐 때만 종류를 적는다
+    var meta = [w.year ? esc(w.year) : '', kind, showMuseum ? esc(item.m.nameKo) : ''].filter(Boolean).join(' · ');
+    if (!showMuseum) meta = [w.year ? esc(w.year) + '년' : '', kind].filter(Boolean).join(' · ');
     if (w.featured) meta += '<span class="has-story">이야기 있음</span>';
     return '<button class="art-card" data-i="' + i + '" aria-label="' + esc(w.titleKo) + ' 크게 보기">' +
       '<div class="art-thumb">' + imgHTML(w) + '</div>' +
@@ -304,7 +317,8 @@
       return;
     }
     var ordered = storyFirst(allWorks);
-    var STORY = '__story';
+    var STORY = '__story', KIND = '__kind:';
+    var KINDS = ['유화', '소묘', '수채화', '판화'];
     var search = $('all-search'), result = $('all-result'), quick = $('all-quick');
     var countries = [];
     museums.forEach(function (m) {
@@ -321,13 +335,14 @@
     function matches(it) {
       if (!query) return true;
       var w = it.w, m = it.m;
-      return [w.titleKo, w.titleEn, w.place, m.nameKo, m.nameEn, m.city, m.country].some(function (s) {
+      return [w.titleKo, w.titleEn, w.place, kindOf(w), m.nameKo, m.nameEn, m.city, m.country].some(function (s) {
         return norm(s).indexOf(query) >= 0;
       });
     }
     function inTab(it, key) {
       if (key === '전체') return true;
       if (key === STORY) return !!it.w.featured;
+      if (key.indexOf(KIND) === 0) return kindOf(it.w) === key.slice(KIND.length);
       return it.m.country === key;
     }
     function tab(label, key, n) {
@@ -336,7 +351,9 @@
     function renderFilters(found) {
       function n(key) { return found.filter(function (it) { return inTab(it, key); }).length; }
       var keys = countries.filter(function (c) { return c === current || n(c) > 0; });
+      var kinds = KINDS.filter(function (k) { return current === KIND + k || n(KIND + k) > 0; });
       filters.innerHTML = [tab('전체', '전체', found.length), tab('이야기 있는 그림', STORY, n(STORY))]
+        .concat(kinds.map(function (k) { return tab(k, KIND + k, n(KIND + k)); }))
         .concat(keys.map(function (c) { return tab(c, c, n(c)); })).join('');
     }
     function render() {

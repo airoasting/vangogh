@@ -1,0 +1,15 @@
+SELECT ?w ?type ?titleEn ?titleKo ?img ?inception ?c ?cEn ?cKo ?co ?cityEn ?cityKo ?countryKo ?placeKo ?placeEn ?isPainting ?lost WHERE {
+  ?w wdt:P170 wd:Q5582 ; wdt:P31 ?type ; wdt:P18 ?img ; wdt:P195 ?c .
+  ?c wdt:P625 ?co .
+  VALUES ?type { wd:Q93184 wd:Q18761202 wd:Q15123870 wd:Q11060274 wd:Q2647254 wd:Q5078274 wd:Q12043905 wd:Q6791777 wd:Q21281546 wd:Q18218093 wd:Q838948 wd:Q17152495 wd:Q1784021 }
+  BIND(EXISTS { ?w wdt:P31 wd:Q3305213 } AS ?isPainting)
+  BIND(EXISTS { ?w wdt:P31 wd:Q104438958 } AS ?lost)
+  OPTIONAL { ?w rdfs:label ?titleEn FILTER(LANG(?titleEn)="en") }
+  OPTIONAL { ?w rdfs:label ?titleKo FILTER(LANG(?titleKo)="ko") }
+  OPTIONAL { ?w wdt:P571 ?inception }
+  OPTIONAL { ?c rdfs:label ?cEn FILTER(LANG(?cEn)="en") }
+  OPTIONAL { ?c rdfs:label ?cKo FILTER(LANG(?cKo)="ko") }
+  OPTIONAL { ?c wdt:P131 ?city . OPTIONAL { ?city rdfs:label ?cityEn FILTER(LANG(?cityEn)="en") } OPTIONAL { ?city rdfs:label ?cityKo FILTER(LANG(?cityKo)="ko") } }
+  OPTIONAL { ?c wdt:P17 ?ctry . ?ctry rdfs:label ?countryKo FILTER(LANG(?countryKo)="ko") }
+  OPTIONAL { ?w wdt:P1071 ?pl . OPTIONAL { ?pl rdfs:label ?placeKo FILTER(LANG(?placeKo)="ko") } OPTIONAL { ?pl rdfs:label ?placeEn FILTER(LANG(?placeEn)="en") } }
+}
