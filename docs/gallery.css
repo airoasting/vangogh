@@ -1,0 +1,311 @@
+/* 반 고흐 그림 지도: 단일 스타일시트 (v7)
+   원칙: 색은 그림이 낸다. 장식 없음. 구조가 필요한 곳에만 1px 헤어라인.
+   글자 크기 13 / 15 / 17 / 22 / 32 / 56, 간격 8 / 16 / 24 / 40 / 64 / 104. */
+:root {
+  --paper: #F4F1EA;
+  --ink: #17171B;
+  --body: #2A2A2E;
+  --muted: #5F5E66;
+  --rule: #D6D0C4;
+  --land: #E2DDD1;
+  --route: #B23A24;
+  --dark: #111113;
+  --dark-text: #E8E4DA;
+  --dark-muted: #A8A39A;
+  --dark-rule: #2E2E33;
+  --sans: "Noto Sans KR", -apple-system, "Apple SD Gothic Neo", system-ui, sans-serif;
+  --serif: "Noto Serif KR", "Apple Myungjo", Georgia, serif;
+  --gutter: clamp(16px, 4vw, 48px);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 72px; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--sans); font-size: 17px; line-height: 1.7; letter-spacing: -0.01em;
+  overflow-x: hidden; -webkit-font-smoothing: antialiased;
+}
+body.no-scroll { overflow: hidden; }
+img { max-width: 100%; display: block; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+h1, h2, h3, h4 { margin: 0; font-weight: 800; word-break: keep-all; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+.wrap { max-width: 1320px; margin: 0 auto; padding: 0 var(--gutter); }
+
+/* 텍스트 링크와 탭 */
+.textlink, .hero-links a, .mast-nav a {
+  display: inline-block; line-height: 44px; min-height: 44px;
+  font-size: 15px; font-weight: 500; text-decoration: underline; text-decoration-thickness: 1px;
+  text-underline-offset: 5px; color: var(--ink);
+}
+.textlink:hover, .hero-links a:hover { text-decoration-thickness: 2px; }
+.tabs { display: flex; flex-wrap: wrap; column-gap: 28px; row-gap: 0; }
+.tab {
+  min-height: 44px; font-size: 15px; font-weight: 500; color: var(--muted);
+  border-bottom: 2px solid transparent; padding: 10px 0 8px;
+}
+.tab:hover { color: var(--ink); }
+.tab[aria-pressed="true"] { color: var(--ink); font-weight: 700; border-bottom-color: var(--ink); }
+.tab .n { font-variant-numeric: tabular-nums; font-weight: 400; margin-left: 6px; color: var(--muted); }
+
+/* 마스트헤드 */
+.mast { position: sticky; top: 0; z-index: 50; background: var(--paper); border-bottom: 1px solid var(--ink); }
+.mast-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.wordmark { font-size: 18px; font-weight: 800; letter-spacing: -0.03em; text-decoration: none; }
+.mast-nav { display: flex; gap: 24px; }
+.mast-nav a { text-decoration: none; font-size: 14px; }
+.mast-nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+
+/* 히어로 */
+.hero { padding-top: 64px; }
+.hero h1 {
+  font-size: clamp(40px, 7vw, 104px); line-height: 1.04; letter-spacing: -0.045em;
+  max-width: 11.5em; font-weight: 800;
+}
+.hero-foot {
+  display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px;
+  margin: 40px 0 40px; align-items: end;
+}
+.hero-lead { grid-column: 1 / span 6; font-size: 22px; line-height: 1.6; color: var(--body); max-width: 26em; word-break: keep-all; }
+.hero-links { grid-column: 8 / span 5; display: flex; gap: 28px; justify-content: flex-end; }
+.intro-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #0E0F12; }
+.intro-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 6%; color: var(--paper); }
+.intro-fallback .big { font-size: clamp(32px, 8vw, 104px); font-weight: 900; line-height: 1; letter-spacing: -0.05em; }
+.intro-fallback a { color: var(--paper); margin-top: 16px; }
+
+/* 섹션 */
+.section { padding-top: 104px; }
+.sec-head {
+  display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px;
+  border-top: 1px solid var(--ink); padding-top: 16px;
+}
+.sec-label { grid-column: 1 / span 3; font-size: 13px; font-weight: 500; color: var(--muted); padding-top: 10px; }
+.sec-head h2 {
+  grid-column: 4 / span 9; font-size: clamp(32px, 4.2vw, 56px); line-height: 1.1; letter-spacing: -0.035em;
+}
+.sec-lead {
+  margin: 24px 0 0 calc((100% + 24px) * 3 / 12); max-width: 34em; font-size: 17px; color: var(--body); word-break: keep-all;
+}
+
+/* 소개: 그림 한 점 + 숫자 목록 */
+.who { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; margin-top: 40px; align-items: start; }
+.who-fig { grid-column: 1 / span 5; margin: 0; }
+.who-fig img { width: 100%; height: auto; }
+.who-fig figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+.who-body { grid-column: 7 / span 6; }
+.who-lead { font-size: 22px; line-height: 1.6; color: var(--body); word-break: keep-all; margin-bottom: 40px; }
+.facts { margin: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; }
+.fact { border-top: 1px solid var(--rule); padding: 16px 0 40px; }
+.fact dt {
+  font-size: 56px; line-height: 1; font-weight: 800; letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums; margin-bottom: 16px; word-break: keep-all;
+}
+.fact dt small { font-size: 22px; font-weight: 700; margin-left: 4px; letter-spacing: -0.02em; }
+.fact dd { margin: 0; font-size: 16px; line-height: 1.7; color: var(--body); word-break: keep-all; }
+
+/* 지도 */
+.map-bar {
+  display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 8px 24px;
+  margin: 40px 0 0; border-bottom: 1px solid var(--rule);
+}
+.map-links { display: flex; gap: 24px; }
+.map-wrap { position: relative; background: #ECE8DF; overflow: hidden; }
+.map { width: 100%; height: min(640px, 72vh); min-height: 420px; touch-action: none; }
+.map svg { display: block; width: 100%; height: 100%; }
+.map .sea { fill: #ECE8DF; }
+.map .country { fill: var(--land); stroke: #ECE8DF; stroke-width: .6; vector-effect: non-scaling-stroke; }
+.map .pin { cursor: pointer; outline: none; }
+.map .pin .hit { fill: transparent; }
+.map .pin .dot { fill: var(--ink); stroke: var(--paper); stroke-width: 2; }
+.map .pin .leader { stroke: var(--ink); stroke-width: 1; }
+.map .pin .anchor { fill: var(--ink); }
+.map .pin text, .map .life-pin text.lbl {
+  font-family: var(--sans); font-size: 12px; font-weight: 500; fill: var(--ink);
+  paint-order: stroke; stroke: #ECE8DF; stroke-width: 3px; stroke-linejoin: round; pointer-events: none;
+}
+.map .pin text .cnt { font-weight: 400; fill: var(--muted); }
+.map .pin:hover .dot, .map .pin.active .dot { fill: var(--route); }
+.map .pin:focus-visible .hit { stroke: var(--ink); stroke-width: 2; }
+.map .life-path { fill: none; stroke: var(--route); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.map .life-pin { cursor: pointer; outline: none; }
+.map .life-pin .hit { fill: transparent; }
+.map .life-pin .body { fill: var(--route); }
+.map .life-pin text.num { font-family: var(--sans); font-size: 11px; font-weight: 700; fill: #fff; pointer-events: none; }
+.map .life-pin.active .body, .map .life-pin:hover .body { fill: var(--ink); }
+.map .life-pin:focus-visible .hit { stroke: var(--ink); stroke-width: 2; }
+.zoom-ctrl { position: absolute; right: 16px; top: 16px; display: flex; flex-direction: column; }
+.sq {
+  width: 40px; height: 40px; background: var(--paper); border: 1px solid var(--ink);
+  font-size: 20px; line-height: 1; display: grid; place-items: center;
+}
+.sq + .sq { border-top: 0; }
+.sq:hover { background: var(--ink); color: var(--paper); }
+.legend {
+  position: absolute; left: 16px; bottom: 16px; font-size: 13px; line-height: 1.5; color: var(--ink);
+  background: rgba(236,232,223,.9); padding: 8px 12px 8px 0; pointer-events: none;
+}
+.legend span { display: flex; align-items: center; gap: 8px; }
+.legend i { display: inline-block; flex: none; }
+.legend .k-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ink); }
+.legend .k-line { width: 18px; height: 2px; background: var(--route); }
+.map-tip {
+  position: absolute; z-index: 5; transform: translate(-50%, calc(-100% - 14px));
+  background: var(--paper); color: var(--ink); border: 1px solid var(--ink);
+  padding: 6px 10px; font-size: 13px; font-weight: 500; white-space: nowrap; pointer-events: none;
+}
+.map-tip[hidden] { display: none; }
+.life-card {
+  position: absolute; left: 16px; top: 16px; width: min(340px, calc(100% - 88px)); z-index: 6;
+  background: var(--paper); border: 1px solid var(--ink); padding: 16px 16px 20px;
+}
+.life-card[hidden] { display: none; }
+.life-card .close-text { position: absolute; right: 8px; top: 4px; }
+.life-card .lc-meta { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.life-card h4 { font-size: 22px; letter-spacing: -0.02em; margin: 2px 0 8px; padding-right: 64px; }
+.life-card p { font-size: 15px; line-height: 1.7; color: var(--body); }
+
+/* 미술관 목록 */
+.index-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-top: 64px; flex-wrap: wrap; }
+.index-head h3 { font-size: 22px; letter-spacing: -0.02em; }
+.index-head p { font-size: 13px; color: var(--muted); }
+.museum-index {
+  list-style: none; margin: 16px 0 0; padding: 0;
+  columns: 3; column-gap: 40px; border-top: 1px solid var(--ink);
+}
+.museum-index li { break-inside: avoid; border-bottom: 1px solid var(--rule); }
+.museum-index button {
+  width: 100%; min-height: 56px; display: grid; grid-template-columns: 1fr auto; align-items: center;
+  column-gap: 16px; text-align: left; padding: 10px 0;
+}
+.museum-index .nm { font-size: 17px; font-weight: 500; line-height: 1.35; word-break: keep-all; }
+.museum-index .ct { display: block; font-size: 13px; color: var(--muted); font-weight: 400; }
+.museum-index .num { font-size: 17px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.museum-index button:hover .nm { text-decoration: underline; text-underline-offset: 4px; }
+
+/* 그림 벽 */
+.filters { margin-top: 40px; border-bottom: 1px solid var(--rule); }
+.wall { columns: 4 240px; column-gap: 32px; margin-top: 40px; }
+.art-card { display: block; width: 100%; text-align: left; break-inside: avoid; margin: 0 0 40px; }
+.art-thumb { background: var(--land); }
+.art-thumb img { width: 100%; height: auto; transition: opacity .2s; }
+.art-card:hover .art-thumb img { opacity: .9; }
+.art-card .t { font-size: 16px; font-weight: 700; line-height: 1.4; margin-top: 12px; word-break: keep-all; }
+.art-card:hover .t { text-decoration: underline; text-underline-offset: 4px; }
+.art-card .y { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: 2px; }
+.placeholder {
+  width: 100%; aspect-ratio: 4 / 5; background: var(--land); display: flex; align-items: flex-end;
+  padding: 12px; font-size: 13px; color: var(--muted);
+}
+.empty-msg { font-size: 15px; color: var(--muted); padding: 24px 0; }
+
+/* 패널 */
+.backdrop { position: fixed; inset: 0; background: rgba(23,23,27,.4); z-index: 80; }
+.backdrop[hidden] { display: none; }
+.panel {
+  position: fixed; top: 0; right: 0; bottom: 0; width: min(600px, 100vw); z-index: 90;
+  background: var(--paper); border-left: 1px solid var(--ink);
+  transform: translateX(100%); transition: transform .4s cubic-bezier(.16,1,.3,1);
+  overflow-y: auto; overscroll-behavior: contain; padding: 40px 40px 64px;
+}
+.panel.open { transform: translateX(0); }
+.close-text {
+  position: absolute; top: 12px; right: 16px; z-index: 3; min-height: 44px; padding: 0 4px;
+  font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px;
+}
+.close-text:hover { text-decoration: underline; text-underline-offset: 4px; }
+.close-text span { font-size: 20px; line-height: 1; }
+.panel-head { border-bottom: 1px solid var(--ink); padding: 0 72px 24px 0; margin-bottom: 24px; }
+.panel-head .eyebrow { font-size: 13px; font-weight: 500; color: var(--muted); }
+.panel-head h3 { font-size: 32px; line-height: 1.2; letter-spacing: -0.03em; margin-top: 8px; }
+.panel-head .en { font-size: 15px; color: var(--muted); margin-top: 4px; }
+.panel-intro { font-size: 17px; line-height: 1.75; color: var(--body); margin-bottom: 40px; max-width: 32em; word-break: keep-all; }
+.art-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 20px; align-items: end; }
+.art-grid .art-card { margin: 0; }
+
+/* 라이트박스: 미술관 벽 라벨 */
+.lightbox { position: fixed; inset: 0; z-index: 120; background: var(--dark); color: var(--dark-text); }
+.lightbox[hidden] { display: none; }
+.lb-inner {
+  position: relative; height: 100%; display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(320px, 2fr); grid-template-rows: 1fr auto;
+  column-gap: 48px; padding: 56px 48px 0;
+}
+.lightbox .close-text { color: var(--dark-text); top: 8px; right: 24px; }
+.lb-content { display: contents; }
+.lb-img { grid-column: 1; grid-row: 1 / span 2; display: flex; align-items: center; justify-content: center; min-height: 0; padding-bottom: 48px; }
+.lb-img img { max-width: 100%; max-height: calc(100vh - 120px); width: auto; height: auto; object-fit: contain; }
+.lb-img .placeholder { max-width: 420px; }
+.lb-text { grid-column: 2; grid-row: 1; overflow-y: auto; padding: 24px 8px 24px 0; min-height: 0; }
+.lb-text h3 { font-family: var(--serif); font-weight: 600; font-size: 32px; line-height: 1.25; letter-spacing: -0.02em; color: #F4F1EA; }
+.lb-text .en { font-family: var(--serif); font-size: 15px; color: var(--dark-muted); margin-top: 6px; }
+.lb-text .tomb { margin-top: 16px; font-size: 14px; line-height: 1.7; color: var(--dark-muted); font-variant-numeric: tabular-nums; }
+.lb-text .story { margin-top: 24px; font-size: 17px; line-height: 1.8; color: var(--dark-text); word-break: keep-all; }
+.lb-text .part { border-top: 1px solid var(--dark-rule); margin-top: 24px; padding-top: 16px; }
+.lb-text .part h4 { font-size: 13px; font-weight: 700; letter-spacing: .02em; color: #F4F1EA; margin-bottom: 6px; }
+.lb-text .part p { font-size: 16px; line-height: 1.75; color: var(--dark-text); word-break: keep-all; }
+.lb-bar {
+  grid-column: 2; grid-row: 2; display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid var(--dark-rule); padding: 8px 0 16px;
+}
+.lb-bar .textlink { color: var(--dark-text); font-size: 14px; }
+.lb-count { font-size: 14px; color: var(--dark-muted); font-variant-numeric: tabular-nums; }
+.lightbox :focus-visible { outline-color: var(--dark-text); }
+
+/* 푸터 */
+.footer { margin-top: 104px; background: var(--ink); color: #BDB8AE; padding: 40px 0 64px; }
+.footer-inner { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; font-size: 14px; line-height: 1.7; }
+.footer-mark { color: var(--paper); font-weight: 700; }
+.footer a { color: var(--paper); text-underline-offset: 3px; }
+
+@media (max-width: 960px) {
+  .museum-index { columns: 2; }
+  .who-fig { grid-column: 1 / span 5; }
+  .who-body { grid-column: 6 / span 7; }
+  .facts { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .mast-inner { height: 56px; }
+  .mast-nav { gap: 16px; }
+  .hero { padding-top: 40px; }
+  .hero-foot, .sec-head, .who { display: block; }
+  .hero-lead { font-size: 18px; }
+  .hero-links { justify-content: flex-start; margin-top: 8px; }
+  .hero-foot { margin: 24px 0 32px; }
+  .intro-frame { margin: 0 calc(var(--gutter) * -1); width: calc(100% + var(--gutter) * 2); }
+  .section { padding-top: 72px; }
+  .sec-label { padding-top: 0; margin-bottom: 8px; }
+  .sec-lead { margin-left: 0; margin-top: 16px; }
+  .who { margin-top: 24px; }
+  .who-fig { max-width: 300px; margin-bottom: 32px; }
+  .who-lead { font-size: 18px; margin-bottom: 24px; }
+  .facts { grid-template-columns: 1fr; }
+  .fact { padding-bottom: 24px; }
+  .fact dt { font-size: 48px; margin-bottom: 8px; }
+  .map-bar { margin-top: 24px; }
+  .map-wrap { margin: 0 calc(var(--gutter) * -1); }
+  .map { height: 64vh; min-height: 420px; }
+  .museum-index { columns: 1; }
+  .wall { columns: 2; column-gap: 16px; }
+  .art-card { margin-bottom: 32px; }
+  .art-card .t { font-size: 15px; }
+  .art-card .y { font-size: 13px; }
+  .panel { padding: 56px 20px 48px; }
+  .panel-head { padding-right: 0; }
+  .art-grid { gap: 24px 16px; }
+  .lb-inner { display: block; height: 100%; overflow-y: auto; padding: 56px 20px 0; }
+  .lb-img { padding-bottom: 0; }
+  .lb-img img { max-height: 60vh; }
+  .lb-text { overflow: visible; padding: 24px 0; }
+  .lb-text h3 { font-size: 26px; }
+  .lb-bar { position: sticky; bottom: 0; background: var(--dark); }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .panel, .art-thumb img { transition: none; }
+}

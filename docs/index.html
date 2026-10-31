@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>반 고흐 그림 지도</title>
+<meta name="description" content="초등학생과 부모님을 위한 반 고흐 그림 지도. 세계 미술관에 있는 고흐의 그림을 지도에서 찾아봐요.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="gallery.css?v=7">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="fonts.css?v=11">
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap mast-inner">
+    <a class="wordmark" href="#top">반 고흐 그림 지도</a>
+    <nav class="mast-nav" aria-label="바로 가기">
+      <a href="#who-section">소개</a>
+      <a href="#map-section">지도</a>
+      <a href="#all-section">모든 그림</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <h1 id="hero-title">빈센트 반 고흐의 그림은 지금 어디에 있을까요?</h1>
+    <div class="hero-foot">
+      <p class="hero-lead">세계 <span data-count="museums">128</span>곳 미술관에 걸린 고흐의 그림 <span data-count="works">650</span>점을 지도에서 찾아보세요.</p>
+      <p class="hero-links"><a href="#map-section">지도에서 찾기</a><a href="#all-section">그림 <span data-count="works">32</span>점 모두 보기</a></p>
+    </div>
+    <div class="intro-frame" id="intro-frame" aria-label="반 고흐 소개 영상"></div>
+  </section>
+
+  <section id="who-section" class="section wrap" aria-labelledby="who-title">
+    <div class="sec-head">
+      <p class="sec-label">소개</p>
+      <h2 id="who-title">반 고흐는 누구일까요?</h2>
+    </div>
+    <div class="who">
+      <figure class="who-fig" id="who-fig"></figure>
+      <div class="who-body">
+        <p class="who-lead">빈센트 반 고흐는 네덜란드에서 태어난 화가예요. 밝은 색과 꿈틀거리는 붓질로 유명해요.</p>
+        <dl class="facts">
+          <div class="fact">
+            <dt>1853</dt>
+            <dd>네덜란드의 작은 마을 쥔더르트에서 태어났어요. 화가가 된 건 스물일곱 살 무렵이에요.</dd>
+          </div>
+          <div class="fact">
+            <dt>2,100<small>점</small></dt>
+            <dd>약 10년 동안 그린 그림이 약 2,100점이에요. 그중 물감을 두껍게 바른 유화가 약 860점이에요.</dd>
+          </div>
+          <div class="fact">
+            <dt>노란색</dt>
+            <dd>해바라기, 밀밭, 노란 집처럼 햇빛을 닮은 노란색을 아주 많이 썼어요.</dd>
+          </div>
+          <div class="fact">
+            <dt>테오</dt>
+            <dd>동생 테오는 형을 늘 도와줬어요. 둘이 나눈 편지 덕분에 고흐의 생각을 지금도 알 수 있어요.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="map-section" class="section wrap" aria-labelledby="map-title">
+    <div class="sec-head">
+      <p class="sec-label">지도</p>
+      <h2 id="map-title">지도로 떠나는 그림 여행</h2>
+    </div>
+    <p class="sec-lead">점을 누르면 그 미술관의 고흐 그림이 열려요. 지도는 끌어서 옮기고, 키워서 볼 수 있어요.</p>
+
+    <div class="map-bar">
+      <div class="tabs" role="group" aria-label="지도 보기 바꾸기">
+        <button class="tab" id="toggle-museums" aria-pressed="true">미술관</button>
+        <button class="tab" id="toggle-life" aria-pressed="false">고흐가 살던 곳</button>
+      </div>
+      <div class="map-links">
+        <button class="textlink" id="zoom-europe">유럽 크게 보기</button>
+        <button class="textlink" id="zoom-reset">세계 전체 보기</button>
+      </div>
+    </div>
+
+    <div class="map-wrap" id="map-wrap">
+      <div id="map" class="map"></div>
+      <div class="zoom-ctrl">
+        <button class="sq" id="zoom-in" aria-label="지도 크게">+</button>
+        <button class="sq" id="zoom-out" aria-label="지도 작게">&minus;</button>
+      </div>
+      <div class="legend" id="map-legend" aria-hidden="true"></div>
+      <div class="map-tip" id="map-tip" role="tooltip" hidden></div>
+      <div class="life-card" id="life-card" hidden></div>
+    </div>
+
+    <div class="index-head">
+      <h3>미술관 목록</h3>
+      <p>이름을 누르면 그 미술관이 열려요.</p>
+    </div>
+    <ol class="museum-index" id="museum-chips"></ol>
+  </section>
+
+  <section id="all-section" class="section wrap" aria-labelledby="all-title">
+    <div class="sec-head">
+      <p class="sec-label">모든 그림</p>
+      <h2 id="all-title">그림 모아 보기</h2>
+    </div>
+    <p class="sec-lead">고흐의 그림을 한곳에 모았어요. 나라를 골라서 볼 수도 있어요.</p>
+    <div class="tabs filters" id="all-filters" role="group" aria-label="나라별로 보기"></div>
+    <div class="wall" id="all-grid"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p class="footer-mark">Vincent van Gogh<br>1853년 ~ 1890년</p>
+    <p>초등 3학년과 부모님이 함께 보도록 만든 그림 지도예요.</p>
+    <p>그림 이미지: <a href="https://commons.wikimedia.org/" rel="noopener">Wikimedia Commons</a> (퍼블릭 도메인)<br>소장처는 각 미술관 공식 소장 기준이에요.</p>
+  </div>
+</footer>
+
+<!-- Gallery panel -->
+<div class="backdrop" id="panel-backdrop" hidden></div>
+<aside class="panel" id="panel" aria-hidden="true" aria-label="미술관 그림">
+  <button class="close-text" id="panel-close" aria-label="미술관 닫기">닫기 <span aria-hidden="true">&times;</span></button>
+  <div class="panel-body" id="panel-body"></div>
+</aside>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="그림 크게 보기">
+  <div class="lb-inner">
+    <button class="close-text" id="lb-close" aria-label="그림 닫기">닫기 <span aria-hidden="true">&times;</span></button>
+    <div class="lb-content" id="lb-content"></div>
+    <div class="lb-bar" id="lb-bar">
+      <button class="textlink" id="lb-prev" aria-label="이전 그림">&larr; 이전</button>
+      <span class="lb-count" id="lb-count"></span>
+      <button class="textlink" id="lb-next" aria-label="다음 그림">다음 &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script src="world.js?v=4"></script>
+<script src="data.js?v=9"></script>
+<script src="intro.js?v=6"></script>
+<script src="app.js?v=13"></script>
+<script src="wall-more.js?v=12"></script>
+</body>
+</html>

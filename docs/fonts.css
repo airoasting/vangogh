@@ -1,0 +1,21 @@
+/* Pretendard 일괄 적용. 다른 스타일보다 마지막에 불러온다. */
+:root { --font-title: "Pretendard Variable", Pretendard, -apple-system, system-ui, sans-serif; --font-body: "Pretendard Variable", Pretendard, -apple-system, system-ui, sans-serif; }
+html, body, button, input, select, textarea, h1, h2, h3, h4, h5, h6, p, a, span, div, li, figcaption, label { font-family: "Pretendard Variable", Pretendard, -apple-system, system-ui, sans-serif !important; }
+body { font-feature-settings: "ss06"; letter-spacing: -0.01em; }
+h1, h2, h3 { letter-spacing: -0.03em; }
+/* 영문 대형 타이포(Anton, Bebas 등)는 인트로가 쓰는 경우 유지 */
+[class*="vgi-"] .latin, [class*="vgi-"] [data-latin], .vgi-latin { font-family: inherit; }
+.wall-more { display: block; margin: 40px auto 0; background: none; border: 0; border-bottom: 1px solid currentColor; padding: 6px 2px; font-size: 16px; font-weight: 600; cursor: pointer; color: inherit; }
+.wall-more:hover { opacity: .7; }
+.wall-count { display: block; text-align: center; margin-top: 12px; font-size: 13px; opacity: .6; }
+/* 히어로 안내 문장은 데스크톱에서 한 줄 */
+@media (min-width: 900px) { .hero-lead { max-width: none !important; white-space: nowrap; } }
+/* 지연 로딩 이미지가 높이 0이라 일부 브라우저(사파리)에서 로드되지 않던 문제: 로드 전 비율을 잡아 둔다 */
+.art-thumb img, .art-card img { width: 100%; height: auto; aspect-ratio: auto 4 / 3; background: #E6E1D6; }
+/* 섹션 머리: 라벨과 제목 사이 빈 칸을 없애고 왼쪽에 붙여 쌓는다 */
+.sec-head { display: block !important; }
+.sec-label { padding-top: 0 !important; margin: 0 0 10px !important; }
+.sec-head h2 { text-align: left !important; margin: 0 !important; }
+.sec-lead { margin-left: 0 !important; }
+/* 섹션 안내 문장은 데스크톱에서 한 줄 */
+@media (min-width: 900px) { .sec-lead { max-width: none !important; white-space: nowrap; } }
