@@ -769,6 +769,39 @@
     renderQuest();
   }
 
+  /* ---------- 한국에서 가장 가까운 곳 ---------- */
+  // 데이터에 한국 미술관이 없으면, 서울에서 가장 가까운 미술관과 그 나라의 수를 데이터로 계산해 알려 준다
+  (function () {
+    var box = $('map-near');
+    if (!box) return;
+    var list = museums.filter(function (m) { return isFinite(m.lat) && isFinite(m.lon); });
+    if (!list.length || list.some(function (m) { return m.country === '한국' || m.country === '대한민국'; })) return;
+    var SEOUL = { lat: 37.5665, lon: 126.978 };
+    function rad(x) { return x * Math.PI / 180; }
+    function km(m) {
+      var a = Math.pow(Math.sin(rad(m.lat - SEOUL.lat) / 2), 2) +
+        Math.cos(rad(SEOUL.lat)) * Math.cos(rad(m.lat)) * Math.pow(Math.sin(rad(m.lon - SEOUL.lon) / 2), 2);
+      return 6371 * 2 * Math.asin(Math.sqrt(a));
+    }
+    var near = list.slice().sort(function (a, b) { return km(a) - km(b); })[0];
+    var same = list.filter(function (m) { return m.country === near.country; });
+    var works = same.reduce(function (n, m) { return n + (m.works || []).length; }, 0);
+    box.innerHTML = '이 지도에는 아직 한국 미술관이 없어요. 서울에서 가장 가까운 곳은 ' +
+      esc(near.country) + ' ' + esc(near.city) + '의 ' + esc(josa(near.nameKo, '이에요', '예요')) + '. ' +
+      esc(near.country) + '에는 ' + same.length + '곳에 그림 ' + works + '점이 있어요. ' +
+      '<button type="button" class="textlink" id="map-near-go">' + esc(near.country) + ' 지도에서 보기</button>';
+    box.hidden = false;
+    $('map-near-go').onclick = function () {
+      var lon = same.reduce(function (n, m) { return n + m.lon; }, 0) / same.length;
+      var lat = same.reduce(function (n, m) { return n + m.lat; }, 0) / same.length;
+      if (!showMuseums) setLayer('museums');
+      var r = wrap.getBoundingClientRect(), off = r.top < 0 || r.bottom > window.innerHeight;
+      if (off) wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // 스크롤과 확대가 겹치면 확대가 중간에 끊겨서, 스크롤이 끝난 뒤 확대한다. 6배부터 미술관 이름이 보인다(LABEL_K)
+      setTimeout(function () { zoomTo(lon, lat, 6.5); }, off ? 600 : 0);  // 딱 6이면 소수점 오차로 이름표 조건에 걸리지 않을 수 있어 6.5로 둔다
+    };
+  })();
+
   /* ---------- 딥링크: ?museum=<id>&work=<번호> ---------- */
   (function () {
     var q;
