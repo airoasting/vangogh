@@ -83,7 +83,10 @@ for m in museums.values():
 adult_notes = cur.get('adultNotes', {})  # {Wikidata 작품 ID: 어른용 메모}
 used_curated = set()
 work_fixes = cur.get('workFixes', {})  # {Wikidata 작품 ID: {catalog.json 필드: 바로잡은 값}}
+drop_works = cur.get('dropWorks', {})  # {Wikidata 작품 ID: 빼는 이유}
 for w in cat['works']:
+    if w['qid'] in drop_works:
+        continue
     w.update(work_fixes.get(w['qid'], {}))  # 자동 문장과 정렬이 바로잡은 값을 쓰도록 맨 먼저 덮어쓴다
     m = museums[w['coll']]
     key = fname(w['img'])
@@ -98,6 +101,8 @@ for w in cat['works']:
                      'fun': cw.get('fun', ''), 'featured': True, 'img': cw['img']})
         if cw.get('forAdults'):
             item['forAdults'] = cw['forAdults']  # 어른용 메모(아이 화면에서는 접어 둔다)
+        if cw.get('talk'):
+            item['talk'] = cw['talk']  # 같이 이야기해요(부모와 아이가 주고받는 질문)
     else:
         yr = f"{w['year']}년에 " if w.get('year') else ''
         pl = f"{w['placeKo']}에서 " if w.get('placeKo') else ''
@@ -125,6 +130,8 @@ for key, (cw, cm) in curated_by_file.items():
                            'fun': cw.get('fun', ''), 'featured': True})
             if cw.get('forAdults'):
                 hit[0]['forAdults'] = cw['forAdults']
+            if cw.get('talk'):
+                hit[0]['talk'] = cw['talk']
             if not hit[0].get('place') and cw.get('place'):
                 hit[0]['place'] = cw['place']  # Wikidata에 그린 곳이 없으면 큐레이션 값을 쓴다
             continue

@@ -4,6 +4,7 @@
   var DATA = window.VG_DATA || null;
   var museums = (DATA && Array.isArray(DATA.museums)) ? DATA.museums : [];
   var life = (DATA && Array.isArray(DATA.life)) ? DATA.life : [];
+  var VG_BIRTH = 1853;  // 살던 곳 카드와 크게 보기의 나이 계산에 함께 쓴다
 
   function $(id) { return document.getElementById(id); }
   function esc(s) {
@@ -105,6 +106,7 @@
         '<h3>' + esc(w.titleKo) + '</h3>' +
         (w.titleEn ? '<p class="en">' + esc(w.titleEn) + '</p>' : '') +
         '<p class="tomb">' + (w.year ? esc(w.year) + '년 · ' : '') + esc(kindOf(w)) + '<br>' + esc(m.nameKo) + '<br>' + place + '</p>' +
+        (ageText(w) ? '<p class="lb-age">' + esc(ageText(w)) + '</p>' : '') +
         '<div class="lb-actions">' +
           (canRead() ? '<button type="button" class="textlink lb-read" id="lb-read" aria-pressed="false">읽어 줘요</button>' : '') +
           (panelOpen && panelMuseum === m ? '' : '<button type="button" class="textlink lb-map" id="lb-map">지도에서 이 미술관 보기</button>') +
@@ -112,6 +114,7 @@
         (w.story ? '<p class="story">' + esc(w.story) + '</p>' : '') +
         (look ? '<div class="part"><h4>그림에서 찾아보기</h4><p>' + esc(look) + '</p></div>' : '') +
         (w.fun ? '<div class="part"><h4>알고 있나요?</h4><p>' + esc(w.fun) + '</p></div>' : '') +
+        (w.talk ? '<div class="part talk"><h4>같이 이야기해요</h4><p>' + esc(w.talk) + '</p></div>' : '') +
         // 어른용 메모는 접어 두고, "읽어 줘요"도 읽지 않는다
         (w.forAdults ? '<details class="part adults"><summary>어른을 위한 메모: 아이가 물으면</summary><p>' + esc(w.forAdults) + '</p></details>' : '') +
         (look ? '' : '<div class="part"><h4>천천히 보고 이야기해요</h4><p>' + LOOK_COMMON + '</p><p>' + esc(lookQuestion(w)) + '</p></div>') +
@@ -125,6 +128,7 @@
       if (w.story) parts.push(w.story);
       if (look) parts.push('그림에서 찾아보기.', look);
       if (w.fun) parts.push('알고 있나요?', w.fun);
+      if (w.talk) parts.push('같이 이야기해요.', w.talk);
       if (!look) parts.push('천천히 보고 이야기해요.', LOOK_COMMON, lookQuestion(w));
       startReading(parts, readBtn);
     };
@@ -182,8 +186,9 @@
     });
     setReadBtn(true);
   }
-  // 이야기가 없는 그림에도 아이가 할 일을 하나 준다. 앞 두 질문은 미술관 교육의 VTS 질문이다.
-  var LOOK_COMMON = '이 그림에서 무슨 일이 일어나고 있나요? 무엇을 보고 그렇게 생각했나요?';
+  // 이야기가 없는 그림에도 아이가 할 일을 하나 준다. 앞 두 질문은 미술관 교육의 VTS 질문을 고친 것이다.
+  // "무슨 일이 일어나나요"는 꽃병, 산 같은 정물과 풍경에서 아이가 막혀 "무엇이 보이나요"로 묻는다.
+  var LOOK_COMMON = '이 그림에서 무엇이 보이나요? 어디를 보고 그렇게 생각했나요?';
   var LOOK_EXTRA = [
     '가장 먼저 눈에 들어온 곳은 어디인가요?',
     '이 그림에서 가장 밝은 색을 찾아보세요.',
@@ -201,6 +206,12 @@
     '이 그림에 색을 칠한다면 무슨 색을 고를까요?',
     '그림을 보면 어떤 기분이 드나요?'
   ];
+  // 그 그림을 그린 해의 고흐 나이. 생일 전후를 가리지 않아 "무렵"으로 쓴다
+  function ageText(w) {
+    var y = +w.year;
+    if (!y || y < VG_BIRTH) return '';
+    return '고흐가 ' + (y - VG_BIRTH) + '살 무렵 ' + (w.kind === '판화' ? '만든 판화예요.' : '그린 그림이에요.');
+  }
   // 유화가 아닌 작품의 종류. 유화에는 kind가 없다
   function kindOf(w) { return w.kind || '유화'; }
   function lookQuestion(w) {
@@ -416,8 +427,7 @@
 
   // 고흐가 살던 곳에서 그린 그림. 그림의 place가 생애 도시 이름과 같으면 묶는다.
   // 몽마르트르는 파리 안, 생폴드모졸 수도원은 생레미에 있는 요양원이라 같은 도시로 본다.
-  // 살던 곳 카드의 나이. 그 해 연도에서 태어난 해를 뺀 값(그 해에 맞은 나이)이다.
-  var VG_BIRTH = 1853;
+  // 살던 곳 카드의 나이. 그 해 연도에서 태어난 해를 뺀 값(그 해에 맞은 나이)이다. VG_BIRTH는 파일 맨 위에 있다.
   function lifeAgeText(s) {
     var ys = String(s.years || '').split('~').map(Number), a = ys[0], b = ys[1];
     if (!a) return '';

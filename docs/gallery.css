@@ -309,6 +309,7 @@ a { color: inherit; }
 .lb-text h3 { font-family: var(--serif); font-weight: 600; font-size: 32px; line-height: 1.25; letter-spacing: -0.02em; color: #F4F1EA; }
 .lb-text .en { font-family: var(--serif); font-size: 15px; color: var(--dark-muted); margin-top: 6px; }
 .lb-text .tomb { margin-top: 16px; font-size: 14px; line-height: 1.7; color: var(--dark-muted); font-variant-numeric: tabular-nums; }
+.lb-text .lb-age { margin-top: 10px; font-size: 15px; color: var(--dark-text); word-break: keep-all; }
 .lb-text .story { margin-top: 24px; font-size: 17px; line-height: 1.8; color: var(--dark-text); word-break: keep-all; }
 .lb-text .part { border-top: 1px solid var(--dark-rule); margin-top: 24px; padding-top: 16px; }
 .lb-text .part h4 { font-size: 13px; font-weight: 700; letter-spacing: .02em; color: #F4F1EA; margin-bottom: 6px; }

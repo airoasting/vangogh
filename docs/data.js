@@ -21,7 +21,8 @@ window.VG_DATA = {
 "story": "네덜란드 시골 뉘넌에서 그린 그림이에요. 하루 종일 밭에서 일한 가족이 램프 불빛 아래에서 감자를 나눠 먹고 있어요. 고흐는 땀 흘려 일하는 사람들의 진짜 모습을 그리고 싶었어요.",
 "lookFor": "그림에서 찾아보기: 천장에 매달린 램프를 찾아보세요.",
 "fun": "고흐는 흙을 만진 손을 보여 주려고 사람들의 손을 일부러 크고 거칠게 그렸어요.",
-"featured": true
+"featured": true,
+"talk": "우리 가족이 저녁을 먹을 때와 비슷한 점, 다른 점은 무엇일까요?"
 },
 {
 "id": "Q18713070",
@@ -33,7 +34,8 @@ window.VG_DATA = {
 "story": "프랑스 아를의 노란 집에 있던 고흐의 방이에요. 고흐는 이 방을 보면 마음이 푹 쉬는 느낌이 들기를 바랐어요.",
 "lookFor": "그림에서 찾아보기: 의자가 몇 개 있는지 세어 보세요.",
 "fun": "고흐는 이 방 그림을 모두 세 번 그렸어요. 나머지 두 장은 시카고와 파리에 있어요.",
-"featured": true
+"featured": true,
+"talk": "내 방에서 마음이 가장 편해지는 곳은 어디인가요? 왜 그런가요?"
 },
 {
 "id": "Q2200610",
@@ -45,7 +47,8 @@ window.VG_DATA = {
 "story": "아를에서 고흐가 빌려 살던 집이에요. 고흐는 이곳을 화가 친구들이 함께 그림을 그리는 집으로 만들고 싶었어요.",
 "lookFor": "그림에서 찾아보기: 초록색 문이 달린 창문을 찾아보세요.",
 "fun": "진짜 노란 집은 전쟁 때 부서져서 지금은 그림으로만 볼 수 있어요.",
-"featured": true
+"featured": true,
+"talk": "친구들과 함께 살 집을 꾸민다면 무슨 색으로 칠하고 싶나요?"
 },
 {
 "id": "Q18689440",
@@ -57,7 +60,8 @@ window.VG_DATA = {
 "story": "고흐는 해바라기 그림을 여러 장 그렸어요. 이 그림은 런던에 있는 해바라기를 보고 다시 그린 그림이에요. 노란색 하나로도 이렇게 많은 느낌을 낼 수 있어요.",
 "lookFor": "그림에서 찾아보기: 꽃병에 적힌 고흐의 이름 \"Vincent\"를 찾아보세요.",
 "fun": "고흐는 그림에 성 대신 이름 \"빈센트\"만 적는 걸 좋아했어요.",
-"featured": true
+"featured": true,
+"talk": "노란색 말고 이 그림에 숨은 색을 몇 가지 찾을 수 있나요? 내가 가장 좋아하는 꽃은 무엇인가요?"
 },
 {
 "id": "Q634122",
@@ -69,7 +73,8 @@ window.VG_DATA = {
 "story": "고흐가 마지막 여름을 보낸 오베르쉬르우아즈에서 그렸어요. 노란 밀밭 위로 짙은 파란 하늘이 펼쳐지고 까마귀들이 날아가요.",
 "lookFor": "그림에서 찾아보기: 밀밭 사이로 난 길이 몇 갈래인지 세어 보세요.",
 "fun": "이 그림은 옆으로 아주 길쭉해요. 넓은 들판을 한눈에 담으려고 그랬대요.",
-"featured": true
+"featured": true,
+"talk": "까마귀들은 어디로 날아가는 걸까요? 이 그림에 어울리는 소리를 함께 내 볼까요?"
 },
 {
 "id": "Q1432536",
@@ -81,7 +86,8 @@ window.VG_DATA = {
 "story": "동생 테오에게 아기가 태어났다는 소식을 듣고 그린 선물이에요. 파란 하늘에 하얀 꽃이 활짝 피어 있어요. 새 생명을 축하하는 마음이 담겨 있어요.",
 "lookFor": "그림에서 찾아보기: 아직 피지 않은 꽃봉오리를 찾아보세요.",
 "fun": "테오는 아기 이름을 형의 이름을 따서 빈센트라고 지었어요.",
-"featured": true
+"featured": true,
+"talk": "아기가 태어난 가족에게 그림을 선물한다면 무엇을 그리고 싶나요?"
 },
 {
 "id": "Q19833788",
@@ -441,15 +447,6 @@ window.VG_DATA = {
 "story": "고흐가 1885년에 암스테르담에서 그린 그림이에요."
 },
 {
-"id": "Q11708249",
-"titleKo": "매춘부의 얼굴",
-"titleEn": "Head of a Prostitute",
-"year": 1885,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Head%20of%20a%20prostitute%20-%20Google%20Art%20Project.jpg?width=640",
-"place": "안트베르펜",
-"story": "고흐가 1885년에 안트베르펜에서 그린 그림이에요."
-},
-{
 "id": "Q19835838",
 "titleKo": "노부인의 초상",
 "titleEn": "Portrait of an Old Woman",
@@ -464,15 +461,6 @@ window.VG_DATA = {
 "titleEn": "Portrait of an Old Man",
 "year": 1885,
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Portret%20van%20een%20oude%20man%20-%20s0061V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
-"place": "안트베르펜",
-"story": "고흐가 1885년에 안트베르펜에서 그린 그림이에요."
-},
-{
-"id": "Q19835881",
-"titleKo": "매춘부의 초상",
-"titleEn": "Portrait of a Prostitute",
-"year": 1885,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Portret%20van%20een%20prostituee%20-%20s0143V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
 "place": "안트베르펜",
 "story": "고흐가 1885년에 안트베르펜에서 그린 그림이에요."
 },
@@ -2403,7 +2391,8 @@ window.VG_DATA = {
 "story": "아를의 밤거리에 있는 카페예요. 노란 불빛이 환하고 하늘에는 별이 반짝여요. 고흐는 밤에도 밖에 나가서 직접 보며 그렸어요.",
 "lookFor": "그림에서 찾아보기: 하늘에 떠 있는 별을 세어 보세요.",
 "fun": "고흐는 이 밤 그림을 그리면서 검은색을 하나도 쓰지 않았다고 편지에 썼어요.",
-"featured": true
+"featured": true,
+"talk": "이 카페에 앉아 있다면 누구와 무슨 이야기를 하고 싶나요?"
 },
 {
 "id": "Q500554",
@@ -2415,7 +2404,8 @@ window.VG_DATA = {
 "story": "할아버지가 난롯가 의자에 앉아 얼굴을 두 손으로 감싸고 있어요. 고흐는 슬픈 마음도 그림으로 솔직하게 그렸어요.",
 "lookFor": "그림에서 찾아보기: 활활 타는 난로 불을 찾아보세요.",
 "fun": "고흐는 젊을 때 그렸던 같은 장면의 그림을 보고 이 그림을 다시 그렸어요..",
-"featured": true
+"featured": true,
+"talk": "슬플 때 우리는 어떻게 마음을 달래나요? 이 할아버지에게 무슨 말을 해 주고 싶나요?"
 },
 {
 "id": "Q5930190",
@@ -2427,7 +2417,8 @@ window.VG_DATA = {
 "story": "하늘까지 닿을 듯한 사이프러스 나무(키가 크고 뾰족한 나무)가 가운데 서 있어요. 한쪽엔 반짝이는 별, 다른 쪽엔 가느다란 달이 함께 떠 있어요.",
 "lookFor": "그림에서 찾아보기: 길을 걸어가는 두 사람을 찾아보세요.",
 "fun": "고흐가 생레미 병원을 떠나기 직전에 그린 그림이에요.",
-"featured": true
+"featured": true,
+"talk": "밤길을 걷는 사람들은 어디로 가는 걸까요? 함께 이야기를 지어 볼까요?"
 },
 {
 "id": "Q24020443",
@@ -3449,7 +3440,8 @@ window.VG_DATA = {
 "story": "아를의 강가에서 본 밤 풍경이에요. 강물 위로 가로등 불빛이 노랗게 길게 비쳐요. 강가에는 두 사람이 산책을 하고 있어요.",
 "lookFor": "그림에서 찾아보기: 하늘에서 국자 모양의 북두칠성을 찾아보세요.",
 "fun": "고흐는 밤하늘을 그리는 걸 정말 좋아해서 \"별을 보면 꿈을 꾸게 된다\"고 편지에 썼어요.",
-"featured": true
+"featured": true,
+"talk": "강가를 걷는 두 사람은 무슨 이야기를 나누고 있을까요?"
 },
 {
 "id": "Q18543956",
@@ -3461,7 +3453,8 @@ window.VG_DATA = {
 "story": "고흐가 엄마와 여동생에게 주려고 조금 작게 다시 그린 침실 그림이에요. 암스테르담에 있는 첫 번째 그림과 비교해 보면 재미있어요.",
 "lookFor": "그림에서 찾아보기: 벽에 걸린 액자 속 얼굴을 찾아보세요.",
 "fun": "세 그림을 나란히 놓으면 벽에 걸린 그림이 조금씩 달라요.",
-"featured": true
+"featured": true,
+"talk": "같은 그림을 한 장 더 그려 선물한다면 누구에게 주고 싶나요?"
 },
 {
 "id": "Q1213917",
@@ -3473,7 +3466,8 @@ window.VG_DATA = {
 "story": "오베르쉬르우아즈 마을의 교회예요. 단단한 돌 건물인데 고흐의 붓질로 흔들흔들 춤추는 것처럼 보여요.",
 "lookFor": "그림에서 찾아보기: 길이 두 갈래로 나뉘는 곳을 찾아보세요.",
 "fun": "이 교회는 지금도 오베르 마을에 그대로 서 있어서 직접 가 볼 수 있어요.",
-"featured": true
+"featured": true,
+"talk": "단단한 건물이 춤추는 것처럼 보이면 어떤 기분이 드나요? 우리 동네에서 그려 보고 싶은 건물은 무엇인가요?"
 },
 {
 "id": "Q85314709",
@@ -3687,7 +3681,8 @@ window.VG_DATA = {
 "story": "파리에 살 때 거울을 보며 그린 고흐 자신의 얼굴이에요. 짧은 붓질을 촘촘히 쌓아서 밝은 색을 냈어요.",
 "lookFor": "그림에서 찾아보기: 밀짚모자에 쓰인 색을 몇 가지나 찾을 수 있는지 보세요.",
 "fun": "이 그림 뒷면에는 감자 깎는 여자를 그린 다른 그림이 있어요. 캔버스를 아끼려고 양쪽을 다 썼어요.",
-"featured": true
+"featured": true,
+"talk": "거울을 보며 내 얼굴을 그린다면 어떤 색을 쓰고 싶나요?"
 },
 {
 "id": "Q18689458",
@@ -3699,7 +3694,8 @@ window.VG_DATA = {
 "story": "여름날 생레미의 황금빛 밀밭이에요. 하늘에는 구름이 소용돌이치고 키 크고 뾰족한 초록 사이프러스 나무가 우뚝 서 있어요.",
 "lookFor": "그림에서 찾아보기: 멀리 보이는 파란 산을 찾아보세요.",
 "fun": "고흐는 사이프러스 나무가 이집트의 뾰족한 돌기둥(오벨리스크)처럼 멋지다고 했어요.",
-"featured": true
+"featured": true,
+"talk": "이 밀밭 사이를 걷는다면 어떤 냄새와 소리가 느껴질까요?"
 },
 {
 "id": "Q19911667",
@@ -3711,7 +3707,8 @@ window.VG_DATA = {
 "story": "생레미 병원을 떠나기 직전에 그린 꽃병 속 붓꽃이에요. 보라색 꽃이 꽃병에서 넘칠 듯이 가득해요.",
 "lookFor": "그림에서 찾아보기: 칼처럼 뾰족한 초록 잎을 찾아보세요.",
 "fun": "처음에는 배경이 분홍빛이었는데, 오랜 세월이 지나며 색이 바래서 하얗게 보여요.",
-"featured": true
+"featured": true,
+"talk": "꽃병이 넘칠 만큼 꽃이 가득하면 어떤 기분이 드나요? 이 꽃을 누구에게 주고 싶나요?"
 },
 {
 "id": "Q29385302",
@@ -3928,7 +3925,8 @@ window.VG_DATA = {
 "story": "아를 근처 시골의 농부 집과 밀밭이에요. 여름 햇볕 아래 밀이 노랗게 익어 가요.",
 "lookFor": "그림에서 찾아보기: 길을 걸어가는 사람을 찾아보세요.",
 "fun": "고흐는 노란 밀과 파란 하늘처럼 서로 반대되는 색을 나란히 두면 더 환해 보인다는 걸 알았어요.",
-"featured": true
+"featured": true,
+"talk": "이 농가 안에서는 지금 누가 무엇을 하고 있을까요?"
 },
 {
 "id": "Q20190142",
@@ -3936,11 +3934,12 @@ window.VG_DATA = {
 "titleEn": "Green Wheat Fields, Auvers",
 "year": 1890,
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Gr%C3%BCnes%20Weizenfeld1.jpeg?width=640",
-"place": "생레미드프로방스",
+"place": "오베르쉬르우아즈",
 "story": "오베르 마을의 아직 덜 익은 초록 밀밭이에요. 바람에 밀이 살랑살랑 흔들리는 것 같아요.",
 "lookFor": "그림에서 찾아보기: 밀밭 사이에 핀 작은 꽃들을 찾아보세요.",
 "fun": "고흐는 오베르에서 지낸 약 70일 동안 하루에 거의 한 장씩 그림을 그렸어요.",
-"featured": true
+"featured": true,
+"talk": "바람이 불면 밀밭은 어떤 소리를 낼까요? 손으로 바람을 흉내 내 볼까요?"
 },
 {
 "id": "roses-nga",
@@ -3952,7 +3951,8 @@ window.VG_DATA = {
 "lookFor": "그림에서 찾아보기: 테이블 위에 떨어진 장미를 찾아보세요.",
 "fun": "지금은 하얀 장미로 보이지만, 처음에는 분홍색 장미였어요. 물감 색이 세월이 지나며 바랬어요.",
 "featured": true,
-"place": "생레미드프로방스"
+"place": "생레미드프로방스",
+"talk": "장미가 이렇게 가득하면 어떤 냄새가 날 것 같나요?"
 },
 {
 "id": "Q65367697",
@@ -4069,16 +4069,6 @@ window.VG_DATA = {
 "intro": "",
 "works": [
 {
-"id": "Q17327725",
-"titleKo": "모자를 쓴 추수하는 사람의 뒷모습",
-"titleEn": "Reaper with Hat, Seen from Behind",
-"year": 1876,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Korensnijder%20met%20hoed%2C%20van%20achteren%20gezien%20Rijksmuseum%20SK-A-2227.jpeg?width=640",
-"place": "",
-"kind": "소묘",
-"story": "고흐가 1876년에 그린 소묘예요."
-},
-{
 "id": "Q17334627",
 "titleKo": "헤이그 스헹크베흐의 꽃 농원",
 "titleEn": "Pierre van de Putte's Flower Nursery on the Schenkweg, The Hague",
@@ -4189,6 +4179,16 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Boerderij%20-%20s0108V1962%20-%20Van%20Gogh%20Museum.jpg?width=640",
 "place": "오베르쉬르우아즈",
 "story": "고흐가 1890년에 오베르쉬르우아즈에서 그린 그림이에요."
+},
+{
+"id": "Q17327725",
+"titleKo": "모자를 쓴 추수하는 사람의 뒷모습",
+"titleEn": "Reaper with Hat, Seen from Behind",
+"year": null,
+"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Korensnijder%20met%20hoed%2C%20van%20achteren%20gezien%20Rijksmuseum%20SK-A-2227.jpeg?width=640",
+"place": "",
+"kind": "소묘",
+"story": "고흐가 그린 소묘예요."
 }
 ]
 },
@@ -4453,7 +4453,8 @@ window.VG_DATA = {
 "story": "파리에서 새로운 화가 친구들을 만난 고흐는 작은 점과 짧은 선으로 그리는 방법을 배웠어요. 얼굴과 배경이 알록달록한 점으로 가득해요.",
 "lookFor": "그림에서 찾아보기: 수염 속에 숨은 빨간색과 초록색 점을 찾아보세요.",
 "fun": "고흐는 모델을 부를 돈이 없어서 자기 얼굴을 30번 넘게 그렸어요.",
-"featured": true
+"featured": true,
+"talk": "점과 짧은 선만으로 가족의 얼굴을 그리면 어떻게 보일까요? 함께 그려 볼까요?"
 },
 {
 "id": "bedroom-aic",
@@ -4465,7 +4466,8 @@ window.VG_DATA = {
 "lookFor": "그림에서 찾아보기: 벽에 걸린 수건을 찾아보세요.",
 "fun": "방 모서리가 비스듬한 건 실제 노란 집의 방 모양이 그랬기 때문이에요.",
 "featured": true,
-"place": ""
+"place": "",
+"talk": "아끼던 물건이 망가졌을 때 어떻게 했나요? 다시 만든다면 무엇을 바꾸고 싶나요?"
 },
 {
 "id": "Q91131092",
@@ -4540,15 +4542,6 @@ window.VG_DATA = {
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Madame%20Roulin%20Rocking%20the%20Cradle%20%28La%20berceuse%29%20-%201926.200%20-%20Art%20Institute%20of%20Chicago.jpg?width=640",
 "place": "아를",
 "story": "고흐가 1889년에 아를에서 그린 그림이에요."
-},
-{
-"id": "Q18713076",
-"titleKo": "아를의 침실",
-"titleEn": "Bedroom in Arles",
-"year": 1889,
-"img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20Bedroom%20-%20Google%20Art%20Project.jpg?width=640",
-"place": "생레미드프로방스",
-"story": "고흐가 1889년에 생레미드프로방스에서 그린 그림이에요."
 },
 {
 "id": "Q20275110",
@@ -4829,7 +4822,8 @@ window.VG_DATA = {
 "story": "고흐가 생레미 병원에서 지낼 때 창밖으로 보이던 산을 그렸어요. 산과 언덕이 파도처럼 출렁출렁 움직이는 것 같아요.",
 "lookFor": "그림에서 찾아보기: 산 위 하늘에 꿈틀꿈틀 흐르는 구름을 찾아보세요.",
 "fun": "이 그림은 탄하우저라는 미술품 수집가가 구겐하임 미술관에 선물한 그림이에요.",
-"featured": true
+"featured": true,
+"talk": "우리 집 창밖으로는 무엇이 보이나요? 그 풍경도 움직이는 것처럼 보일 때가 있나요?"
 },
 {
 "id": "Q19883059",
@@ -5175,19 +5169,21 @@ window.VG_DATA = {
 "story": "친구 고갱이 아를에 온다는 소식에 고흐는 신이 났어요. 친구 방을 꾸미려고 해바라기를 그렸어요. 배경도 꽃병도 꽃도 모두 노란색이에요.",
 "lookFor": "그림에서 찾아보기: 해바라기가 모두 몇 송이인지 세어 보세요.",
 "fun": "활짝 핀 꽃, 시든 꽃, 씨만 남은 꽃까지 해바라기의 일생이 다 들어 있어요.",
-"featured": true
+"featured": true,
+"talk": "친구가 우리 집에 놀러 온다면 친구가 묵을 방을 무엇으로 꾸며 주고 싶나요?"
 },
 {
 "id": "Q1118295",
 "titleKo": "고흐의 의자",
 "titleEn": "Van Gogh's Chair",
-"year": 1889,
+"year": 1888,
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Vincent_Willem_van_Gogh_138.jpg/960px-Vincent_Willem_van_Gogh_138.jpg",
 "place": "아를",
 "story": "고흐가 쓰던 평범한 나무 의자예요. 사람은 없지만 의자만 봐도 고흐가 떠올라요.",
 "lookFor": "그림에서 찾아보기: 의자 위에 놓인 담배 파이프를 찾아보세요.",
 "fun": "고흐는 친구 고갱의 의자도 그려서 두 그림이 짝꿍이 되었어요.",
-"featured": true
+"featured": true,
+"talk": "우리 집에서 엄마나 아빠를 떠올리게 하는 물건은 무엇인가요?"
 },
 {
 "id": "Q26220142",
@@ -5497,7 +5493,8 @@ window.VG_DATA = {
 "story": "가을 저녁, 아를의 포도밭이 해 질 녘 빛을 받아 빨갛게 물들었어요. 사람들이 바쁘게 포도를 따고 있어요.",
 "lookFor": "그림에서 찾아보기: 하늘에 떠 있는 동그란 해를 찾아보세요.",
 "fun": "고흐가 살아 있을 때 팔린 그림으로 잘 알려진 작품이에요.",
-"featured": true
+"featured": true,
+"talk": "포도를 다 따고 나면 이 사람들은 무엇을 할까요?"
 },
 {
 "id": "Q1132723",
@@ -5509,7 +5506,8 @@ window.VG_DATA = {
 "story": "높은 벽에 둘러싸인 마당에서 사람들이 빙글빙글 원을 그리며 걷고 있어요. 고흐는 귀스타브 도레라는 화가의 판화(판에 새겨 찍어 낸 그림)를 보고 색을 입혀 그렸어요.",
 "lookFor": "그림에서 찾아보기: 바닥 위를 날아다니는 나비 두 마리를 찾아보세요.",
 "fun": "가운데 모자를 쓰지 않은 사람이 고흐를 닮았다는 이야기가 있어요.",
-"featured": true
+"featured": true,
+"talk": "높은 벽 안에서 빙글빙글 걷는 사람들은 어떤 마음일까요? 이 사람들에게 무엇을 보여 주고 싶나요?"
 },
 {
 "id": "Q26220262",
@@ -5771,7 +5769,8 @@ window.VG_DATA = {
 "story": "아를에서 그린 해바라기예요. 런던의 해바라기와 달리 배경이 시원한 청록색이에요.",
 "lookFor": "그림에서 찾아보기: 해바라기가 몇 송이인지 세어 보고 런던 그림과 비교해 보세요.",
 "fun": "이 그림에는 해바라기가 12송이 있어요.",
-"featured": true
+"featured": true,
+"talk": "노란 배경과 청록색 배경 중 어느 쪽이 더 마음에 드나요? 왜 그런가요?"
 },
 {
 "id": "Q3314658",
@@ -5783,7 +5782,8 @@ window.VG_DATA = {
 "story": "봄이 온 아를의 과일나무 밭이에요. 앞에는 키 큰 나무줄기들이 서 있고, 그 사이로 꽃 핀 나무와 마을이 보여요.",
 "lookFor": "그림에서 찾아보기: 나무 사이로 보이는 마을의 지붕을 찾아보세요.",
 "fun": "고흐는 일본 판화를 좋아해서, 앞쪽 나무 사이로 먼 풍경을 들여다보는 방법을 따라 해 봤어요.",
-"featured": true
+"featured": true,
+"talk": "봄이 왔다는 것을 우리는 무엇을 보고 알 수 있나요?"
 },
 {
 "id": "Q26220091",
@@ -5918,11 +5918,12 @@ window.VG_DATA = {
 "titleEn": "Portrait of Joseph Roulin",
 "year": 1889,
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Portrait%20de%20Joseph%20Roulin%20-%20Google%20Art%20Project.jpg?width=640",
-"place": "에를랑겐",
+"place": "아를",
 "story": "아를의 우체부 아저씨 룰랭이에요. 룰랭은 외로운 고흐에게 다정한 친구가 되어 주었어요.",
 "lookFor": "그림에서 찾아보기: 뒤쪽 벽지에 핀 꽃들을 찾아보세요.",
 "fun": "고흐는 룰랭 아저씨뿐 아니라 아내와 세 아이까지 온 가족을 그렸어요.",
-"featured": true
+"featured": true,
+"talk": "외로울 때 다정하게 대해 준 사람이 있나요? 그 사람을 그린다면 무엇을 꼭 넣고 싶나요?"
 },
 {
 "id": "Q9212498",
@@ -5934,7 +5935,8 @@ window.VG_DATA = {
 "story": "별이 빛나는 밤과 같은 달에 생레미에서 그린 그림이에요. 올리브 나무와 땅과 하늘이 모두 물결처럼 꿈틀거려요.",
 "lookFor": "그림에서 찾아보기: 하늘에 떠 있는 하얀 구름을 찾아보세요.",
 "fun": "고흐는 생레미에서 올리브 나무 그림을 열 장 넘게 그렸어요.",
-"featured": true
+"featured": true,
+"talk": "나무와 땅이 물결처럼 움직인다면 어떤 소리가 날까요?"
 },
 {
 "id": "Q45585",
@@ -5946,7 +5948,8 @@ window.VG_DATA = {
 "story": "생레미의 병원 창문 너머로 본 새벽 하늘을 그렸어요. 하늘이 소용돌이처럼 빙글빙글 돌아요. 마을은 고흐가 상상을 더해서 그렸어요.",
 "lookFor": "그림에서 찾아보기: 왼쪽에 불꽃처럼 솟은 사이프러스 나무(키 크고 뾰족한 나무)를 찾아보세요.",
 "fun": "고흐는 이 그림을 낮에 기억을 떠올리며 그렸어요. 병원 방에서는 밤에 그림을 그릴 수 없었거든요.",
-"featured": true
+"featured": true,
+"talk": "이 하늘에서 소리가 들린다면 어떤 소리일까요? 오늘 밤 우리 동네 하늘은 어떤 모습일까요?"
 },
 {
 "id": "Q26221308",
@@ -6127,7 +6130,8 @@ window.VG_DATA = {
 "story": "고흐가 생레미 병원에 들어가고 처음 그린 그림 중 하나예요. 병원 정원에 핀 보라색 붓꽃을 보며 그렸어요.",
 "lookFor": "그림에서 찾아보기: 보라색 꽃들 사이에 혼자 하얀 붓꽃을 찾아보세요.",
 "fun": "1987년에 팔릴 때 그때까지 세상에서 가장 비싼 그림 값이었어요.",
-"featured": true
+"featured": true,
+"talk": "새로운 곳에 처음 갔을 때 무엇이 가장 먼저 눈에 들어왔나요?"
 },
 {
 "id": "Q20738593",
@@ -6652,7 +6656,8 @@ window.VG_DATA = {
 "lookFor": "그림에서 찾아보기: 뒤쪽 벽에 걸린 일본 판화를 찾아보세요. 산과 사람들이 보여요.",
 "fun": "고흐가 다친 쪽은 왼쪽 귀였어요. 거울을 보며 그려서, 그림에서는 오른쪽 귀에 붕대를 감은 것처럼 보여요.",
 "featured": true,
-"forAdults": "1888년 12월, 고흐는 마음의 병이 심해진 상태에서 자신의 왼쪽 귀를 다쳤고 아를의 병원에서 치료를 받았어요. 이 그림은 퇴원한 뒤인 1889년 1월에 그렸어요. 아이가 \"귀는 왜 다쳤어요?\" 하고 물으면 \"마음이 많이 아파서 스스로를 다치게 했고, 병원에서 도움을 받은 뒤 다시 그림을 그렸어\"처럼 아픔과 회복을 함께 말해 주세요. 마음이 아플 때 어른에게 도움을 청하는 것은 부끄러운 일이 아니라는 이야기로 이어 갈 수 있어요."
+"forAdults": "1888년 12월, 고흐는 마음의 병이 심해진 상태에서 자신의 왼쪽 귀를 다쳤고 아를의 병원에서 치료를 받았어요. 이 그림은 퇴원한 뒤인 1889년 1월에 그렸어요. 아이가 \"귀는 왜 다쳤어요?\" 하고 물으면 \"마음이 많이 아파서 스스로를 다치게 했고, 병원에서 도움을 받은 뒤 다시 그림을 그렸어\"처럼 아픔과 회복을 함께 말해 주세요. 마음이 아플 때 어른에게 도움을 청하는 것은 부끄러운 일이 아니라는 이야기로 이어 갈 수 있어요.",
+"talk": "마음이 아플 때 누구에게 이야기하나요? 다시 힘을 낼 때 무엇이 도움이 되었나요?"
 },
 {
 "id": "Q26221132",
@@ -7585,11 +7590,12 @@ window.VG_DATA = {
 "titleEn": "Roses",
 "year": 1889,
 "img": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Vincent_van_Gogh_-_Roses_-_Google_Art_Project.jpg/960px-Vincent_van_Gogh_-_Roses_-_Google_Art_Project.jpg",
-"place": "아를",
+"place": "생레미드프로방스",
 "story": "생레미 병원 정원의 장미 덤불을 가까이에서 그렸어요. 초록 잎 사이로 하얀 장미가 동글동글 피어 있어요.",
 "lookFor": "그림에서 찾아보기: 잎사귀 사이에 숨은 장미꽃을 몇 송이나 찾을 수 있는지 세어 보세요.",
 "fun": "고흐는 일본 그림을 무척 좋아했는데, 이 그림은 지금 일본에서 사람들을 만나고 있어요.",
-"featured": true
+"featured": true,
+"talk": "우리 동네에서 가까이 다가가 자세히 보고 싶은 꽃이나 풀은 무엇인가요?"
 }
 ]
 },
@@ -8008,8 +8014,8 @@ window.VG_DATA = {
 "titleEn": "Poppy Flowers",
 "year": 1887,
 "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Vase%20mit%20Pechnelken.jpeg?width=640",
-"place": "카스텔람마레디스타비아",
-"story": "고흐가 1887년에 카스텔람마레디스타비아에서 그린 그림이에요."
+"place": "파리",
+"story": "고흐가 1887년에 파리에서 그린 그림이에요."
 }
 ]
 },

@@ -183,9 +183,10 @@
    "kind": "소묘",
    "titleKo": "모자를 쓴 추수하는 사람의 뒷모습",
    "titleEn": "Reaper with Hat, Seen from Behind",
-   "year": 1876,
+   "year": null,
    "place": "",
-   "file": "Korensnijder met hoed, van achteren gezien Rijksmuseum SK-A-2227.jpeg"
+   "file": "Korensnijder met hoed, van achteren gezien Rijksmuseum SK-A-2227.jpeg",
+   "yearNote": "Wikidata는 1876년. 고흐가 본격적으로 그리기 전이라 확인 전까지 비운다"
   },
   {
    "id": "Q105312271",
