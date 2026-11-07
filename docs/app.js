@@ -125,6 +125,8 @@
     $('lb-bar').style.visibility = multi ? '' : 'hidden';
     $('lb-count').textContent = multi ? (lbIdx + 1) + ' / ' + lbList.length : '';
     var look = w.lookFor ? String(w.lookFor).replace(/^그림에서 찾아보기:\s*/, '') : '';
+    // 이야기가 있는 그림은 이야기를 접어 두고 그림을 먼저 보게 한다. 한 줄 사실 문장만 있는 그림은 접지 않는다
+    var gated = !!(w.featured && w.story), opened = false;
     var place = esc(m.city) + (m.country ? ', ' + esc(m.country) : '');
     $('lb-content').innerHTML =
       '<div class="lb-img">' + imgHTML(w, true) + '</div>' +
@@ -137,17 +139,35 @@
           (canRead() ? '<button type="button" class="textlink lb-read" id="lb-read" aria-pressed="false">읽어 줘요</button>' : '') +
           (panelOpen && panelMuseum === m ? '' : '<button type="button" class="textlink lb-map" id="lb-map">지도에서 이 미술관 보기</button>') +
         '</div>' +
-        (w.story ? '<p class="story">' + esc(w.story) + '</p>' : '') +
-        (look ? '<div class="part"><h4>그림에서 찾아보기</h4><p>' + esc(look) + '</p></div>' : '') +
-        (w.fun ? '<div class="part"><h4>알고 있나요?</h4><p>' + esc(w.fun) + '</p></div>' : '') +
-        (w.talk ? '<div class="part talk"><h4>같이 이야기해요</h4><p>' + esc(w.talk) + '</p></div>' : '') +
+        // 미술관 감상 순서: 먼저 보고, 느끼고, 그다음에 읽는다
+        '<div class="part look"><h4>먼저 천천히 보기</h4><p>' + LOOK_COMMON + '</p><p>' + esc(lookQuestion(w)) + '</p></div>' +
+        feelHTML() +
+        (gated
+          ? '<div class="part story-gate" id="story-gate"><p>그림을 충분히 봤으면 이야기를 열어 보세요.</p>' +
+              '<button type="button" class="story-open" id="story-open" aria-expanded="false" aria-controls="lb-more">이야기 보기</button></div>' +
+            '<div class="lb-more" id="lb-more" hidden>' +
+              '<p class="story" tabindex="-1">' + esc(w.story) + '</p>' +
+              (look ? '<div class="part"><h4>그림에서 찾아보기</h4><p>' + esc(look) + '</p></div>' : '') +
+              (w.fun ? '<div class="part"><h4>알고 있나요?</h4><p>' + esc(w.fun) + '</p></div>' : '') +
+              (w.talk ? '<div class="part talk"><h4>같이 이야기해요</h4><p>' + esc(w.talk) + '</p></div>' : '') +
+            '</div>'
+          : (w.story ? '<p class="story">' + esc(w.story) + '</p>' : '')) +
         groups.map(function (g) { return versionsPartHTML(g, w); }).join('') +
         // 어른용 메모는 접어 두고, "읽어 줘요"도 읽지 않는다
         (w.forAdults ? '<details class="part adults"><summary>어른을 위한 메모: 아이가 물으면</summary><p>' + esc(w.forAdults) + '</p></details>' : '') +
-        (look ? '' : '<div class="part"><h4>천천히 보고 이야기해요</h4><p>' + LOOK_COMMON + '</p><p>' + esc(lookQuestion(w)) + '</p></div>') +
       '</div>';
     var mapBtn = $('lb-map');
     if (mapBtn) mapBtn.onclick = function () { closeLightbox(); selectMuseum(m, true); };
+    var openBtn = $('story-open');
+    if (openBtn) openBtn.onclick = function () {
+      stopReading();
+      opened = true;
+      $('lb-more').hidden = false;
+      $('story-gate').hidden = true;
+      $('lb-more').querySelector('.story').focus({ preventScroll: true });
+      $('lb-more').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    };
+    bindFeel();
     Array.prototype.forEach.call($('lb-content').querySelectorAll('.versions'), function (box) {
       var g = GROUPS[+box.getAttribute('data-g')];
       box.onclick = function (e) {
@@ -159,12 +179,14 @@
     var readBtn = $('lb-read');
     if (readBtn) readBtn.onclick = function () {
       if (reading) { stopReading(); return; }
-      var parts = [w.titleKo + '.'];
-      if (w.story) parts.push(w.story);
-      if (look) parts.push('그림에서 찾아보기.', look);
-      if (w.fun) parts.push('알고 있나요?', w.fun);
-      if (w.talk) parts.push('같이 이야기해요.', w.talk);
-      if (!look) parts.push('천천히 보고 이야기해요.', LOOK_COMMON, lookQuestion(w));
+      // 화면에 보이는 순서대로 읽는다. 이야기를 아직 안 열었으면 질문까지만 읽는다
+      var parts = [w.titleKo + '.', '먼저 천천히 보기.', LOOK_COMMON, lookQuestion(w), FEEL_ASK];
+      if (!gated || opened) {
+        if (w.story) parts.push(w.story);
+        if (look) parts.push('그림에서 찾아보기.', look);
+        if (w.fun) parts.push('알고 있나요?', w.fun);
+        if (w.talk) parts.push('같이 이야기해요.', w.talk);
+      }
       startReading(parts, readBtn);
     };
     setURL(m, (m.works || []).indexOf(w));
@@ -274,7 +296,7 @@
     });
     setReadBtn(true);
   }
-  // 이야기가 없는 그림에도 아이가 할 일을 하나 준다. 앞 두 질문은 미술관 교육의 VTS 질문을 고친 것이다.
+  // 모든 그림에서 먼저 보게 하는 열린 질문. 앞 두 질문은 미술관 교육의 VTS 질문을 고친 것이다.
   // "무슨 일이 일어나나요"는 꽃병, 산 같은 정물과 풍경에서 아이가 막혀 "무엇이 보이나요"로 묻는다.
   var LOOK_COMMON = '이 그림에서 무엇이 보이나요? 어디를 보고 그렇게 생각했나요?';
   var LOOK_EXTRA = [
@@ -283,7 +305,7 @@
     '붓자국은 어느 쪽으로 움직이나요? 손가락으로 따라 그려 보세요.',
     '그림 속에 들어간다면 어떤 소리가 들릴까요?',
     '이 그림에 새 제목을 붙인다면 뭐라고 할까요?',
-    '그림을 보면 어떤 기분이 드나요?'
+    '그림 속 사람이나 물건이 말을 한다면 무슨 말을 할까요?'
   ];
   // 소묘와 판화는 색과 붓자국 대신 선을 보게 한다
   var LOOK_LINE = [
@@ -292,8 +314,28 @@
     '고흐는 짧은 선과 점을 많이 그었어요. 어디에서 찾을 수 있나요?',
     '그림 속에 들어간다면 어떤 소리가 들릴까요?',
     '이 그림에 색을 칠한다면 무슨 색을 고를까요?',
-    '그림을 보면 어떤 기분이 드나요?'
+    '그림 속 사람이나 물건이 말을 한다면 무슨 말을 할까요?'
   ];
+  // 감정 낱말 고르기. "어떤 기분이 드나요?"에서 3학년이 "좋아요"에서 멈추지 않게 고를 말을 준다. 답을 저장하지 않는다
+  var FEEL_ASK = '이 그림을 보면 어떤 기분이 드나요?';
+  var FEELINGS = ['신나요', '즐거워요', '포근해요', '편안해요', '설레요', '신기해요', '궁금해요', '쓸쓸해요', '슬퍼요', '무서워요', '답답해요', '힘이 나요'];
+  function feelHTML() {
+    return '<div class="part feel"><h4>' + FEEL_ASK + '</h4><p class="feel-sub">마음에 가장 가까운 말을 하나 골라 보세요.</p>' +
+      '<div class="feel-words" role="group" aria-label="기분 고르기">' + FEELINGS.map(function (f) {
+        return '<button type="button" class="feel-word" aria-pressed="false">' + esc(f) + '</button>';
+      }).join('') + '</div><p class="feel-reply" aria-live="polite"></p></div>';
+  }
+  function bindFeel() {
+    var box = $('lb-content').querySelector('.feel-words'), reply = $('lb-content').querySelector('.feel-reply');
+    if (!box) return;
+    box.onclick = function (e) {
+      var b = e.target.closest('.feel-word');
+      if (!b) return;
+      Array.prototype.forEach.call(box.children, function (x) { x.setAttribute('aria-pressed', x === b); });
+      // 낱말이 모두 "요"로 끝나 받침이 없으므로 "를"을 쓴다
+      reply.textContent = '「' + b.textContent + '」를 골랐어요. 그림의 어디를 보고 그렇게 느꼈나요? 같은 그림을 보고도 사람마다 느낌이 달라요.';
+    };
+  }
   // 그 그림을 그린 해의 고흐 나이. 생일 전후를 가리지 않아 "무렵"으로 쓴다
   function ageText(w) {
     var y = +w.year;

@@ -504,3 +504,24 @@ a { color: inherit; }
 .tl-more[hidden] { display: none; }
 @media (min-width: 761px) { .tl-more { display: none !important; } }
 @media (max-width: 760px) { .tl-list.folded .tl-item:nth-child(n+4) { display: none; } }
+
+/* 감상 순서: 먼저 보기, 기분 고르기, 이야기 열기 */
+.lb-text .feel-sub { font-size: 14px !important; color: var(--dark-muted) !important; }
+.feel-words { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.feel-word {
+  min-height: 40px; padding: 6px 12px; font-size: 15px; color: var(--dark-text);
+  border: 1px solid var(--dark-rule); background: transparent; cursor: pointer;
+}
+.feel-word:hover { border-color: var(--dark-text); }
+.feel-word[aria-pressed="true"] { background: var(--dark-text); border-color: var(--dark-text); color: var(--dark); font-weight: 700; }
+.lb-text .feel-reply { margin-top: 12px; }
+.lb-text .feel-reply:empty { display: none; }
+.lb-text .story-gate p { font-size: 15px; color: var(--dark-muted); }
+.story-open {
+  margin-top: 10px; min-height: 48px; padding: 10px 20px; font-size: 16px; font-weight: 700;
+  color: var(--dark); background: var(--dark-text); border: 1px solid var(--dark-text); cursor: pointer;
+}
+.story-open:hover { background: #F4F1EA; }
+.lb-more .story:focus { outline: none; }
+.lb-more { border-top: 1px solid var(--dark-rule); margin-top: 24px; }
+.lb-more .story { margin-top: 16px; }
