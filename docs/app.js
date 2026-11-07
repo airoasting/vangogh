@@ -154,7 +154,7 @@
           : (w.story ? '<p class="story">' + esc(w.story) + '</p>' : '')) +
         groups.map(function (g) { return versionsPartHTML(g, w); }).join('') +
         // 어른용 메모는 접어 두고, "읽어 줘요"도 읽지 않는다
-        (w.forAdults ? '<details class="part adults"><summary>어른을 위한 메모: 아이가 물으면</summary><p>' + esc(w.forAdults) + '</p></details>' : '') +
+        adultsHTML(w.forAdults, 'part') +
       '</div>';
     var mapBtn = $('lb-map');
     if (mapBtn) mapBtn.onclick = function () { closeLightbox(); selectMuseum(m, true); };
@@ -341,6 +341,10 @@
     var y = +w.year;
     if (!y || y < VG_BIRTH) return '';
     return '고흐가 ' + (y - VG_BIRTH) + '살 무렵 ' + (w.kind === '판화' ? '만든 판화예요.' : '그린 그림이에요.');
+  }
+  // 어른용 메모. 접어 두고 "읽어 줘요"도 읽지 않는다. 그림, 살던 곳, 연대기가 같이 쓴다
+  function adultsHTML(text, cls) {
+    return text ? '<details class="' + (cls || '') + ' adults"><summary>어른을 위한 메모: 아이가 물으면</summary><p>' + esc(text) + '</p></details>' : '';
   }
   // 유화가 아닌 작품의 종류. 유화에는 kind가 없다
   function kindOf(w) { return w.kind || '유화'; }
@@ -756,7 +760,7 @@
         '<p class="lc-meta">' + (d.i + 1) + '번째 · ' + esc(s.country) + ' · ' + esc(s.years) + '</p>' +
         '<h4>' + esc(s.placeKo) + '</h4>' +
         (lifeAgeText(s) ? '<p class="lc-age">' + esc(lifeAgeText(s)) + '</p>' : '') +
-        '<p>' + esc(s.story) + '</p>' + lifeWorksHTML(works);
+        '<p>' + esc(s.story) + '</p>' + adultsHTML(s.forAdults) + lifeWorksHTML(works);
       lifeCard.hidden = false;
       lifeCard.scrollTop = 0;
       lifeCard.querySelector('.close-text').onclick = hideLifeCard;
@@ -1002,7 +1006,7 @@
           (lifeAgeText(s) ? '<span>' + esc(lifeAgeText(s)) + '</span>' : '') + '</div>' +
         '<div class="tl-what">' +
           '<h3>' + esc(s.placeKo) + '<small>' + esc(s.country) + '</small></h3>' +
-          '<p>' + esc(s.story) + '</p>' +
+          '<p>' + esc(s.story) + '</p>' + adultsHTML(s.forAdults) +
           (thumbs.length ? '<div class="tl-thumbs">' + thumbs.map(function (it) {
             return '<button type="button" class="tl-thumb" data-w="' + works.indexOf(it) + '" aria-label="' + esc(it.w.titleKo) + ' 크게 보기">' + imgHTML(it.w) + '</button>';
           }).join('') + '</div>' : '') +
@@ -1011,10 +1015,11 @@
             '<button type="button" class="textlink tl-map">지도에서 보기</button>' +
           '</div>' +
         '</div></li>';
-    }).join('');
+    }).join('') + afterHTML();
     listEl.addEventListener('click', function (e) {
       var li = e.target.closest('.tl-item');
       if (!li) return;
+      if (li.classList.contains('tl-after')) { afterClick(e); return; }
       var s = life[+li.getAttribute('data-i')], works = paintedAt(s);
       var th = e.target.closest('.tl-thumb');
       if (th) { openLightbox(works, +th.getAttribute('data-w')); return; }
@@ -1026,11 +1031,40 @@
         setTimeout(function () { if (mapApi) mapApi.openLife(+li.getAttribute('data-i')); }, off ? 700 : 0);
       }
     });
+    // 연대기 맨 끝 "고흐가 떠난 뒤". 죽음에서 끝내지 않고 지금 그림이 있는 미술관(지도)으로 잇는다
+    // 목록을 그릴 때 먼저 불리므로 변수 대신 함수 안에서 데이터를 읽는다
+    function afterData() { return DATA && DATA.afterLife; }
+    function vgm() { return museums.filter(function (x) { return x.nameEn === 'Van Gogh Museum'; })[0]; }
+    function afterHTML() {
+      var AFTER = afterData(), VGM = vgm();
+      if (!AFTER) return '';
+      return '<li class="tl-item tl-after">' +
+        '<div class="tl-when"><b>' + esc(AFTER.when) + '</b></div>' +
+        '<div class="tl-what">' +
+          '<h3>' + esc(AFTER.title) + '</h3>' +
+          '<p>' + esc(AFTER.story) + '</p>' +
+          '<p class="tl-stat">이 지도에는 고흐의 그림이 있는 미술관 ' + museums.length + '곳이 있어요.</p>' +
+          adultsHTML(AFTER.forAdults) +
+          '<div class="tl-actions">' +
+            (VGM ? '<button type="button" class="textlink tl-vgm">반 고흐 미술관 보기</button>' : '') +
+            '<button type="button" class="textlink tl-world">세계 미술관 지도 보기</button>' +
+          '</div>' +
+        '</div></li>';
+    }
+    function afterClick(e) {
+      if (e.target.closest('.tl-vgm') && vgm()) { selectMuseum(vgm(), true); return; }
+      if (e.target.closest('.tl-world')) {
+        setLayer('museums');
+        var r = wrap.getBoundingClientRect(), off = r.top < 0 || r.bottom > window.innerHeight;
+        if (off) wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(function () { $('zoom-reset').click(); }, off ? 600 : 0);
+      }
+    }
     // 폰에서는 목록을 처음 몇 곳만 보이고 접어 둔다. 그래야 그림 모음까지 내려가는 길이 짧다(접기는 CSS가 760px 이하에서만 한다)
     var more = $('tl-more'), SHOW = 3;
     function setFolded(f) {
       listEl.classList.toggle('folded', f);
-      if (more) { more.hidden = !f; more.textContent = '나머지 ' + (life.length - SHOW) + '곳 더 보기'; }
+      if (more) { more.hidden = !f; more.textContent = '나머지 ' + (life.length - SHOW) + '곳과 그 뒤 이야기 보기'; }
     }
     if (more && life.length > SHOW + 1) {
       setFolded(true);

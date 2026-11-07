@@ -525,3 +525,18 @@ a { color: inherit; }
 .lb-more .story:focus { outline: none; }
 .lb-more { border-top: 1px solid var(--dark-rule); margin-top: 24px; }
 .lb-more .story { margin-top: 16px; }
+
+/* 끝맺음: 부모님께, 밝은 화면의 어른 메모, 연대기 끝 칸 */
+.parents { margin-top: 32px; padding: 20px 24px; border: 1px solid var(--ink); background: var(--paper); }
+.parents h3 { font-size: 15px; font-weight: 700; }
+.parents ul { margin: 10px 0 0; padding-left: 1.1em; }
+.parents li { font-size: 15px; line-height: 1.7; color: var(--body); word-break: keep-all; }
+.parents li + li { margin-top: 6px; }
+.life-card .adults, .tl-item .adults { margin-top: 12px; border-top: 1px solid var(--rule); padding-top: 4px; }
+.life-card .adults summary, .tl-item .adults summary {
+  min-height: 44px; display: flex; align-items: center; cursor: pointer; font-size: 13px; font-weight: 700; color: var(--muted);
+}
+.life-card .adults summary:hover, .tl-item .adults[open] summary, .life-card .adults[open] summary { color: var(--ink); }
+.life-card .adults p, .tl-item .adults p { font-size: 15px; line-height: 1.7; color: var(--body); }
+.tl-after .tl-when b { font-size: 22px; }
+.tl-after .tl-stat { font-size: 15px !important; color: var(--muted) !important; }

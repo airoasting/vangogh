@@ -154,7 +154,7 @@ out.sort(key=lambda m: -len(m['works']))
 # 여기서 거르지 않고, 없는 작품 id는 app.js가 건너뛴다
 versions = cur.get('versions', [])
 
-data = {'museums': out, 'life': cur['life'], 'versions': versions,
+data = {'museums': out, 'life': cur['life'], 'afterLife': cur.get('afterLife'), 'versions': versions,
         'source': 'Wikidata (CC0) 소장 정보, Wikimedia Commons 퍼블릭 도메인 이미지'}
 with open(os.path.join(DIR, 'data.js'), 'w') as f:
     f.write('/* 자동 생성: tools/build_catalog.py. 큐레이션 원본은 data.curated.js */\n')
