@@ -73,6 +73,21 @@
     if (k === 'works' && allWorks.length) el.textContent = allWorks.length;
   });
 
+  /* ---------- 보고 싶어요, 봤어요 ---------- */
+  // 전시를 앞둔 가족이 고른 그림. 이 브라우저에만 남는다(점수와 배지 없음). 저장이 막혀 있어도 페이지는 그대로 동작한다
+  var MARK_KEY = 'vg-marks-v1';
+  var marks = (function () {
+    try { var v = JSON.parse(localStorage.getItem(MARK_KEY)); return v && typeof v === 'object' ? v : {}; } catch (err) { return {}; }
+  })();
+  function markOf(w) { return marks[w.id] || {}; }
+  function setMark(w, k, on) {
+    var mk = marks[w.id] || {};
+    if (on) mk[k] = 1; else delete mk[k];
+    if (mk.want || mk.seen) marks[w.id] = mk; else delete marks[w.id];
+    try { localStorage.setItem(MARK_KEY, JSON.stringify(marks)); } catch (err) { /* 저장이 막힌 브라우저 */ }
+    document.dispatchEvent(new CustomEvent('vg:marks'));
+  }
+
   /* ---------- 주소(딥링크) ---------- */
   function setURL(m, workIdx) {
     if (!window.history || !history.replaceState) return;
@@ -139,6 +154,10 @@
           (canRead() ? '<button type="button" class="textlink lb-read" id="lb-read" aria-pressed="false">읽어 줘요</button>' : '') +
           (panelOpen && panelMuseum === m ? '' : '<button type="button" class="textlink lb-map" id="lb-map">지도에서 이 미술관 보기</button>') +
         '</div>' +
+        '<div class="lb-marks" role="group" aria-label="내 목록">' +
+          '<button type="button" class="mark-btn" id="lb-want" aria-pressed="' + !!markOf(w).want + '">보고 싶어요</button>' +
+          '<button type="button" class="mark-btn" id="lb-seen" aria-pressed="' + !!markOf(w).seen + '">봤어요</button>' +
+        '</div>' +
         // 미술관 감상 순서: 먼저 보고, 느끼고, 그다음에 읽는다
         '<div class="part look"><h4>먼저 천천히 보기</h4><p>' + LOOK_COMMON + '</p><p>' + esc(lookQuestion(w)) + '</p></div>' +
         feelHTML() +
@@ -168,6 +187,14 @@
       $('lb-more').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     };
     bindFeel();
+    ['want', 'seen'].forEach(function (k) {
+      var b = $('lb-' + k);
+      b.onclick = function () {
+        var on = b.getAttribute('aria-pressed') !== 'true';
+        setMark(w, k, on);
+        b.setAttribute('aria-pressed', on);
+      };
+    });
     Array.prototype.forEach.call($('lb-content').querySelectorAll('.versions'), function (box) {
       var g = GROUPS[+box.getAttribute('data-g')];
       box.onclick = function (e) {
@@ -356,6 +383,20 @@
   }
   function lbStep(d) { lbIdx = (lbIdx + d + lbList.length) % lbList.length; renderLightbox(); }
   $('lb-close').addEventListener('click', closeLightbox);
+  // 태블릿과 폰에서는 그림을 옆으로 밀어서 넘긴다(위아래 스크롤과 헷갈리지 않게 가로 움직임이 클 때만)
+  (function () {
+    var x0 = null, y0 = 0;
+    lb.addEventListener('touchstart', function (e) {
+      if (lbMode !== 'one' || e.touches.length !== 1 || !e.target.closest('.lb-img')) { x0 = null; return; }
+      x0 = e.touches[0].clientX; y0 = e.touches[0].clientY;
+    }, { passive: true });
+    lb.addEventListener('touchend', function (e) {
+      if (x0 == null || lbList.length < 2) return;
+      var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+      x0 = null;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) lbStep(dx < 0 ? 1 : -1);
+    }, { passive: true });
+  })();
   $('lb-prev').addEventListener('click', function () { lbStep(-1); });
   $('lb-next').addEventListener('click', function () { lbStep(1); });
 
@@ -366,6 +407,9 @@
     var meta = [w.year ? esc(w.year) : '', kind, showMuseum ? esc(item.m.nameKo) : ''].filter(Boolean).join(' · ');
     if (!showMuseum) meta = [w.year ? esc(w.year) + '년' : '', kind].filter(Boolean).join(' · ');
     if (w.featured) meta += '<span class="has-story">이야기 있음</span>';
+    var mk = markOf(w);
+    if (mk.seen) meta += '<span class="mk seen">봤어요</span>';
+    else if (mk.want) meta += '<span class="mk">보고 싶어요</span>';
     return '<button class="art-card" data-i="' + i + '" aria-label="' + esc(w.titleKo) + ' 크게 보기">' +
       '<div class="art-thumb">' + imgHTML(w) + '</div>' +
       '<div class="t">' + esc(w.titleKo) + '</div>' +
@@ -462,7 +506,8 @@
       return;
     }
     var ordered = storyFirst(allWorks);
-    var STORY = '__story', KIND = '__kind:';
+    var STORY = '__story', KIND = '__kind:', WANT = '__want';
+    var COUNTRY_SHOW = 5, allCountries = false;
     var KINDS = ['유화', '소묘', '수채화', '판화'];
     var search = $('all-search'), result = $('all-result'), quick = $('all-quick');
     var countries = [];
@@ -487,6 +532,7 @@
     function inTab(it, key) {
       if (key === '전체') return true;
       if (key === STORY) return !!it.w.featured;
+      if (key === WANT) return !!markOf(it.w).want;
       if (key.indexOf(KIND) === 0) return kindOf(it.w) === key.slice(KIND.length);
       return it.m.country === key;
     }
@@ -497,9 +543,18 @@
       function n(key) { return found.filter(function (it) { return inTab(it, key); }).length; }
       var keys = countries.filter(function (c) { return c === current || n(c) > 0; });
       var kinds = KINDS.filter(function (k) { return current === KIND + k || n(KIND + k) > 0; });
-      filters.innerHTML = [tab('전체', '전체', found.length), tab('이야기 있는 그림', STORY, n(STORY))]
+      // 나라는 그림이 많은 몇 나라만 보이고 나머지는 접는다(고른 나라는 늘 보인다)
+      var shown = allCountries ? keys : keys.filter(function (c, i) { return i < COUNTRY_SHOW || c === current; });
+      var hidden = keys.length - shown.length;
+      var mine = n(WANT);
+      filters.innerHTML = [tab('전체', '전체', found.length)]
+        .concat(mine || current === WANT ? [tab('보고 싶은 그림', WANT, mine)] : [])
+        .concat([tab('이야기 있는 그림', STORY, n(STORY))])
         .concat(kinds.map(function (k) { return tab(k, KIND + k, n(KIND + k)); }))
-        .concat(keys.map(function (c) { return tab(c, c, n(c)); })).join('');
+        .concat(shown.map(function (c) { return tab(c, c, n(c)); }))
+        .concat(hidden > 0 ? ['<button type="button" class="tab tab-more" data-more="1">나라 ' + hidden + '곳 더 보기</button>']
+          : (allCountries && keys.length > COUNTRY_SHOW ? ['<button type="button" class="tab tab-more" data-more="0">나라 접기</button>'] : []))
+        .join('');
     }
     function render() {
       var found = ordered.filter(matches);
@@ -523,6 +578,13 @@
     filters.addEventListener('click', function (e) {
       var b = e.target.closest('.tab');
       if (!b) return;
+      if (b.hasAttribute('data-more')) {
+        allCountries = b.getAttribute('data-more') === '1';
+        render();
+        var t = filters.querySelector('.tab-more') || filters.querySelector('.tab:last-child');
+        if (t) t.focus();
+        return;
+      }
       current = b.getAttribute('data-c');
       render();
       var f = filters.querySelector('[data-c="' + current.replace(/"/g, '') + '"]');
@@ -546,6 +608,7 @@
         render();
       });
     }
+    document.addEventListener('vg:marks', function () { render(); });
     render();
   })();
 
