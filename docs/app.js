@@ -616,7 +616,7 @@
       : '<span><i class="k-dot"></i>미술관 (숫자는 그림 수)</span>';
   }
 
-  function setLayer(which) {
+  function setLayer(which, noFit) {
     showMuseums = which === 'museums';
     showLife = which === 'life';
     $('toggle-museums').setAttribute('aria-pressed', showMuseums);
@@ -624,7 +624,7 @@
     renderLegend();
     if (mapApi) mapApi.applyLayers();
     if (!showLife) hideLifeCard();
-    if (showLife && mapApi) mapApi.fitLife();
+    if (showLife && mapApi && !noFit) mapApi.fitLife();  // 연대기에서 올 때는 그 도시로 바로 확대한다
   }
   $('toggle-museums').addEventListener('click', function () { setLayer('museums'); });
   $('toggle-life').addEventListener('click', function () { setLayer('life'); });
@@ -682,6 +682,23 @@
     lifePins.append('circle').attr('class', 'body').attr('r', 9);
     lifePins.append('text').attr('class', 'num').attr('text-anchor', 'middle').attr('dy', '0.36em').text(function (d) { return d.i + 1; });
     var lifeLbl = lifePins.append('text').attr('class', 'lbl').attr('x', 14).attr('dy', '0.35em').text(function (d) { return d.s.placeKo; });
+    // 살던 곳 이름표는 차례대로 붙이되, 앞 이름표와 겹치면 숨긴다(헤이그처럼 두 번 산 곳, 네덜란드와 벨기에처럼 붙은 곳)
+    function placeLifeLabels() {
+      // 핀 동그라미를 먼저 자리로 잡아, 이름표가 다른 핀을 덮지 않게 한다
+      var boxes = lifePts.map(function (d) {
+        var x = d.x * k + d.dx, y = d.y * k + d.dy;
+        return { x0: x - 9, x1: x + 9, y0: y - 9, y1: y + 9, own: d };
+      });
+      lifeLbl.style('display', function (d) {
+        if (k < 3.5) return 'none';
+        var x = d.x * k + d.dx, y = d.y * k + d.dy;
+        var b = { x0: x + 11, x1: x + 16 + d.s.placeKo.length * 12.5, y0: y - 8, y1: y + 8 };
+        var hit = boxes.some(function (o) { return o.own !== d && b.x0 < o.x1 && b.x1 > o.x0 && b.y0 < o.y1 && b.y1 > o.y0; });
+        if (hit) return 'none';
+        boxes.push(b);
+        return null;
+      });
+    }
     lifePins.on('click', function (e, d) { e.stopPropagation(); showLifeStop(d, this); })
       .on('keydown', function (e, d) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showLifeStop(d, this); } })
       .on('mouseenter', function (e, d) { showTip(e, (d.i + 1) + '. ' + d.s.placeKo + ' (' + d.s.years + ')'); })
@@ -748,10 +765,10 @@
         lastK = kr;
         dots.attr('r', musR);
         lbl.attr('x', function (d) { return musR(d) + 5; });
-        lifeLbl.style('display', k >= 3.5 ? null : 'none');
         spread(musPts, musR);
         placeLabels();
         spread(lifePts, function () { return 9; });
+        placeLifeLabels();
         lifePath.attr('d', lifePts.length > 1 ? d3.line().x(function (d) { return d.x + d.dx / k; }).y(function (d) { return d.y + d.dy / k; })(lifePts) : null);
       }
       place(pins, k);
@@ -785,6 +802,10 @@
       },
       setActive: function (m) { pins.classed('active', function (d) { return d.m === m; }); },
       clearLifeActive: function () { lifePins.classed('active', false); },
+      openLife: function (i) {
+        var node = lifePins.filter(function (d) { return d.i === i; }).node();
+        if (node) showLifeStop(d3.select(node).datum(), node);
+      },
       fitLife: function () {
         if (!lifePts.length) return;
         var xs = lifePts.map(function (d) { return d.x; }), ys = lifePts.map(function (d) { return d.y; });
@@ -821,6 +842,147 @@
       if (Math.abs(mapEl.clientWidth - lastW) > 40) { lastW = mapEl.clientWidth; hideLifeCard(); buildMap(); }
     }, 250);
   });
+
+  /* ---------- 연대기 ---------- */
+  // 정본 life(살던 곳과 해)만으로 그린다. 막대는 이 지도에 있는 그림 가운데 그 해에 그린 그림 수다.
+  (function () {
+    var chart = $('tl-chart'), listEl = $('tl-list'), note = $('tl-note');
+    if (!chart || !listEl || !life.length) return;
+    var Y0 = VG_BIRTH, Y1 = 1890;
+    function span(s) {
+      var ys = String(s.years || '').split('~').map(Number);
+      return { a: ys[0], b: ys[1] || ys[0] };
+    }
+    var byYear = {}, noYear = 0;
+    allWorks.forEach(function (it) {
+      var y = +it.w.year;
+      if (!y) { noYear++; return; }
+      (byYear[y] = byYear[y] || []).push(it);
+    });
+    var maxN = 0, maxY = 0;
+    Object.keys(byYear).forEach(function (y) { if (byYear[y].length > maxN) { maxN = byYear[y].length; maxY = +y; } });
+
+    // 한눈에 보기: 위는 해마다 그림 수, 아래는 살던 곳의 차례
+    var tip = document.createElement('div');
+    tip.className = 'tl-tip'; tip.hidden = true;
+    function draw() {
+      var W = Math.max(640, chart.clientWidth), PAD = 24, step = (W - PAD * 2) / (Y1 - Y0 + 1);
+      function x(y) { return PAD + (y - Y0 + 0.5) * step; }
+      var BASE = 150, BAR_H = 104, LANE = 238, H = 286;
+      var bw = Math.min(18, step - 4), out = [];
+      out.push('<svg viewBox="0 0 ' + W + ' ' + H + '" width="' + W + '" height="' + H + '" role="img" aria-label="고흐가 살던 곳과 해마다 그린 그림 수">');
+      // 화가로 지낸 약 10년(소개 정본: 스물일곱 살 무렵 화가가 되어 약 10년 동안 그렸다)
+      out.push('<g class="tl-span"><path d="M' + x(1880) + ' 26 V18 H' + x(Y1) + ' V26"/><text x="' + (x(1880) + x(Y1)) / 2 + '" y="12" text-anchor="middle">화가로 지낸 약 10년</text></g>');
+      out.push('<line class="tl-base" x1="' + PAD + '" x2="' + (W - PAD) + '" y1="' + BASE + '" y2="' + BASE + '"/>');
+      for (var y = Y0; y <= Y1; y++) {
+        var n = (byYear[y] || []).length;
+        if (!n) continue;
+        var h = Math.max(3, n / maxN * BAR_H), x0 = x(y) - bw / 2, r = Math.min(4, bw / 2, h);
+        out.push('<g class="tl-bar" data-y="' + y + '" tabindex="0" role="button" aria-label="' + y + '년, 이 지도의 그림 ' + n + '점 보기">' +
+          '<rect class="hit" x="' + (x(y) - step / 2) + '" y="30" width="' + step + '" height="' + (BASE - 30) + '"/>' +
+          '<path class="mark" d="M' + x0 + ' ' + BASE + ' V' + (BASE - h + r) + ' Q' + x0 + ' ' + (BASE - h) + ' ' + (x0 + r) + ' ' + (BASE - h) +
+          ' H' + (x0 + bw - r) + ' Q' + (x0 + bw) + ' ' + (BASE - h) + ' ' + (x0 + bw) + ' ' + (BASE - h + r) + ' V' + BASE + ' Z"/></g>');
+        if (y === maxY) out.push('<text class="tl-val" x="' + x(y) + '" y="' + (BASE - h - 6) + '" text-anchor="middle">' + n + '점</text>');
+      }
+      // 연도와 나이
+      [Y0, 1860, 1870, 1880, Y1].forEach(function (yy) {
+        out.push('<text class="tl-year" x="' + x(yy) + '" y="' + (BASE + 20) + '" text-anchor="middle">' + yy + '</text>' +
+          '<text class="tl-age" x="' + x(yy) + '" y="' + (BASE + 36) + '" text-anchor="middle">' + (yy - VG_BIRTH) + '살</text>');
+      });
+      // 살던 곳: 한 해만 있으면 점, 여러 해면 선. 번호는 위아래로 엇갈려 겹치지 않게 한다
+      out.push('<line class="tl-lane" x1="' + x(Y0) + '" x2="' + x(Y1) + '" y1="' + LANE + '" y2="' + LANE + '"/>');
+      life.forEach(function (s, i) {
+        var sp = span(s);
+        if (!sp.a) return;
+        if (sp.b > sp.a) out.push('<line class="tl-stay" x1="' + x(sp.a) + '" x2="' + x(sp.b) + '" y1="' + LANE + '" y2="' + LANE + '"/>');
+        var cy = LANE + (i % 2 ? 22 : -22);
+        out.push('<g class="tl-stop" data-i="' + i + '" tabindex="0" role="button" aria-label="' + (i + 1) + '번 ' + esc(s.placeKo) + ', ' + esc(s.years) + '">' +
+          '<line x1="' + x(sp.a) + '" x2="' + x(sp.a) + '" y1="' + LANE + '" y2="' + cy + '"/>' +
+          '<circle class="dot" cx="' + x(sp.a) + '" cy="' + LANE + '" r="3.5"/>' +
+          '<circle class="hit" cx="' + x(sp.a) + '" cy="' + cy + '" r="16"/>' +
+          '<circle class="num" cx="' + x(sp.a) + '" cy="' + cy + '" r="9"/>' +
+          '<text x="' + x(sp.a) + '" y="' + cy + '" dy="0.36em" text-anchor="middle">' + (i + 1) + '</text></g>');
+      });
+      out.push('</svg>');
+      chart.innerHTML = out.join('');
+      chart.appendChild(tip);
+      chart.scrollLeft = chart.scrollWidth;  // 폰에서 옆으로 넘길 때는 그림을 그린 마지막 10년부터 보인다
+    }
+    function showTip(el, text) {
+      var r = el.getBoundingClientRect(), c = chart.getBoundingClientRect();
+      tip.textContent = text; tip.hidden = false;
+      tip.style.left = (r.left - c.left + chart.scrollLeft + r.width / 2) + 'px';
+      tip.style.top = (r.top - c.top) + 'px';
+    }
+    function yearList(y) { return storyFirst(byYear[y] || []); }
+    function goStop(i) {
+      var li = listEl.querySelector('[data-i="' + i + '"]');
+      if (!li) return;
+      li.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      li.classList.add('flash');
+      setTimeout(function () { li.classList.remove('flash'); }, 1400);
+    }
+    chart.addEventListener('click', function (e) {
+      var b = e.target.closest('.tl-bar'), st = e.target.closest('.tl-stop');
+      if (b) openLightbox(yearList(+b.getAttribute('data-y')), 0);
+      if (st) goStop(+st.getAttribute('data-i'));
+    });
+    chart.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      var t = e.target.closest('.tl-bar, .tl-stop');
+      if (!t) return;
+      e.preventDefault(); t.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    });
+    function hoverText(t) {
+      if (t.classList.contains('tl-bar')) { var y = +t.getAttribute('data-y'); return y + '년 · ' + (y - VG_BIRTH) + '살 무렵 · 그림 ' + (byYear[y] || []).length + '점'; }
+      var s = life[+t.getAttribute('data-i')]; return s.placeKo + ' · ' + s.years;
+    }
+    ['mouseover', 'focusin'].forEach(function (ev) {
+      chart.addEventListener(ev, function (e) { var t = e.target.closest('.tl-bar, .tl-stop'); if (t) showTip(t, hoverText(t)); });
+    });
+    ['mouseleave', 'focusout'].forEach(function (ev) { chart.addEventListener(ev, function () { tip.hidden = true; }); });
+
+    // 차례대로 읽는 목록. 표 대신 이 목록이 차트의 내용을 글로 담는다
+    listEl.innerHTML = life.map(function (s, i) {
+      var works = paintedAt(s), thumbs = works.filter(function (it) { return it.w.img; }).slice(0, 4);
+      return '<li class="tl-item" data-i="' + i + '">' +
+        '<div class="tl-when"><span class="tl-n">' + (i + 1) + '</span><b>' + esc(String(s.years).replace('~', '–')) + '</b>' +
+          (lifeAgeText(s) ? '<span>' + esc(lifeAgeText(s)) + '</span>' : '') + '</div>' +
+        '<div class="tl-what">' +
+          '<h3>' + esc(s.placeKo) + '<small>' + esc(s.country) + '</small></h3>' +
+          '<p>' + esc(s.story) + '</p>' +
+          (thumbs.length ? '<div class="tl-thumbs">' + thumbs.map(function (it) {
+            return '<button type="button" class="tl-thumb" data-w="' + works.indexOf(it) + '" aria-label="' + esc(it.w.titleKo) + ' 크게 보기">' + imgHTML(it.w) + '</button>';
+          }).join('') + '</div>' : '') +
+          '<div class="tl-actions">' +
+            (works.length ? '<button type="button" class="textlink tl-all">여기서 그린 그림 ' + works.length + '점 보기</button>' : '') +
+            '<button type="button" class="textlink tl-map">지도에서 보기</button>' +
+          '</div>' +
+        '</div></li>';
+    }).join('');
+    listEl.addEventListener('click', function (e) {
+      var li = e.target.closest('.tl-item');
+      if (!li) return;
+      var s = life[+li.getAttribute('data-i')], works = paintedAt(s);
+      var th = e.target.closest('.tl-thumb');
+      if (th) { openLightbox(works, +th.getAttribute('data-w')); return; }
+      if (e.target.closest('.tl-all')) { openLightbox(works, 0); return; }
+      if (e.target.closest('.tl-map')) {
+        setLayer('life', true);
+        var r = wrap.getBoundingClientRect(), off = r.top < 0 || r.bottom > window.innerHeight;
+        if (off) wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(function () { if (mapApi) mapApi.openLife(+li.getAttribute('data-i')); }, off ? 700 : 0);
+      }
+    });
+    if (note) note.textContent = '막대는 이 지도에 있는 그림 가운데 그 해에 그린 그림의 수예요. 그린 해를 모르는 ' + noYear + '점은 빠져 있어요. 막대를 누르면 그 해의 그림을 볼 수 있어요.';
+
+    draw();
+    var tw = chart.clientWidth, tt;
+    window.addEventListener('resize', function () {
+      clearTimeout(tt);
+      tt = setTimeout(function () { if (Math.abs(chart.clientWidth - tw) > 40) { tw = chart.clientWidth; draw(); } }, 250);
+    });
+  })();
 
   /* ---------- 찾기 문제 ---------- */
   // 그림 한 점의 미술관을 지도에서 찾는 문제. 문제와 힌트는 모두 데이터(제목, 나라, 도시, 미술관)로 만든다.

@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="gallery.css?v=23">
+<link rel="stylesheet" href="gallery.css?v=26">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="fonts.css?v=12">
 </head>
@@ -22,7 +22,8 @@
       <a class="wordmark" href="#top" aria-label="반 고흐 그림 지도"><span aria-hidden="true"><span class="ch" style="--i:0">반</span> <span class="ch" style="--i:2">고</span><span class="ch" style="--i:3">흐</span> <span class="ch" style="--i:5">그</span><span class="ch" style="--i:6">림</span> <span class="ch" style="--i:8">지</span><span class="ch" style="--i:9">도</span></span></a>
     </div>
     <nav class="mast-nav" aria-label="바로 가기">
-      <a href="#who-section">소개</a>
+      <a class="nav-wide" href="#who-section">소개</a>
+      <a href="#life-section">연대기</a>
       <a href="#map-section">지도</a>
       <a href="#all-section">그림 모음</a>
     </nav>
@@ -69,6 +70,18 @@
         </dl>
       </div>
     </div>
+  </section>
+
+  <section id="life-section" class="section wrap" aria-labelledby="life-title">
+    <div class="sec-head">
+      <p class="sec-label">연대기</p>
+      <h2 id="life-title">고흐의 37년</h2>
+    </div>
+    <p class="sec-lead long">태어난 해부터 세상을 떠난 해까지, 고흐가 살던 곳을 차례로 따라가요. 그림은 대부분 마지막 10년 동안 그렸어요.</p>
+    <div class="tl-chart" id="tl-chart"></div>
+    <p class="tl-note" id="tl-note"></p>
+    <ol class="tl-list" id="tl-list"></ol>
+    <p class="tl-note">여기에는 날짜를 확인한 곳만 적었어요. 빈칸으로 남은 해에도 고흐는 학교를 다니고 여러 도시를 오가며 살았어요.</p>
   </section>
 
   <section id="map-section" class="section wrap" aria-labelledby="map-title">
@@ -171,9 +184,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <script src="world.js?v=4"></script>
-<script src="data.js?v=16"></script>
+<script src="data.js?v=17"></script>
 <script src="intro.js?v=13"></script>
-<script src="app.js?v=26"></script>
+<script src="app.js?v=32"></script>
 <script src="wall-more.js?v=12"></script>
 </body>
 </html>
