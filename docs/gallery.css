@@ -301,6 +301,9 @@ a { color: inherit; }
   column-gap: 48px; padding: 56px 48px 0;
 }
 .lightbox .close-text { color: var(--dark-text); top: 8px; right: 24px; }
+/* 길게 내려가는 나란히 보기에서도 닫기 단추가 화면에 남는다 */
+.lightbox.compare .close-text { position: fixed; z-index: 2; background: var(--dark); }
+.lightbox.compare .close-text:hover, .lightbox.compare .close-text:focus-visible { background: var(--dark-text); }
 .lb-content { display: contents; }
 .lb-img { grid-column: 1; grid-row: 1 / span 2; display: flex; align-items: center; justify-content: center; min-height: 0; padding-bottom: 48px; }
 .lb-img img { max-width: 100%; max-height: calc(100vh - 120px); width: auto; height: auto; object-fit: contain; }
@@ -388,4 +391,56 @@ a { color: inherit; }
    그래야 320px 폰에서도 바로 가기 메뉴까지 한 줄에 들어간다. */
 @media (max-width: 480px) {
   .brand-by-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+
+/* 나란히 보기: 그림 모음 위의 묶음 줄 */
+.pairs { margin-top: 40px; }
+.pairs-sub { font-size: 15px; color: var(--muted); margin-top: 4px; word-break: keep-all; }
+.pair-row { list-style: none; margin: 16px 0 0; padding: 0 0 8px; display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x proximity; }
+.pair-row li { flex: 0 0 auto; scroll-snap-align: start; }
+.pair-card { display: block; width: 168px; text-align: left; }
+.pair-thumbs { display: grid; gap: 3px; height: 112px; background: var(--land); overflow: hidden; }
+.pair-thumbs.n2 { grid-template-columns: 1fr 1fr; }
+.pair-thumbs.n3 { grid-template-columns: 1fr 1fr 1fr; }
+.pair-thumbs span { display: block; min-width: 0; height: 112px; }
+.pair-thumbs img, .pair-thumbs .placeholder { width: 100%; height: 100%; object-fit: cover; aspect-ratio: auto; }
+.pair-card:hover img { opacity: .9; }
+.pair-t { display: block; font-size: 15px; font-weight: 700; line-height: 1.4; margin-top: 10px; word-break: keep-all; }
+.pair-card:hover .pair-t { text-decoration: underline; text-underline-offset: 4px; }
+.pair-n { display: block; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* 나란히 보기: 크게 보기 안의 작은 그림 줄 */
+.lb-text .v-thumbs { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.v-thumb { display: block; width: 56px; height: 56px; overflow: hidden; background: #222; opacity: .7; outline-offset: 2px; }
+.v-thumb img, .v-thumb .placeholder { width: 100%; height: 100%; object-fit: cover; aspect-ratio: auto; }
+.v-thumb:hover { opacity: 1; }
+.v-thumb[aria-current="true"] { opacity: 1; box-shadow: 0 0 0 2px var(--dark-text); }
+.lb-text .v-open { color: var(--dark-text); font-size: 14px; }
+
+/* 나란히 보기: 묶음 전체 화면 */
+.lightbox.compare .lb-inner { display: block; overflow-y: auto; padding: 56px 48px 48px; }
+.lightbox.compare .lb-bar { display: none; }
+.cmp-head { max-width: 46em; padding-right: 56px; }
+.cmp-eyebrow { font-size: 13px; color: var(--dark-muted); }
+.cmp-head h3 { font-family: var(--serif); font-weight: 600; font-size: 32px; line-height: 1.25; letter-spacing: -0.02em; color: #F4F1EA; margin-top: 6px; }
+.cmp-lead { font-size: 17px; line-height: 1.8; margin-top: 12px; word-break: keep-all; }
+.cmp-ask { font-size: 16px; line-height: 1.75; margin-top: 12px; padding-left: 14px; border-left: 2px solid var(--dark-text); word-break: keep-all; }
+.cmp-ask b { display: block; font-size: 13px; color: #F4F1EA; }
+.cmp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 32px 24px; align-items: end; margin-top: 32px; }
+.cmp-grid.two { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.cmp-item { margin: 0; }
+.cmp-img { display: flex; align-items: flex-end; justify-content: center; width: 100%; height: 38vh; min-height: 220px; }
+.cmp-grid.two .cmp-img { height: 58vh; }
+.cmp-img img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.cmp-img:hover img { opacity: .9; }
+.cmp-item figcaption { font-size: 14px; line-height: 1.6; color: var(--dark-muted); margin-top: 10px; text-align: center; font-variant-numeric: tabular-nums; }
+.cmp-item figcaption b { color: var(--dark-text); }
+.cmp-foot { font-size: 14px; color: var(--dark-muted); margin-top: 32px; }
+@media (max-width: 760px) {
+  .lightbox.compare .lb-inner { padding: 56px 20px 32px; }
+  .cmp-head { padding-right: 0; }
+  .cmp-head h3 { font-size: 26px; }
+  .cmp-grid, .cmp-grid.two { grid-template-columns: 1fr 1fr; gap: 24px 12px; }
+  .cmp-img, .cmp-grid.two .cmp-img { height: 30vh; min-height: 160px; }
+  .cmp-item figcaption { font-size: 13px; }
 }

@@ -8,9 +8,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="gallery.css?v=21">
+<link rel="stylesheet" href="gallery.css?v=23">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="fonts.css?v=11">
+<link rel="stylesheet" href="fonts.css?v=12">
 </head>
 <body>
 
@@ -115,7 +115,12 @@
       <p class="sec-label">그림 모음</p>
       <h2 id="all-title">그림 모아 보기</h2>
     </div>
-    <p class="sec-lead">고흐가 그린 그림 약 2,100점 가운데 세계 미술관이 가지고 있는 <span data-count="works">775</span>점을 모았어요. 물감을 두껍게 바른 유화도 있고, 연필과 펜으로 그린 소묘, 수채화, 판화도 있어요. 사람들이 집에 가지고 있는 그림과 아직 목록이 만들어지지 않은 소묘는 빠져 있어요. 이야기가 있는 그림이 먼저 나와요.</p>
+    <p class="sec-lead long">고흐가 그린 그림 약 2,100점 가운데 세계 미술관이 가지고 있는 <span data-count="works">775</span>점을 모았어요. 물감을 두껍게 바른 유화도 있고, 연필과 펜으로 그린 소묘, 수채화, 판화도 있어요. 사람들이 집에 가지고 있는 그림과 아직 목록이 만들어지지 않은 소묘는 빠져 있어요. 이야기가 있는 그림이 먼저 나와요.</p>
+    <div class="pairs" id="all-pairs" hidden>
+      <p class="find-label" id="pairs-title">나란히 놓고 보기</p>
+      <p class="pairs-sub">고흐는 같은 그림을 여러 번 그리기도 했어요. 나란히 놓고 다른 곳을 찾아보세요.</p>
+      <ul class="pair-row" id="pair-row" aria-labelledby="pairs-title"></ul>
+    </div>
     <div class="wall-find">
       <div class="find-field">
         <label class="find-label" for="all-search">그림 찾기</label>
@@ -166,9 +171,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <script src="world.js?v=4"></script>
-<script src="data.js?v=15"></script>
+<script src="data.js?v=16"></script>
 <script src="intro.js?v=13"></script>
-<script src="app.js?v=23"></script>
+<script src="app.js?v=26"></script>
 <script src="wall-more.js?v=12"></script>
 </body>
 </html>

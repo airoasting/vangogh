@@ -37,6 +37,28 @@
   museums.forEach(function (m) {
     (m.works || []).forEach(function (w) { allWorks.push({ w: w, m: m }); });
   });
+  // 나란히 보기 묶음(정본 versions). 데이터에 없는 작품은 건너뛰고, 두 점이 안 남으면 묶음을 뺀다
+  var byId = {};
+  allWorks.forEach(function (it) { byId[it.w.id] = it; });
+  var GROUPS = ((DATA && DATA.versions) || []).map(function (g) {
+    var list = (g.works || []).map(function (id) { return byId[id]; }).filter(Boolean);
+    return list.length >= 2 ? { id: g.id, titleKo: g.titleKo, lead: g.lead || '', ask: g.ask || '', list: list } : null;
+  }).filter(Boolean);
+  function groupsOf(w) {
+    return GROUPS.filter(function (g) { return g.list.some(function (it) { return it.w === w; }); });
+  }
+  // 몇 점이 몇 도시에 있는지는 데이터로 센다
+  function groupWhere(g) {
+    var cities = [], ms = [];
+    g.list.forEach(function (it) {
+      if (cities.indexOf(it.m.city) < 0) cities.push(it.m.city);
+      if (ms.indexOf(it.m) < 0) ms.push(it.m);
+    });
+    var n = g.list.length;
+    if (ms.length === 1) return n + '점 모두 ' + ms[0].city + '의 ' + ms[0].nameKo + '에 있어요.';
+    if (cities.length === 1) return n + '점 모두 ' + cities[0] + '에 있어요.';
+    return n + '점이 지금 ' + cities.length + '개 도시에 흩어져 있어요.';
+  }
   function museumList(m) { return (m.works || []).map(function (w) { return { w: w, m: m }; }); }
   // 이야기가 있는 그림(큐레이션 32점)을 앞에 둔다. 나머지 순서는 그대로 둔다.
   function storyFirst(list) {
@@ -79,7 +101,7 @@
   function openLightbox(list, idx) {
     if (!list.length) return;
     lbList = list; lbIdx = Math.max(0, Math.min(idx, list.length - 1));
-    lastFocus = document.activeElement;
+    if (lb.hidden) lastFocus = document.activeElement;  // 나란히 보기에서 넘어올 때는 처음 연 곳을 기억한다
     renderLightbox();
     lb.hidden = false;
     document.body.classList.add('no-scroll');
@@ -94,7 +116,10 @@
   }
   function renderLightbox() {
     stopReading();
+    if (lbMode === 'compare') { var inner = lb.querySelector('.lb-inner'); if (inner) inner.scrollTop = 0; }  // 폰에서 내려 둔 위치를 버린다
+    lbMode = 'one'; lb.classList.remove('compare');
     var item = lbList[lbIdx], w = item.w, m = item.m;
+    var groups = groupsOf(w);
     var multi = lbList.length > 1;
     $('lb-bar').style.visibility = multi ? '' : 'hidden';
     $('lb-count').textContent = multi ? (lbIdx + 1) + ' / ' + lbList.length : '';
@@ -115,12 +140,21 @@
         (look ? '<div class="part"><h4>그림에서 찾아보기</h4><p>' + esc(look) + '</p></div>' : '') +
         (w.fun ? '<div class="part"><h4>알고 있나요?</h4><p>' + esc(w.fun) + '</p></div>' : '') +
         (w.talk ? '<div class="part talk"><h4>같이 이야기해요</h4><p>' + esc(w.talk) + '</p></div>' : '') +
+        groups.map(function (g) { return versionsPartHTML(g, w); }).join('') +
         // 어른용 메모는 접어 두고, "읽어 줘요"도 읽지 않는다
         (w.forAdults ? '<details class="part adults"><summary>어른을 위한 메모: 아이가 물으면</summary><p>' + esc(w.forAdults) + '</p></details>' : '') +
         (look ? '' : '<div class="part"><h4>천천히 보고 이야기해요</h4><p>' + LOOK_COMMON + '</p><p>' + esc(lookQuestion(w)) + '</p></div>') +
       '</div>';
     var mapBtn = $('lb-map');
     if (mapBtn) mapBtn.onclick = function () { closeLightbox(); selectMuseum(m, true); };
+    Array.prototype.forEach.call($('lb-content').querySelectorAll('.versions'), function (box) {
+      var g = GROUPS[+box.getAttribute('data-g')];
+      box.onclick = function (e) {
+        var t = e.target.closest('.v-thumb');
+        if (t) { openLightbox(g.list, +t.getAttribute('data-i')); $('lb-close').focus(); return; }
+        if (e.target.closest('.v-open')) openCompare(g);
+      };
+    });
     var readBtn = $('lb-read');
     if (readBtn) readBtn.onclick = function () {
       if (reading) { stopReading(); return; }
@@ -133,6 +167,59 @@
       startReading(parts, readBtn);
     };
     setURL(m, (m.works || []).indexOf(w));
+  }
+
+  /* ---------- 나란히 보기 ---------- */
+  // 같은 라이트박스 안에서 그림 설명 대신 묶음 전체를 한 화면에 펼친다
+  var lbMode = 'one';
+  function versionsPartHTML(g, w) {
+    return '<div class="part versions" data-g="' + GROUPS.indexOf(g) + '">' +
+      '<h4>나란히 보기: ' + esc(g.titleKo) + '</h4>' +
+      '<p>' + esc(groupWhere(g)) + '</p>' +
+      '<div class="v-thumbs">' + g.list.map(function (it, i) {
+        var cur = it.w === w;
+        return '<button type="button" class="v-thumb" data-i="' + i + '"' + (cur ? ' aria-current="true"' : '') +
+          ' aria-label="' + esc(it.m.city + ', ' + it.m.nameKo + (it.w.year ? ', ' + it.w.year + '년' : '') + (cur ? ' (지금 보는 그림)' : '')) + '">' +
+          imgHTML(it.w) + '</button>';
+      }).join('') + '</div>' +
+      '<button type="button" class="textlink v-open">' + g.list.length + '점 나란히 보기</button>' +
+    '</div>';
+  }
+  function openCompare(g) {
+    stopReading();
+    if (lb.hidden) lastFocus = document.activeElement;
+    lbMode = 'compare';
+    lb.classList.add('compare');
+    $('lb-bar').style.visibility = 'hidden';
+    $('lb-count').textContent = '';
+    $('lb-content').innerHTML =
+      '<div class="cmp">' +
+        '<div class="cmp-head">' +
+          '<p class="cmp-eyebrow">나란히 보기 · ' + esc(groupWhere(g)) + '</p>' +
+          '<h3>' + esc(g.titleKo) + '</h3>' +
+          (g.lead ? '<p class="cmp-lead">' + esc(g.lead) + '</p>' : '') +
+          (g.ask ? '<p class="cmp-ask"><b>찾아보세요</b>' + esc(g.ask) + '</p>' : '') +
+        '</div>' +
+        '<div class="cmp-grid' + (g.list.length === 2 ? ' two' : '') + '">' + g.list.map(function (it, i) {
+          var w = it.w;
+          return '<figure class="cmp-item"><button type="button" class="cmp-img" data-i="' + i + '" aria-label="' + esc(w.titleKo + ', ' + it.m.city) + ' 크게 보기">' +
+            imgHTML(w) + '</button>' +
+            '<figcaption><b>' + esc(it.m.city) + '</b> ' + esc(it.m.nameKo) + '<br>' +
+            [w.year ? esc(w.year) + '년' : '', esc(kindOf(w))].filter(Boolean).join(' · ') + '</figcaption></figure>';
+        }).join('') + '</div>' +
+        '<p class="cmp-foot">그림을 누르면 크게 볼 수 있어요.</p>' +
+      '</div>';
+    // 오버레이 안의 지연 로딩은 늦게 떠서, 나란히 놓는 그림은 바로 불러온다
+    Array.prototype.forEach.call($('lb-content').querySelectorAll('.cmp-img img'), function (im) { im.loading = 'eager'; });
+    $('lb-content').querySelector('.cmp-grid').onclick = function (e) {
+      var b = e.target.closest('.cmp-img');
+      if (b) { openLightbox(g.list, +b.getAttribute('data-i')); $('lb-close').focus(); }
+    };
+    lb.hidden = false;
+    lb.scrollTop = 0;
+    var inner = lb.querySelector('.lb-inner'); if (inner) inner.scrollTop = 0;
+    document.body.classList.add('no-scroll');
+    $('lb-close').focus();
   }
 
   /* ---------- 읽어 줘요 (브라우저 내장 음성) ---------- */
@@ -299,8 +386,8 @@
   document.addEventListener('keydown', function (e) {
     if (!lb.hidden) {
       if (e.key === 'Escape') closeLightbox();
-      else if (e.key === 'ArrowLeft') lbStep(-1);
-      else if (e.key === 'ArrowRight') lbStep(1);
+      else if (e.key === 'ArrowLeft' && lbMode === 'one') lbStep(-1);
+      else if (e.key === 'ArrowRight' && lbMode === 'one') lbStep(1);
       else if (e.key === 'Tab') {
         // 라이트박스 안에서만 포커스가 돈다
         var f = Array.prototype.filter.call(lb.querySelectorAll('button, a[href], [tabindex="0"]'), function (el) {
@@ -413,6 +500,24 @@
       });
     }
     render();
+  })();
+
+  /* ---------- 그림 모음 위의 나란히 보기 줄 ---------- */
+  (function () {
+    var box = $('all-pairs'), row = $('pair-row');
+    if (!box || !row || !GROUPS.length) return;
+    row.innerHTML = GROUPS.map(function (g, i) {
+      var shown = g.list.slice(0, 3);
+      return '<li><button type="button" class="pair-card" data-g="' + i + '">' +
+        '<span class="pair-thumbs n' + shown.length + '">' + shown.map(function (it) { return '<span>' + imgHTML(it.w) + '</span>'; }).join('') + '</span>' +
+        '<span class="pair-t">' + esc(g.titleKo) + '</span>' +
+        '<span class="pair-n">' + g.list.length + '점</span></button></li>';
+    }).join('');
+    row.onclick = function (e) {
+      var b = e.target.closest('.pair-card');
+      if (b) openCompare(GROUPS[+b.getAttribute('data-g')]);
+    };
+    box.hidden = false;
   })();
 
   /* ---------- 지도 ---------- */
