@@ -80,6 +80,10 @@ for m in museums.values():
             m['nameKo'] = cm.get('nameKo') or m['nameKo']
             m['city'] = cm.get('city') or m['city']
 
+for mid, fix in cur.get('museumFixes', {}).items():  # Wikidata 미술관 값을 정본으로 바로잡는다(예: 도시)
+    if mid in museums:
+        museums[mid].update(fix)
+
 adult_notes = cur.get('adultNotes', {})  # {Wikidata 작품 ID: 어른용 메모}
 used_curated = set()
 work_fixes = cur.get('workFixes', {})  # {Wikidata 작품 ID: {catalog.json 필드: 바로잡은 값}}

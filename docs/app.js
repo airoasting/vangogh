@@ -55,9 +55,10 @@
       if (ms.indexOf(it.m) < 0) ms.push(it.m);
     });
     var n = g.list.length;
-    if (ms.length === 1) return n + '점 모두 ' + ms[0].city + '의 ' + ms[0].nameKo + '에 있어요.';
-    if (cities.length === 1) return n + '점 모두 ' + cities[0] + '에 있어요.';
-    return n + '점이 지금 ' + cities.length + '개 도시에 흩어져 있어요.';
+    // 고흐가 그린 판 전부가 아니라 이 지도에 있는 것만 센다(개인 소장, 사라진 그림은 빠진다)
+    if (ms.length === 1) return '이 지도의 ' + n + '점은 모두 ' + ms[0].city + '의 ' + ms[0].nameKo + '에 있어요.';
+    if (cities.length === 1) return '이 지도의 ' + n + '점은 모두 ' + cities[0] + '에 있어요.';
+    return '이 지도의 ' + n + '점은 지금 ' + cities.length + '개 도시에 있어요.';
   }
   function museumList(m) { return (m.works || []).map(function (w) { return { w: w, m: m }; }); }
   // 이야기가 있는 그림(큐레이션 32점)을 앞에 둔다. 나머지 순서는 그대로 둔다.
@@ -561,7 +562,7 @@
     var thumbs = [];
     list.forEach(function (it, i) { if (thumbs.length < 3 && it.w.img) thumbs.push(i); });
     return '<div class="lc-works">' +
-      '<p class="lc-stat">여기서 그린 그림 ' + list.length + '점이 지금은 ' + cs.length + '개 나라, ' + ms.length + '곳 미술관에 있어요.</p>' +
+      '<p class="lc-stat">이 지도에는 여기서 그린 그림이 ' + list.length + '점 있어요. 지금 ' + cs.length + '개 나라, ' + ms.length + '곳 미술관에 있어요.</p>' +
       (thumbs.length ? '<div class="lc-thumbs">' + thumbs.map(function (i) {
         var w = list[i].w;
         return '<button type="button" class="lc-thumb" data-i="' + i + '" aria-label="' + esc(w.titleKo) + ' 크게 보기">' + imgHTML(w) + '</button>';
@@ -815,9 +816,13 @@
         svg.transition().duration(900).call(zoom.transform, t);
       }
     };
+    // 찾기 문제의 답이 유럽 밖이면 세계 전체로, 아니면 미술관이 가장 많이 모인 유럽으로 연다
+    mapApi.questView = function (dur) {
+      if (questWantsWorld()) svg.transition().duration(dur || 0).call(zoom.transform, d3.zoomIdentity);
+      else zoomTo(9, 50, europeK, dur || 0);
+    };
     mapApi.applyLayers();
-    // 첫 화면은 미술관이 가장 많이 모인 유럽에서 시작한다
-    zoomTo(9, 50, europeK, 0);
+    mapApi.questView(0);
     relayout();
     if (panelMuseum) mapApi.setActive(panelMuseum);
   }
@@ -922,6 +927,7 @@
     function goStop(i) {
       var li = listEl.querySelector('[data-i="' + i + '"]');
       if (!li) return;
+      if (i >= SHOW) setFolded(false);  // 접힌 곳이면 먼저 편다
       li.scrollIntoView({ behavior: 'smooth', block: 'center' });
       li.classList.add('flash');
       setTimeout(function () { li.classList.remove('flash'); }, 1400);
@@ -978,6 +984,20 @@
         setTimeout(function () { if (mapApi) mapApi.openLife(+li.getAttribute('data-i')); }, off ? 700 : 0);
       }
     });
+    // 폰에서는 목록을 처음 몇 곳만 보이고 접어 둔다. 그래야 그림 모음까지 내려가는 길이 짧다(접기는 CSS가 760px 이하에서만 한다)
+    var more = $('tl-more'), SHOW = 3;
+    function setFolded(f) {
+      listEl.classList.toggle('folded', f);
+      if (more) { more.hidden = !f; more.textContent = '나머지 ' + (life.length - SHOW) + '곳 더 보기'; }
+    }
+    if (more && life.length > SHOW + 1) {
+      setFolded(true);
+      more.onclick = function () {
+        setFolded(false);
+        var b = listEl.children[SHOW] && listEl.children[SHOW].querySelector('button');
+        if (b) b.focus({ preventScroll: true });
+      };
+    }
     if (note) note.textContent = '막대는 이 지도에 있는 그림 가운데 그 해에 그린 그림의 수예요. 그린 해를 모르는 ' + noYear + '점은 빠져 있어요. 막대를 누르면 그 해의 그림을 볼 수 있어요.';
 
     draw();
@@ -1008,6 +1028,8 @@
     return word + (has ? withB : withoutB);
   }
   function isFar(m) { return m.lon < -25 || m.lon > 45 || m.lat < 34; }
+  // 지도가 처음 그려질 때는 QUESTS가 아직 없어서 거짓이 나온다. 문제를 만든 뒤 다시 부른다
+  function questWantsWorld() { return !!(QUESTS && qi < QUESTS.length && !qSolved && isFar(QUESTS[qi].m)); }
 
   function renderQuest() {
     if (!questBox || !QUESTS.length) return;
@@ -1058,6 +1080,7 @@
       if (act === 'skip' || act === 'next') { qi++; qHint = 0; qSolved = false; }
       if (act === 'restart') { qi = 0; qHint = 0; qSolved = false; }
       renderQuest();
+      if (act !== 'hint' && mapApi && mapApi.questView && !showLife) mapApi.questView(800);  // 다음 문제에 맞는 배율로
       var nb = questBox.querySelector('button[data-q]');
       if (nb) nb.focus({ preventScroll: true });
     });
@@ -1065,6 +1088,7 @@
       setTimeout(function () { questBox.focus({ preventScroll: true }); }, 600);
     });
     renderQuest();
+    if (mapApi && mapApi.questView) mapApi.questView(0);
   }
 
   /* ---------- 한국에서 가장 가까운 곳 ---------- */
@@ -1086,7 +1110,7 @@
     var works = same.reduce(function (n, m) { return n + (m.works || []).length; }, 0);
     box.innerHTML = '이 지도에는 아직 한국 미술관이 없어요. 서울에서 가장 가까운 곳은 ' +
       esc(near.country) + ' ' + esc(near.city) + '의 ' + esc(josa(near.nameKo, '이에요', '예요')) + '. ' +
-      esc(near.country) + '에는 ' + same.length + '곳에 그림 ' + works + '점이 있어요. ' +
+      '이 지도에서 ' + esc(near.country) + '에는 ' + same.length + '곳에 그림 ' + works + '점이 있어요. ' +
       '<button type="button" class="textlink" id="map-near-go">' + esc(near.country) + ' 지도에서 보기</button>';
     box.hidden = false;
     $('map-near-go').onclick = function () {

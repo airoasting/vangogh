@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="gallery.css?v=26">
+<link rel="stylesheet" href="gallery.css?v=27">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="fonts.css?v=12">
 </head>
@@ -23,8 +23,8 @@
     </div>
     <nav class="mast-nav" aria-label="바로 가기">
       <a class="nav-wide" href="#who-section">소개</a>
-      <a href="#life-section">연대기</a>
       <a href="#map-section">지도</a>
+      <a href="#life-section">연대기</a>
       <a href="#all-section">그림 모음</a>
     </nav>
   </div>
@@ -35,8 +35,8 @@
   <section class="hero wrap" aria-labelledby="hero-title">
     <h1 id="hero-title">빈센트 반 고흐의 그림은 지금 어디에 있을까요?</h1>
     <div class="hero-foot">
-      <p class="hero-lead">세계 <span data-count="museums">145</span>곳 미술관에 있는 고흐의 그림 <span data-count="works">775</span>점을 지도에서 찾아보세요.</p>
-      <p class="hero-links"><a href="#map-section">지도에서 찾기</a><a href="#all-section">그림 <span data-count="works">32</span>점 모두 보기</a></p>
+      <p class="hero-lead">이 지도에는 세계 <span data-count="museums">145</span>곳 미술관에 있는 고흐의 그림 <span data-count="works">775</span>점이 있어요.</p>
+      <p class="hero-links"><a href="#map-section">지도에서 찾기</a><a href="#all-section">그림 <span data-count="works">775</span>점 모두 보기</a></p>
     </div>
     <div class="intro-frame" id="intro-frame" aria-label="반 고흐 소개 영상"></div>
   </section>
@@ -70,18 +70,6 @@
         </dl>
       </div>
     </div>
-  </section>
-
-  <section id="life-section" class="section wrap" aria-labelledby="life-title">
-    <div class="sec-head">
-      <p class="sec-label">연대기</p>
-      <h2 id="life-title">고흐의 37년</h2>
-    </div>
-    <p class="sec-lead long">태어난 해부터 세상을 떠난 해까지, 고흐가 살던 곳을 차례로 따라가요. 그림은 대부분 마지막 10년 동안 그렸어요.</p>
-    <div class="tl-chart" id="tl-chart"></div>
-    <p class="tl-note" id="tl-note"></p>
-    <ol class="tl-list" id="tl-list"></ol>
-    <p class="tl-note">여기에는 날짜를 확인한 곳만 적었어요. 빈칸으로 남은 해에도 고흐는 학교를 다니고 여러 도시를 오가며 살았어요.</p>
   </section>
 
   <section id="map-section" class="section wrap" aria-labelledby="map-title">
@@ -123,12 +111,25 @@
     <ol class="museum-index" id="museum-chips"></ol>
   </section>
 
+  <section id="life-section" class="section wrap" aria-labelledby="life-title">
+    <div class="sec-head">
+      <p class="sec-label">연대기</p>
+      <h2 id="life-title">고흐의 37년</h2>
+    </div>
+    <p class="sec-lead long">태어난 해부터 세상을 떠난 해까지, 고흐가 살던 곳을 차례로 따라가요. 그림은 대부분 마지막 10년 동안 그렸어요.</p>
+    <div class="tl-chart" id="tl-chart"></div>
+    <p class="tl-note" id="tl-note"></p>
+    <ol class="tl-list" id="tl-list"></ol>
+    <button type="button" class="wall-more tl-more" id="tl-more" hidden></button>
+    <p class="tl-note">여기에는 날짜를 확인한 곳만 적었어요. 빈칸으로 남은 해에도 고흐는 학교를 다니고 여러 도시를 오가며 살았어요.</p>
+  </section>
+
   <section id="all-section" class="section wrap" aria-labelledby="all-title">
     <div class="sec-head">
       <p class="sec-label">그림 모음</p>
       <h2 id="all-title">그림 모아 보기</h2>
     </div>
-    <p class="sec-lead long">고흐가 그린 그림 약 2,100점 가운데 세계 미술관이 가지고 있는 <span data-count="works">775</span>점을 모았어요. 물감을 두껍게 바른 유화도 있고, 연필과 펜으로 그린 소묘, 수채화, 판화도 있어요. 사람들이 집에 가지고 있는 그림과 아직 목록이 만들어지지 않은 소묘는 빠져 있어요. 이야기가 있는 그림이 먼저 나와요.</p>
+    <p class="sec-lead long">고흐가 그린 그림은 약 2,100점이에요. 이 지도에는 그 가운데 미술관 정보와 사진을 찾을 수 있는 <span data-count="works">775</span>점을 모았어요. 물감을 두껍게 바른 유화도 있고, 연필과 펜으로 그린 소묘, 수채화, 판화도 있어요. 사람들이 집에 가지고 있는 그림과 아직 목록이 만들어지지 않은 소묘는 빠져 있어요. 이야기가 있는 그림이 먼저 나와요.</p>
     <div class="pairs" id="all-pairs" hidden>
       <p class="find-label" id="pairs-title">나란히 놓고 보기</p>
       <p class="pairs-sub">고흐는 같은 그림을 여러 번 그리기도 했어요. 나란히 놓고 다른 곳을 찾아보세요.</p>
@@ -184,9 +185,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
 <script src="world.js?v=4"></script>
-<script src="data.js?v=17"></script>
+<script src="data.js?v=18"></script>
 <script src="intro.js?v=13"></script>
-<script src="app.js?v=33"></script>
+<script src="app.js?v=34"></script>
 <script src="wall-more.js?v=12"></script>
 </body>
 </html>
