@@ -911,8 +911,12 @@
     function showTip(el, text) {
       var r = el.getBoundingClientRect(), c = chart.getBoundingClientRect();
       tip.textContent = text; tip.hidden = false;
-      tip.style.left = (r.left - c.left + chart.scrollLeft + r.width / 2) + 'px';
-      tip.style.top = (r.top - c.top) + 'px';
+      // 차트 상자는 넘치는 부분을 자르므로, 보이는 범위 안으로 툴팁을 밀어 넣는다
+      var tw = tip.offsetWidth, th = tip.offsetHeight, m = 4;
+      var cx = r.left - c.left + chart.scrollLeft + r.width / 2;
+      var lo = chart.scrollLeft + tw / 2 + m, hi = chart.scrollLeft + chart.clientWidth - tw / 2 - m;
+      tip.style.left = Math.max(lo, Math.min(hi, cx)) + 'px';
+      tip.style.top = Math.max(th + 6 + m, r.top - c.top) + 'px';
     }
     function yearList(y) { return storyFirst(byYear[y] || []); }
     function goStop(i) {
